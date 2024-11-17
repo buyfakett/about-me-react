@@ -58,13 +58,8 @@ const App = () => {
           ))}
         </div>
       </section>
-
-      <Footer />
-
       {/* Footer */}
-      {/*<footer className="mt-12 text-gray-400 text-sm">*/}
-      {/*  © {new Date().getFullYear()} Your Name. All rights reserved.*/}
-      {/*</footer>*/}
+      <Footer />
     </div>
   );
 };
