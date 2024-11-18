@@ -2,8 +2,11 @@ import React from "react";
 import {FaGithub} from "react-icons/fa";
 import { FaBilibili } from "react-icons/fa6";
 
-const githubUrl = "https://github.com/buyfakett"
-const biliUrl = "https://space.bilibili.com/11479221"
+const skipUrl = {
+    blog: "https://blog.tteam.icu",
+    github: "https://github.com/buyfakett",
+    bili: "https://space.bilibili.com/11479221"
+}
 
 const NavBar = () => {
     return (
@@ -13,7 +16,8 @@ const NavBar = () => {
                 {/*<img src={require('%PUBLIC_URL%/favicon.ico')} alt=""/>*/}
                 <div className="text-lg font-bold">
                     <a
-                        href="https://blog.tteam.icu"
+                        href={skipUrl.blog}
+                        target="_blank"
                         className="hover:text-blue-400 transition-colors duration-200"
                     >
                         博客
@@ -22,7 +26,7 @@ const NavBar = () => {
                 {/* 右侧：社交媒体图标 */}
                 <div className="flex space-x-4">
                     <a
-                        href={githubUrl}
+                        href={skipUrl.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 transition-colors duration-200"
@@ -30,7 +34,7 @@ const NavBar = () => {
                         <FaGithub size={24}/>
                     </a>
                     <a
-                        href={biliUrl}
+                        href={skipUrl.bili}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 transition-colors duration-200"
