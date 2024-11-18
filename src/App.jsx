@@ -2,7 +2,6 @@ import React, {useEffect} from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
-import aboutMe from "./components/AboutMe";
 
 const languages = [
     {name: "Python", percentage: 40, color: "bg-blue-500"},
@@ -23,7 +22,7 @@ const umamiScript = `<script defer src="https://umami.tteam.icu/script.js" data-
 
 const App = () => {
     useEffect(() => {
-        if (process.env.IS_PRODUCTION === "true") {
+        if (process.env.NODE_ENV === 'production') {
             // 判断访问的域名
             if (window.location.hostname !== skipUrl.aboutMe) {
                 const newUrl = `https://${skipUrl.aboutMe}`;
