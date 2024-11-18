@@ -21,17 +21,17 @@ const umamiScript = `<script defer src="https://umami.tteam.icu/script.js" data-
 
 const App = () => {
     useEffect(() => {
-        // 获取当前的主域名
-        const currentHost = window.location.hostname;
-        // 判断是否是非 www 的域名
-        if (!currentHost.startsWith('www.')) {
-            // 如果不是 www.xxx，重定向到 www.xxx
-            const newUrl = `https://www.${currentHost}`;
-            window.location.replace(newUrl);  // 使用 replace 来重定向并避免用户后退
-        }
-
         // 如果是生产环境, 就加上umami
-        if (process.env.REACT_APP_USE_CUSTOM_JS === "true") {
+        if (process.env.IS_PRODUCTION === "true") {
+            // 获取当前的主域名
+            const currentHost = window.location.hostname;
+            // 判断是否是非 www 的域名
+            if (!currentHost.startsWith('www.')) {
+                // 如果不是 www.xxx，重定向到 www.xxx
+                const newUrl = `https://www.${currentHost}`;
+                window.location.replace(newUrl);  // 使用 replace 来重定向并避免用户后退
+            }
+
             // 将 script 标签插入到 head
             const div = document.createElement('div');
             div.innerHTML = umamiScript; // 将 HTML 字符串插入到 div 中
