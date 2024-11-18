@@ -1,30 +1,40 @@
 import React from "react";
 import {FaGithub} from "react-icons/fa";
-import { FaBilibili } from "react-icons/fa6";
+import {FaBilibili} from "react-icons/fa6";
 
-const NavBar = ({note, blog, github, bili}) => {
+const NavBar = ({note, blog, github, bili, headPortrait}) => {
     return (
         <nav className="bg-gray-800 text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
-                {/* 左侧：博客链接 */}
-                {/*<img src={require('%PUBLIC_URL%/favicon.ico')} alt=""/>*/}
-                <div className="text-lg font-bold space-x-4">
+                {/* 左侧 */}
+                <div className="flex items-center space-x-4">
+                    {/* 头像 */}
+                    <a href="/" className="img-box">
+                        <img
+                            className="w-10 h-10 object-cover"
+                            src={headPortrait}
+                            alt="head portrait"
+                        />
+                    </a>
+                    {/* 链接 */}
                     <a
                         href={note}
                         target="_blank"
-                        className="hover:text-blue-400 transition-colors duration-200"
+                        rel="noopener noreferrer"
+                        className="text-lg font-bold hover:text-blue-400 transition-colors duration-200"
                     >
-                        Node
+                        Note
                     </a>
                     <a
                         href={blog}
                         target="_blank"
-                        className="hover:text-blue-400 transition-colors duration-200"
+                        rel="noopener noreferrer"
+                        className="text-lg font-bold hover:text-blue-400 transition-colors duration-200"
                     >
                         Blog
                     </a>
                 </div>
-                {/* 右侧：社交媒体图标 */}
+                {/* 右侧 */}
                 <div className="flex space-x-4">
                     <a
                         href={github}

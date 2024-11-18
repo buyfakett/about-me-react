@@ -18,10 +18,24 @@ const skipUrl = {
     bili: "https://space.bilibili.com/11479221",
 }
 
+const imgUrl = {
+    headPortrait: "https://tc.tteam.icu/i/2024/10/22/xhykcg-3.webp"
+}
+
 const umamiScript = `<script defer src="https://umami.tteam.icu/script.js" data-website-id="12d3e9e9-3982-43a1-a285-e2f611073a71"></script>`
 
 const App = () => {
     useEffect(() => {
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/x-icon';
+        link.href = imgUrl.headPortrait;
+        document.head.appendChild(link);
+
+        // 清理副作用
+        return () => {
+            document.head.removeChild(link);
+        };
         if (process.env.NODE_ENV === 'production') {
             // 判断访问的域名
             if (window.location.hostname !== skipUrl.aboutMe) {
@@ -38,8 +52,8 @@ const App = () => {
     }, []);
     return (
         <div>
-            <NavBar note={skipUrl.note} blog={skipUrl.blog} github={skipUrl.github} bili={skipUrl.bili}/>
-            <AboutMe languages={languages}/>
+            <NavBar note={skipUrl.note} blog={skipUrl.blog} github={skipUrl.github} bili={skipUrl.bili} headPortrait={imgUrl.headPortrait}/>
+            <AboutMe languages={languages} headPortrait={imgUrl.headPortrait}/>
             <Footer github={skipUrl.github}/>
         </div>
     );

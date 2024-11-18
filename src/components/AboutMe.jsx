@@ -1,11 +1,12 @@
 import React from "react";
 import {motion} from "framer-motion";
 import clsx from "clsx";
+import HeadPortrait from "./AboutMe/HeadPortrait";
 
-const AboutMe = ({languages}) => {
+const AboutMe = ({languages, headPortrait}) => {
     return (
         <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
-
+            <HeadPortrait headPortrait={headPortrait} />
             {/* Header Section */}
             <header className="text-center mb-8">
                 <motion.h1
