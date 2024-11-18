@@ -3,9 +3,10 @@ import {FaGithub} from "react-icons/fa";
 import { FaBilibili } from "react-icons/fa6";
 
 const skipUrl = {
+    note: "https://note.tteam.icu",
     blog: "https://blog.tteam.icu",
     github: "https://github.com/buyfakett",
-    bili: "https://space.bilibili.com/11479221"
+    bili: "https://space.bilibili.com/11479221",
 }
 
 const NavBar = () => {
@@ -14,7 +15,14 @@ const NavBar = () => {
             <div className="container mx-auto flex justify-between items-center">
                 {/* 左侧：博客链接 */}
                 {/*<img src={require('%PUBLIC_URL%/favicon.ico')} alt=""/>*/}
-                <div className="text-lg font-bold">
+                <div className="text-lg font-bold space-x-4">
+                    <a
+                        href={skipUrl.note}
+                        target="_blank"
+                        className="hover:text-blue-400 transition-colors duration-200"
+                    >
+                        笔记
+                    </a>
                     <a
                         href={skipUrl.blog}
                         target="_blank"
