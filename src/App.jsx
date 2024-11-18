@@ -1,8 +1,7 @@
-import React from "react";
-import {motion} from "framer-motion";
-import clsx from "clsx";
-import Footer from "./Footer";
-import NavBar from "./NavBar";
+import React, {useEffect} from "react";
+import Footer from "./components/Footer";
+import NavBar from "./components/NavBar";
+import AboutMe from "./components/AboutMe";
 
 const languages = [
     {name: "Python", percentage: 40, color: "bg-blue-500"},
@@ -11,60 +10,30 @@ const languages = [
     {name: "PHP", percentage: 15, color: "bg-red-500"},
 ];
 
+const skipUrl = {
+    note: "https://note.tteam.icu",
+    blog: "https://blog.tteam.icu",
+    github: "https://github.com/buyfakett",
+    bili: "https://space.bilibili.com/11479221",
+}
+
+const umamiScript = `<script defer src="https://umami.tteam.icu/script.js" data-website-id="12d3e9e9-3982-43a1-a285-e2f611073a71"></script>`
+
 const App = () => {
+    useEffect(() => {
+        // 如果是生产环境, 就加上umami
+        if (process.env.REACT_APP_USE_CUSTOM_JS === "true") {
+            // 将 script 标签插入到 head
+            const div = document.createElement('div');
+            div.innerHTML = umamiScript; // 将 HTML 字符串插入到 div 中
+            document.head.appendChild(div.firstChild); // 将 script 插入到 head
+        }
+    }, []);
     return (
         <div>
-            <NavBar/>
-            <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
-
-                {/* Header Section */}
-                <header className="text-center mb-8">
-                    <motion.h1
-                        className="text-4xl font-bold mb-4"
-                        initial={{opacity: 0, y: -50}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 1}}
-                    >
-                        About Me
-                    </motion.h1>
-                    <motion.p
-                        className="text-lg"
-                        initial={{opacity: 0, y: 50}}
-                        animate={{opacity: 1, y: 0}}
-                        transition={{duration: 1, delay: 0.5}}
-                    >
-                        Hello! I'm a developer passionate about creating efficient and scalable software solutions.
-                    </motion.p>
-                </header>
-
-                {/* Language Section */}
-                <section className="w-full max-w-xl">
-                    <h2 className="text-2xl font-semibold mb-4">Languages I Use</h2>
-                    <div className="space-y-4">
-                        {languages.map((lang, index) => (
-                            <motion.div
-                                key={lang.name}
-                                className="w-full bg-gray-800 rounded-lg overflow-hidden"
-                                initial={{opacity: 0, scale: 0.9}}
-                                animate={{opacity: 1, scale: 1}}
-                                transition={{duration: 0.5, delay: index * 0.2}}
-                            >
-                                <div
-                                    className={clsx(
-                                        "h-8 flex items-center px-2 text-sm font-medium",
-                                        lang.color
-                                    )}
-                                    style={{width: `${lang.percentage}%`}}
-                                >
-                                    {lang.name} ({lang.percentage}%)
-                                </div>
-                            </motion.div>
-                        ))}
-                    </div>
-                </section>
-
-                <Footer/>
-            </div>
+            <NavBar note={skipUrl.note} blog={skipUrl.blog} github={skipUrl.github} bili={skipUrl.bili}/>
+            <AboutMe languages={languages}/>
+            <Footer github={skipUrl.github}/>
         </div>
     );
 };
