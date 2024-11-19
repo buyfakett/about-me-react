@@ -51,11 +51,11 @@ const App = () => {
         }
     }, []);
     return (
-        <div>
+        <>
             <NavBar note={skipUrl.note} blog={skipUrl.blog} github={skipUrl.github} bili={skipUrl.bili} headPortrait={imgUrl.headPortrait}/>
             <AboutMe languages={languages} headPortrait={imgUrl.headPortrait}/>
             <Footer github={skipUrl.github}/>
-        </div>
+        </>
     );
 };
 
