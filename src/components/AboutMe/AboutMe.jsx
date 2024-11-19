@@ -1,7 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 import clsx from "clsx";
-import HeadPortrait from "./AboutMe/HeadPortrait/HeadPortrait";
+import HeadPortrait from "./HeadPortrait/HeadPortrait";
 
 const AboutMe = ({languages, headPortrait}) => {
     return (

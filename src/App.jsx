@@ -1,7 +1,7 @@
 import React, {useEffect} from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import AboutMe from "./components/AboutMe";
+import AboutMe from "./components/AboutMe/AboutMe";
 
 const languages = [
     {name: "Python", percentage: 40, color: "bg-blue-500"},
