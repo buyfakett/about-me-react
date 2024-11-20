@@ -6,7 +6,7 @@ import {ThemeContext} from "../util/ThemeContext";
 const NavBar = ({note, blog, github, bili, headPortrait}) => {
     const { theme, toggleTheme } = useContext(ThemeContext);
     return (
-        <nav className="bg-gray-800 dark:text-white px-4 py-2 shadow-md">
+        <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 {/* 左侧 */}
                 <div className="flex items-center space-x-4">
@@ -23,7 +23,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                         href={note}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold hover:text-blue-400 transition-colors duration-200"
+                        className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
                     >
                         Note
                     </a>
@@ -31,7 +31,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                         href={blog}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold hover:text-blue-400 transition-colors duration-200"
+                        className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
                     >
                         Blog
                     </a>
@@ -54,12 +54,12 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                     >
                         <FaBilibili size={24}/>
                     </a>
-                    <button
-                        onClick={toggleTheme}
-                        className="mt-1 px-4 py-2 bg-blue-500 text-white rounded hover:bg-blue-600 dark:bg-yellow-500 dark:hover:bg-yellow-600"
-                    >
-                        切换主题
-                    </button>
+                    {/*<button*/}
+                    {/*    onClick={toggleTheme}*/}
+                    {/*    className="mt-1 px-4 py-2 bg-blue-500 dark:text-white rounded hover:bg-blue-600 dark:bg-yellow-500 dark:hover:bg-yellow-600"*/}
+                    {/*>*/}
+                    {/*    切换主题*/}
+                    {/*</button>*/}
                 </div>
             </div>
         </nav>

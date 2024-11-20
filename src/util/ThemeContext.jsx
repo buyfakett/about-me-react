@@ -6,7 +6,7 @@ export const ThemeProvider = ({ children }) => {
     const [theme, setTheme] = useState(() => {
         // 获取用户首选主题（如存在）
         const savedTheme = localStorage.getItem('theme');
-        return savedTheme || 'light';
+        return savedTheme || 'dark';
     });
 
     useEffect(() => {
