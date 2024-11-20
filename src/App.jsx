@@ -59,8 +59,13 @@ const App = () => {
                 bili={Config.skipUrl.bili}
                 headPortrait={Config.imgUrl.headPortrait}
             />
-            <AboutMe languages={wakatimeData.languages} headPortrait={Config.imgUrl.headPortrait}/>
-            <Footer github={Config.skipUrl.github}/>
+            <AboutMe
+                languages={wakatimeData.languages}
+                headPortrait={Config.imgUrl.headPortrait}
+            />
+            <Footer
+                github={Config.skipUrl.github}
+            />
         </>
     );
 };
