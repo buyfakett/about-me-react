@@ -1,60 +1,73 @@
-import React, {useEffect} from "react";
+import React, {useEffect, useState} from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe/AboutMe";
-
-const languages = [
-    {name: "Python", percentage: 40, color: "bg-blue-500"},
-    {name: "shell", percentage: 25, color: "bg-blue-500"},
-    {name: "VUE", percentage: 20, color: "bg-green-500"},
-    {name: "PHP", percentage: 15, color: "bg-red-500"},
-];
-
-const skipUrl = {
-    aboutMe: "www.tteam.icu",
-    note: "https://note.tteam.icu",
-    blog: "https://blog.tteam.icu",
-    github: "https://github.com/buyfakett",
-    bili: "https://space.bilibili.com/11479221",
-}
-
-const imgUrl = {
-    headPortrait: "https://tc.tteam.icu/i/2024/10/22/xhykcg-3.webp"
-}
-
-const umamiScript = `<script defer src="https://umami.tteam.icu/script.js" data-website-id="12d3e9e9-3982-43a1-a285-e2f611073a71"></script>`
+import * as Config from "./config"
 
 const App = () => {
+    const [data, setData] = useState(null);
+    const [error, setError] = useState(null);
+
     useEffect(() => {
-        const link = document.createElement('link');
-        link.rel = 'icon';
-        link.type = 'image/x-icon';
-        link.href = imgUrl.headPortrait;
+        // 动态设置 Favicon
+        const link = document.createElement("link");
+        link.rel = "icon";
+        link.type = "image/x-icon";
+        link.href = Config.imgUrl.headPortrait;
         document.head.appendChild(link);
 
         // 清理副作用
         return () => {
             document.head.removeChild(link);
         };
-        if (process.env.NODE_ENV === 'production') {
-            // 判断访问的域名
-            if (window.location.hostname !== skipUrl.aboutMe) {
-                const newUrl = `https://${skipUrl.aboutMe}`;
-                window.location.replace(newUrl);  // 使用 replace 来重定向并避免用户后退
+    }, []); // 此处只执行一次
+
+    useEffect(() => {
+        // 判断生产环境并处理逻辑
+        if (process.env.NODE_ENV === "production") {
+            // 判断域名并重定向
+            if (window.location.hostname !== Config.skipUrl.aboutMe) {
+                window.location.replace(`https://${Config.skipUrl.aboutMe}`);
             }
 
-            // 如果是生产环境, 就加上umami
-            // 将 script 标签插入到 head
-            const div = document.createElement('div');
-            div.innerHTML = umamiScript; // 将 HTML 字符串插入到 div 中
-            document.head.appendChild(div.firstChild); // 将 script 插入到 head
+            // 注入 Umami 脚本
+            const script = document.createElement("script");
+            script.src = Config.umamiScript;
+            script.defer = true;
+            script.dataset.websiteId = Config.umamiId;
+            document.head.appendChild(script);
         }
+
+        // 调用 API 获取数据
+        const fetchData = async () => {
+            try {
+                const response = await fetch(Config.apiList.wakaTime);
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                const result = await response.json();
+                console.log(result);
+                setData(result);
+            } catch (err) {
+                console.error(err);
+                setError(err.message);
+            }
+        };
+
+        fetchData();
     }, []);
+
     return (
         <>
-            <NavBar note={skipUrl.note} blog={skipUrl.blog} github={skipUrl.github} bili={skipUrl.bili} headPortrait={imgUrl.headPortrait}/>
-            <AboutMe languages={languages} headPortrait={imgUrl.headPortrait}/>
-            <Footer github={skipUrl.github}/>
+            <NavBar
+                note={Config.skipUrl.note}
+                blog={Config.skipUrl.blog}
+                github={Config.skipUrl.github}
+                bili={Config.skipUrl.bili}
+                headPortrait={Config.imgUrl.headPortrait}
+            />
+            <AboutMe languages={Config.languages} headPortrait={Config.imgUrl.headPortrait}/>
+            <Footer github={Config.skipUrl.github}/>
         </>
     );
 };
