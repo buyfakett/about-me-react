@@ -5,8 +5,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import * as Config from "./config"
 
 const App = () => {
-    const [data, setData] = useState(Config.wakaTimeDefaultData);
-    const [error, setError] = useState(null);
+    const [wakatimeData, setwakatimeData] = useState(Config.wakaTimeDefaultData);
 
     useEffect(() => {
         // 动态设置 Favicon
@@ -39,22 +38,16 @@ const App = () => {
         }
 
         // 调用 API 获取数据
-        const fetchData = async () => {
-            try {
-                const response = await fetch(Config.apiList.wakaTime);
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status}`);
-                }
-                const result = await response.json();
-                console.log(result);
-                setData(result);
-            } catch (err) {
-                console.error(err);
-                setError(err.message);
+        const wakatimeData = async () => {
+            const response = await fetch(Config.apiList.wakaTime);
+            if (!response.ok) {
+                throw new Error(`HTTP error! status: ${response.status}`);
             }
+            const result = await response.json();
+            setwakatimeData(result);
         };
 
-        fetchData();
+        wakatimeData();
     }, []);
 
     return (
@@ -66,7 +59,7 @@ const App = () => {
                 bili={Config.skipUrl.bili}
                 headPortrait={Config.imgUrl.headPortrait}
             />
-            <AboutMe languages={data.languages} headPortrait={Config.imgUrl.headPortrait}/>
+            <AboutMe languages={wakatimeData.languages} headPortrait={Config.imgUrl.headPortrait}/>
             <Footer github={Config.skipUrl.github}/>
         </>
     );
