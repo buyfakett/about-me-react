@@ -5,7 +5,7 @@ import LanguageSection from "./LanguageSection/LanguageSection";
 
 const AboutMe = ({languages, headPortrait}) => {
     return (
-        <div className="min-h-screen bg-gray-900 text-white flex flex-col items-center justify-center p-4">
+        <div className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4">
 
             <HeadPortrait headPortrait={headPortrait} />
 

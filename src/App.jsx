@@ -1,8 +1,9 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe/AboutMe";
 import * as Config from "./config"
+import {ThemeContext} from "./util/ThemeContext";
 
 const App = () => {
     const [wakatimeData, setwakatimeData] = useState(Config.wakaTimeDefaultData);
