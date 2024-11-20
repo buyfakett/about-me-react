@@ -5,7 +5,7 @@ import AboutMe from "./components/AboutMe/AboutMe";
 import * as Config from "./config"
 
 const App = () => {
-    const [data, setData] = useState(null);
+    const [data, setData] = useState(Config.wakaTimeDefaultData);
     const [error, setError] = useState(null);
 
     useEffect(() => {
@@ -66,7 +66,7 @@ const App = () => {
                 bili={Config.skipUrl.bili}
                 headPortrait={Config.imgUrl.headPortrait}
             />
-            <AboutMe languages={Config.languages} headPortrait={Config.imgUrl.headPortrait}/>
+            <AboutMe languages={data.languages} headPortrait={Config.imgUrl.headPortrait}/>
             <Footer github={Config.skipUrl.github}/>
         </>
     );

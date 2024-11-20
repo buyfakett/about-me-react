@@ -1,9 +1,33 @@
-export const languages = [
-    {name: "Python", percentage: 40, color: "bg-blue-500"},
-    {name: "shell", percentage: 25, color: "bg-blue-500"},
-    {name: "VUE", percentage: 20, color: "bg-green-500"},
-    {name: "PHP", percentage: 15, color: "bg-red-500"},
-];
+export const wakaTimeDefaultData = {
+    "start_time": "2023-09-15T16:00:00Z",
+    "languages": [
+        {
+            "name": "Python",
+            "percentage": 24.27,
+            "color": "bg-blue-500"
+        },
+        {
+            "name": "Bash",
+            "percentage": 19.35,
+            "color": "bg-blue-500"
+        },
+        {
+            "name": "Other",
+            "percentage": 18.24,
+            "color": "bg-gray-500"
+        },
+        {
+            "name": "Markdown",
+            "percentage": 6.96,
+            "color": "bg-gray-400"
+        },
+        {
+            "name": "YAML",
+            "percentage": 5.63,
+            "color": "bg-yellow-500"
+        }
+    ]
+};
 
 export const skipUrl = {
     aboutMe: "www.tteam.icu",
