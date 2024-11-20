@@ -2,6 +2,7 @@ import React from "react";
 import {motion} from "framer-motion";
 import HeadPortrait from "./HeadPortrait/HeadPortrait";
 import LanguageSection from "./LanguageSection/LanguageSection";
+import {HyperText} from "./FramerMotion";
 
 const AboutMe = ({wakatimeData, headPortrait}) => {
     return (
@@ -19,15 +20,20 @@ const AboutMe = ({wakatimeData, headPortrait}) => {
                 >
                     About Me
                 </motion.h1>
+
                 <motion.p
                     className="text-lg"
                     initial={{opacity: 0, y: 50}}
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 1, delay: 0.5}}
                 >
-                    Hello! I'm a full stack engineer, mainly responsible for operations and maintenance
+                    <HyperText
+                        text="Hello! I'm a full stack engineer, mainly responsible for operations and maintenance"
+                    />
                     <br/>
-                    The following are language usage statistics starting from {wakatimeData.start_time}
+                    <HyperText
+                        text={`The following are language usage statistics starting from ${wakatimeData.start_time}`}
+                    />
                 </motion.p>
             </header>
 

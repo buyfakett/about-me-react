@@ -1,6 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 import clsx from "clsx";
+import {NumberTicker} from "./NumberTicker";
 
 const AboutMe = ({languages}) => {
     return (
@@ -24,7 +25,10 @@ const AboutMe = ({languages}) => {
                                 )}
                                 style={{width: `${lang.percentage}%`}}
                             >
-                                {lang.name} ({lang.percentage}%)
+                                &nbsp;&nbsp;
+                                {lang.name}
+                                &nbsp;&nbsp;
+                                <NumberTicker value={lang.percentage} decimalPlaces={2} />%
                             </div>
                         </motion.div>
                     ))}
