@@ -3,11 +3,11 @@ import {motion} from "framer-motion";
 import HeadPortrait from "./HeadPortrait/HeadPortrait";
 import LanguageSection from "./LanguageSection/LanguageSection";
 
-const AboutMe = ({languages, headPortrait}) => {
+const AboutMe = ({wakatimeData, headPortrait}) => {
     return (
         <div className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4">
 
-            <HeadPortrait headPortrait={headPortrait} />
+            <HeadPortrait headPortrait={headPortrait}/>
 
             {/* Header Section */}
             <header className="text-center mb-8">
@@ -25,11 +25,13 @@ const AboutMe = ({languages, headPortrait}) => {
                     animate={{opacity: 1, y: 0}}
                     transition={{duration: 1, delay: 0.5}}
                 >
-                    Hello! I'm a developer passionate about creating efficient and scalable software solutions.
+                    Hello! I'm a full stack engineer, mainly responsible for operations and maintenance
+                    <br/>
+                    The following are language usage statistics starting from {wakatimeData.start_time}
                 </motion.p>
             </header>
 
-            <LanguageSection languages={languages} />
+            <LanguageSection languages={wakatimeData.languages}/>
 
         </div>
     );

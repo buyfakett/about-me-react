@@ -3,7 +3,6 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe/AboutMe";
 import * as Config from "./config"
-import {ThemeContext} from "./util/ThemeContext";
 
 const App = () => {
     const [wakatimeData, setwakatimeData] = useState(Config.wakaTimeDefaultData);
@@ -61,7 +60,7 @@ const App = () => {
                 headPortrait={Config.imgUrl.headPortrait}
             />
             <AboutMe
-                languages={wakatimeData.languages}
+                wakatimeData={wakatimeData}
                 headPortrait={Config.imgUrl.headPortrait}
             />
             <Footer

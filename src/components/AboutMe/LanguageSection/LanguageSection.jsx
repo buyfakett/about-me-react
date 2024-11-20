@@ -19,7 +19,7 @@ const AboutMe = ({languages}) => {
                         >
                             <div
                                 className={clsx(
-                                    "h-8 flex items-center px-2 text-sm font-medium",
+                                    "h-9 flex items-center px-0.1 text-sm font-medium",
                                     lang.color
                                 )}
                                 style={{width: `${lang.percentage}%`}}

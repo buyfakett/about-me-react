@@ -1,5 +1,5 @@
 export const wakaTimeDefaultData = {
-    "start_time": "2023-09-15T16:00:00Z",
+    "start_time": "2023/09/15",
     "languages": [
         {
             "name": "Python",

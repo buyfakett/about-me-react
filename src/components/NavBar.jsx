@@ -9,7 +9,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
         <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 {/* 左侧 */}
-                <div className="flex items-center space-x-4">
+                <div className="flex items-center space-x-10">
                     {/* 头像 */}
                     <a href="/" className="img-box">
                         <img
@@ -37,7 +37,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                     </a>
                 </div>
                 {/* 右侧 */}
-                <div className="flex space-x-4">
+                <div className="flex space-x-10">
                     <a
                         href={github}
                         target="_blank"
