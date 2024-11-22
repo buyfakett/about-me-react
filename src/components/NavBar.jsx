@@ -50,7 +50,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                         href={bili}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-gray-400 transition-colors duration-200"
+                        className="hover:text-gray-400 text-blue-400 transition-colors duration-200"
                     >
                         <FaBilibili size={24}/>
                     </a>
