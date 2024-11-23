@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
-import AboutMe from "./components/AboutMe/AboutMe";
+import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
 import {wakatine} from "./default_data/waka_time"
 

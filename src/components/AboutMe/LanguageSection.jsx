@@ -1,7 +1,7 @@
 import React from "react";
 import {motion} from "framer-motion";
 import clsx from "clsx";
-import {NumberTicker} from "./NumberTicker";
+import {NumberTicker} from "../magicui/NumberTicker";
 
 const AboutMe = ({languages}) => {
     return (

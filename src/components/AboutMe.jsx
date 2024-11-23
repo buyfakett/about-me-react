@@ -1,8 +1,9 @@
 import React from "react";
 import {motion} from "framer-motion";
-import HeadPortrait from "./HeadPortrait/HeadPortrait";
-import LanguageSection from "./LanguageSection/LanguageSection";
-import {TypingAnimation} from "./TypingAnimation";
+import HeadPortrait from "./AboutMe/HeadPortrait";
+import LanguageSection from "./AboutMe/LanguageSection";
+import {TypingAnimation} from "./magicui/TypingAnimation";
+import WorkExperience from "./AboutMe/WorkExperience";
 
 const AboutMe = ({wakatimeData, headPortrait}) => {
     return (
@@ -31,7 +32,11 @@ const AboutMe = ({wakatimeData, headPortrait}) => {
                     />
             </header>
 
-            <LanguageSection languages={wakatimeData.languages}/>
+            <LanguageSection
+                languages={wakatimeData.languages}
+            />
+
+            {/*<WorkExperience />*/}
 
         </div>
     );

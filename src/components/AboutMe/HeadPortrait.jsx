@@ -1,5 +1,5 @@
 import React from "react";
-import {HeadPortraitCircle} from "./HeadPortraitCircle";
+import {HeadPortraitCircle} from "../magicui/HeadPortraitCircle";
 import {motion} from "framer-motion";
 
 

@@ -20,6 +20,16 @@ module.exports = {
         },
       },
     },
+    animation: {
+      "background-position-spin":
+          "background-position-spin 3000ms infinite alternate",
+    },
+    keyframes: {
+      "background-position-spin": {
+        "0%": { backgroundPosition: "top center" },
+        "100%": { backgroundPosition: "bottom center" },
+      },
+    },
   },
   plugins: [], // 确保插件格式正确
 };

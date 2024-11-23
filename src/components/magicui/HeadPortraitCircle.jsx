@@ -1,5 +1,5 @@
 import React from "react";
-import {OrbitingCircles} from "../../magicui/orbiting-circles";
+import {OrbitingCircles} from "./OrbitingCircles";
 import {FaGithub} from "react-icons/fa";
 import { DiPython, DiGo, DiReact } from "react-icons/di";
 
