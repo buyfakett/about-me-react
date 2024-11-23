@@ -4,19 +4,26 @@ import clsx from "clsx";
 import {NumberTicker} from "../magicui/NumberTicker";
 import {TypingAnimation} from "../magicui/TypingAnimation";
 
-const AboutMe = ({start_time, languages}) => {
+const LanguageSection = ({start_time, languages}) => {
     return (
         <>
             {/* 文字介绍 */}
-            <div className="text-center mb-8">
-                <TypingAnimation
-                    text={[
-                        "Hi ! I'm a full stack engineer, mainly responsible for operations and maintenance.",
-                        `The following are language usage statistics starting from ${start_time}`
-                    ].join('\n')}
-                    duration={20}
-                    className="text-lg"
-                />
+            <div className="text-center mb-8 h-[70px]">
+                <a
+                    href="https://wakatime.com/dashboard"
+                    target="_blank"
+                    rel="wakatime"
+                >
+                    <TypingAnimation
+                        text={[
+                            "Hi ! I'm a full stack engineer, mainly responsible for operations and maintenance.",
+                            `The following are language usage statistics starting from ${start_time}`,
+                            "Data sources please click me"
+                        ].join('\n')}
+                        duration={20}
+                        className="text-lg"
+                    />
+                </a>
             </div>
 
             {/* 语言使用时间排行榜 */}
@@ -54,4 +61,4 @@ const AboutMe = ({start_time, languages}) => {
     );
 };
 
-export default AboutMe;
+export default LanguageSection;
