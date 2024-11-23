@@ -24,7 +24,7 @@ const AboutMe = ({wakatimeData, headPortrait}) => {
                 languages={wakatimeData.languages}
             />
 
-            {/*<WorkExperience />*/}
+            <WorkExperience />
 
         </div>
     );

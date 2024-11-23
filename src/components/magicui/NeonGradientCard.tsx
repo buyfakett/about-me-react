@@ -71,7 +71,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
                                                                className,
                                                                children,
                                                                borderSize = 2,
-                                                               borderRadius = 2,
+                                                               borderRadius = 10,
                                                                neonColors = {
                                                                    firstColor: "#ff00aa",
                                                                    secondColor: "#00FFF1",
@@ -119,7 +119,7 @@ const NeonGradientCard: React.FC<NeonGradientCardProps> = ({
                     "--pseudo-element-background-image": `linear-gradient(0deg, ${neonColors.firstColor}, ${neonColors.secondColor})`,
                     "--pseudo-element-width": `${dimensions.width + borderSize * 2}px`,
                     "--pseudo-element-height": `${dimensions.height + borderSize * 2}px`,
-                    "--after-blur": `${dimensions.width / 3}px`,
+                    "--after-blur": `${dimensions.width / 9}px`,
                 } as CSSProperties
             }
             className={cn(
