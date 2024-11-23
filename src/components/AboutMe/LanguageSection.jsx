@@ -2,11 +2,24 @@ import React from "react";
 import {motion} from "framer-motion";
 import clsx from "clsx";
 import {NumberTicker} from "../magicui/NumberTicker";
+import {TypingAnimation} from "../magicui/TypingAnimation";
 
-const AboutMe = ({languages}) => {
+const AboutMe = ({start_time, languages}) => {
     return (
         <>
-            {/* LanguageSection */}
+            {/* 文字介绍 */}
+            <div className="text-center mb-8">
+                <TypingAnimation
+                    text={[
+                        "Hi ! I'm a full stack engineer, mainly responsible for operations and maintenance.",
+                        `The following are language usage statistics starting from ${start_time}`
+                    ].join('\n')}
+                    duration={20}
+                    className="text-lg"
+                />
+            </div>
+
+            {/* 语言使用时间排行榜 */}
             <section className="w-full max-w-xl">
                 <h2 className="text-2xl font-semibold mb-4">Languages I Use</h2>
                 <div className="space-y-4">
@@ -28,7 +41,10 @@ const AboutMe = ({languages}) => {
                                 &nbsp;&nbsp;
                                 {lang.name}
                                 &nbsp;&nbsp;
-                                <NumberTicker value={lang.percentage} decimalPlaces={2} />%
+                                <NumberTicker
+                                    value={lang.percentage}
+                                    decimalPlaces={2}
+                                />%
                             </div>
                         </motion.div>
                     ))}

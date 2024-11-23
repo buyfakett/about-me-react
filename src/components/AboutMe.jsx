@@ -2,7 +2,6 @@ import React from "react";
 import {motion} from "framer-motion";
 import HeadPortrait from "./AboutMe/HeadPortrait";
 import LanguageSection from "./AboutMe/LanguageSection";
-import {TypingAnimation} from "./magicui/TypingAnimation";
 import WorkExperience from "./AboutMe/WorkExperience";
 
 const AboutMe = ({wakatimeData, headPortrait}) => {
@@ -11,28 +10,17 @@ const AboutMe = ({wakatimeData, headPortrait}) => {
 
             <HeadPortrait headPortrait={headPortrait}/>
 
-            {/* Header Section */}
-            <header className="text-center mb-8">
-                <motion.h1
-                    className="text-4xl font-bold mb-4"
-                    initial={{opacity: 0, y: -50}}
-                    animate={{opacity: 1, y: 0}}
-                    transition={{duration: 1}}
-                >
-                    About Me
-                </motion.h1>
-
-                    <TypingAnimation
-                        text={[
-                            "Hi ! I'm a full stack engineer, mainly responsible for operations and maintenance.",
-                            `The following are language usage statistics starting from ${wakatimeData.start_time}`
-                        ].join('\n')}
-                        duration={20}
-                        className="text-lg"
-                    />
-            </header>
+            <motion.h1
+                className="text-4xl font-bold mb-4"
+                initial={{ opacity: 0, y: 50 }} // 从下方开始 (y 设为正值)
+                animate={{ opacity: 1, y: 0 }} // 最终回到原始位置
+                transition={{ duration: 1 }} // 动画持续 1 秒
+            >
+                About Me
+            </motion.h1>
 
             <LanguageSection
+                start_time={wakatimeData.start_time}
                 languages={wakatimeData.languages}
             />
 
