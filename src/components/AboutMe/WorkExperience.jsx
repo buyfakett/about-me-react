@@ -35,7 +35,7 @@ const WorkExperience = ({imgUrl, skipUrl}) => {
                         />
                     </div>
                     <NeonGradientCard
-                        className="w-[900px] h-[200px] items-center justify-center cursor-pointer"
+                        className="w-[900px] h-[220px] items-center justify-center cursor-pointer"
                         onClick={() => window.open(skipUrl.muen, '_blank')}
                     >
                         <h1 className="text-3xl">沐恩网络</h1>
@@ -43,7 +43,8 @@ const WorkExperience = ({imgUrl, skipUrl}) => {
                         <h3>2022.6 - 至今</h3>
                         <ul>
                             <li>内部系统前后端优化</li>
-                            <li>自动化系统优化</li>
+                            <li>自动化系统、监控系统、备份系统优化</li>
+                            <li>服务器、监控、数据库等迁移集群</li>
                             <li>线上问题分析, 提出优化方案</li>
                         </ul>
                     </NeonGradientCard>
