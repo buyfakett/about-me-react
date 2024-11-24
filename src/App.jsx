@@ -39,7 +39,7 @@ const App = () => {
         }
 
         // 调用 API 获取数据
-        const wakatimeData = async () => {
+        const getWakatimeData = async () => {
             const response = await fetch(Config.apiList.wakaTime);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -48,7 +48,7 @@ const App = () => {
             setwakatimeData(result);
         };
 
-        wakatimeData();
+        getWakatimeData();
     }, []);
 
     return (
@@ -62,7 +62,8 @@ const App = () => {
             />
             <AboutMe
                 wakatimeData={wakatimeData}
-                headPortrait={Config.imgUrl.headPortrait}
+                imgUrl={Config.imgUrl}
+                skipUrl={Config.skipUrl}
             />
             <Footer
                 github={Config.skipUrl.github}

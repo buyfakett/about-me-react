@@ -4,11 +4,11 @@ import HeadPortrait from "./AboutMe/HeadPortrait";
 import LanguageSection from "./AboutMe/LanguageSection";
 import WorkExperience from "./AboutMe/WorkExperience";
 
-const AboutMe = ({wakatimeData, headPortrait}) => {
+const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
     return (
         <div className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4">
 
-            <HeadPortrait headPortrait={headPortrait}/>
+            <HeadPortrait headPortrait={imgUrl.headPortrait}/>
 
             <motion.h1
                 className="text-4xl font-bold mb-4"
@@ -24,7 +24,10 @@ const AboutMe = ({wakatimeData, headPortrait}) => {
                 languages={wakatimeData.languages}
             />
 
-            <WorkExperience />
+            <WorkExperience
+                skipUrl={skipUrl}
+                imgUrl={imgUrl}
+            />
 
         </div>
     );
