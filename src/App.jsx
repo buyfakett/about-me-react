@@ -3,10 +3,10 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
-import {wakatine} from "./default_data/waka_time"
+import {wakatineDefaultData} from "./default_data/waka_time"
 
 const App = () => {
-    const [wakatimeData, setwakatimeData] = useState(wakatine);
+    const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
 
     useEffect(() => {
         // 动态设置 Favicon
@@ -54,10 +54,7 @@ const App = () => {
     return (
         <div className="bg-gray-900 text-gray-300">
             <NavBar
-                note={Config.skipUrl.note}
-                blog={Config.skipUrl.blog}
-                github={Config.skipUrl.github}
-                bili={Config.skipUrl.bili}
+                skipUrl={Config.skipUrl}
                 headPortrait={Config.imgUrl.headPortrait}
             />
             <AboutMe

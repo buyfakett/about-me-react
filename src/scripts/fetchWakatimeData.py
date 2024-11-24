@@ -14,7 +14,7 @@ try:
     # 获取返回的JSON数据
     src_data = response.json()
 
-    data = 'export const wakatine = ' + str(src_data)
+    data = 'export const wakatineDefaultData = ' + str(src_data)
 
     os.makedirs("src/default_data", exist_ok=True)
 

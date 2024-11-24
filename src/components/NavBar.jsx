@@ -3,7 +3,7 @@ import {FaGithub} from "react-icons/fa";
 import {FaBilibili} from "react-icons/fa6";
 import {ThemeContext} from "../util/ThemeContext";
 
-const NavBar = ({note, blog, github, bili, headPortrait}) => {
+const NavBar = ({skipUrl, headPortrait}) => {
     const { theme, toggleTheme } = useContext(ThemeContext);
     return (
         <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
@@ -20,7 +20,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                     </a>
                     {/* 链接 */}
                     <a
-                        href={note}
+                        href={skipUrl.note}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
@@ -28,7 +28,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                         Note
                     </a>
                     <a
-                        href={blog}
+                        href={skipUrl.blog}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
@@ -39,7 +39,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                 {/* 右侧 */}
                 <div className="flex space-x-10">
                     <a
-                        href={github}
+                        href={skipUrl.github}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 transition-colors duration-200"
@@ -47,7 +47,7 @@ const NavBar = ({note, blog, github, bili, headPortrait}) => {
                         <FaGithub size={24}/>
                     </a>
                     <a
-                        href={bili}
+                        href={skipUrl.bili}
                         target="_blank"
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 text-blue-400 transition-colors duration-200"
