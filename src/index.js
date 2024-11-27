@@ -2,13 +2,17 @@ import React from "react";
 import ReactDOM from "react-dom";
 import "./index.css";
 import App from "./App";
-import { ThemeProvider } from './util/ThemeContext';
+import { BrowserRouter } from "react-router-dom"; // 引入 BrowserRouter
+import { ThemeProvider } from "./util/ThemeContext";
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const root = ReactDOM.createRoot(document.getElementById("root"));
+
 root.render(
-    <div>
-        <ThemeProvider>
-            <App />
-        </ThemeProvider>
-    </div>
+    <React.StrictMode>
+        <BrowserRouter> {/* 用 BrowserRouter 包裹整个应用 */}
+            <ThemeProvider>
+                <App />
+            </ThemeProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 );

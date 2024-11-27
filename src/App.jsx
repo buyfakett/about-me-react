@@ -1,9 +1,12 @@
 import React, {useEffect, useState} from "react";
+import {Routes, Route} from "react-router-dom";
 import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
 import {wakatineDefaultData} from "./default_data/waka_time"
+import Tools from "./components/Tools";
+import Firends from "./components/Firends";
 
 const App = () => {
     const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
@@ -57,11 +60,17 @@ const App = () => {
                 skipUrl={Config.skipUrl}
                 headPortrait={Config.imgUrl.headPortrait}
             />
-            <AboutMe
-                wakatimeData={wakatimeData}
-                imgUrl={Config.imgUrl}
-                skipUrl={Config.skipUrl}
-            />
+            <Routes>
+                <Route path="/" element={
+                    <AboutMe
+                        wakatimeData={wakatimeData}
+                        imgUrl={Config.imgUrl}
+                        skipUrl={Config.skipUrl}
+                    />
+                }/>
+                <Route path="/tools" element={<Tools />}/>
+                <Route path="/firends" element={<Firends />}/>
+            </Routes>
             <Footer
                 github={Config.skipUrl.github}
             />
