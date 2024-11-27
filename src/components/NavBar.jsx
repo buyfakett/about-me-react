@@ -20,6 +20,20 @@ const NavBar = ({skipUrl, headPortrait}) => {
                         />
                     </a>
                     {/* 链接 */}
+                    {/*<a*/}
+                    {/*    href="/tools"*/}
+                    {/*    rel="noopener noreferrer"*/}
+                    {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
+                    {/*>*/}
+                    {/*    Tools*/}
+                    {/*</a>*/}
+                    {/*<a*/}
+                    {/*    href="/urls"*/}
+                    {/*    rel="noopener noreferrer"*/}
+                    {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
+                    {/*>*/}
+                    {/*    Urls*/}
+                    {/*</a>*/}
                     <a
                         href={skipUrl.note}
                         target="_blank"

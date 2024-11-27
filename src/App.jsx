@@ -6,7 +6,7 @@ import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
 import {wakatineDefaultData} from "./default_data/waka_time"
 import Tools from "./components/Tools";
-import Firends from "./components/Firends";
+import Urls from "./components/Urls";
 
 const App = () => {
     const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
@@ -69,7 +69,7 @@ const App = () => {
                     />
                 }/>
                 <Route path="/tools" element={<Tools />}/>
-                <Route path="/firends" element={<Firends />}/>
+                <Route path="/urls" element={<Urls />}/>
             </Routes>
             <Footer
                 github={Config.skipUrl.github}

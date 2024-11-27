@@ -1,6 +1,6 @@
 import React from "react";
 
-const Firends = () => {
+const Urls = () => {
     return (
         <div className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4">
             Firends
@@ -8,4 +8,4 @@ const Firends = () => {
     );
 };
 
-export default Firends;
+export default Urls;
