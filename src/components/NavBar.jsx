@@ -1,10 +1,11 @@
 import React, {useContext} from "react";
 import {FaGithub} from "react-icons/fa";
 import {FaBilibili} from "react-icons/fa6";
-import {ThemeContext} from "../util/ThemeContext";
+// import {ThemeContext} from "../util/ThemeContext";
+import {CiShare1} from "react-icons/ci";
 
 const NavBar = ({skipUrl, headPortrait}) => {
-    const { theme, toggleTheme } = useContext(ThemeContext);
+    // const { theme, toggleTheme } = useContext(ThemeContext);
     return (
         <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
@@ -23,19 +24,22 @@ const NavBar = ({skipUrl, headPortrait}) => {
                         href={skipUrl.note}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
+                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
                     >
                         Note
+                        <CiShare1 className="ml-1 w-3 h-3"/>
                     </a>
                     <a
                         href={skipUrl.blog}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
+                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
                     >
                         Blog
+                        <CiShare1 className="ml-1 w-3 h-3"/>
                     </a>
                 </div>
+
                 {/* 右侧 */}
                 <div className="flex space-x-10">
                     <a
