@@ -1,8 +1,8 @@
 import React from "react";
 import {motion} from "framer-motion";
-import HeadPortrait from "./AboutMe/HeadPortrait";
-import LanguageSection from "./AboutMe/LanguageSection";
-import WorkExperience from "./AboutMe/WorkExperience";
+import HeadPortrait from "./HeadPortrait";
+import LanguageSection from "./LanguageSection";
+import WorkExperience from "./WorkExperience";
 
 const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
     return (
