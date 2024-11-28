@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@douyinfe/semi-ui": "^2.70.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
     "framer-motion": "^10.18.0",
