@@ -1,6 +1,7 @@
 import React from "react";
 import {NeonGradientCard} from "../magicui/NeonGradientCard";
 import {motion} from "framer-motion";
+import {Image} from '@douyinfe/semi-ui';
 
 
 const WorkExperience = ({imgUrl, skipUrl}) => {
@@ -28,7 +29,7 @@ const WorkExperience = ({imgUrl, skipUrl}) => {
                 {/*第一个卡片*/}
                 <div className="flex items-center gap-4 w-[900px] h-[200px]">
                     <div className="flex-shrink-0">
-                        <img
+                        <Image
                             src={imgUrl.muen}
                             alt="沐恩网络"
                             className="w-12 h-12 rounded mr-5"
@@ -53,7 +54,7 @@ const WorkExperience = ({imgUrl, skipUrl}) => {
                 {/*第二个卡片*/}
                 <div className="flex items-center gap-4 w-[900px] h-[200px] mt-10">
                     <div className="flex-shrink-0">
-                        <img
+                        <Image
                             src={imgUrl.zhenshan}
                             alt="臻善科技"
                             className="w-12 h-12 rounded mr-5"
