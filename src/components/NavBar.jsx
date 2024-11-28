@@ -3,6 +3,7 @@ import {FaGithub} from "react-icons/fa";
 import {FaBilibili} from "react-icons/fa6";
 // import {ThemeContext} from "../util/ThemeContext";
 import {CiShare1} from "react-icons/ci";
+import {Link} from "react-router-dom";
 
 const NavBar = ({skipUrl, headPortrait}) => {
     // const { theme, toggleTheme } = useContext(ThemeContext);
@@ -12,28 +13,26 @@ const NavBar = ({skipUrl, headPortrait}) => {
                 {/* 左侧 */}
                 <div className="flex items-center space-x-10">
                     {/* 头像 */}
-                    <a href="/" className="img-box">
+                    <Link to="/" className="img-box">
                         <img
                             className="w-10 h-10 object-cover"
                             src={headPortrait}
                             alt="head portrait"
                         />
-                    </a>
+                    </Link>
                     {/* 链接 */}
-                    {/*<a*/}
-                    {/*    href="/tools"*/}
-                    {/*    rel="noopener noreferrer"*/}
+                    {/*<Link*/}
+                    {/*    to="/tools"*/}
                     {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
                     {/*>*/}
                     {/*    Tools*/}
-                    {/*</a>*/}
-                    {/*<a*/}
-                    {/*    href="/urls"*/}
-                    {/*    rel="noopener noreferrer"*/}
+                    {/*</Link>*/}
+                    {/*<Link*/}
+                    {/*    to="/urls"*/}
                     {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
                     {/*>*/}
                     {/*    Urls*/}
-                    {/*</a>*/}
+                    {/*</Link>*/}
                     <a
                         href={skipUrl.note}
                         target="_blank"
