@@ -1,25 +1,26 @@
-import React, {useContext} from "react";
+import React from "react";
 import {FaGithub} from "react-icons/fa";
 import {FaBilibili} from "react-icons/fa6";
-// import {ThemeContext} from "../util/ThemeContext";
 import {CiShare1} from "react-icons/ci";
 import {Link} from "react-router-dom";
+import {Divider} from '@douyinfe/semi-ui';
 
-const NavBar = ({skipUrl, headPortrait}) => {
-    // const { theme, toggleTheme } = useContext(ThemeContext);
+const NavBar = ({skipUrl}) => {
     return (
         <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">
                 {/* 左侧 */}
                 <div className="flex items-center space-x-10">
                     {/* 头像 */}
-                    <Link to="/" className="img-box">
-                        <img
-                            className="w-10 h-10 object-cover"
-                            src={headPortrait}
-                            alt="head portrait"
-                        />
+                    <Link to="/">
+                        <span className="font-bold text-lg">
+                        buyfakett
+                        </span>
                     </Link>
+
+                    {/*分割线*/}
+                    <Divider layout="vertical" margin='20px' className="bg-white"/>
+
                     {/* 链接 */}
                     {/*<Link*/}
                     {/*    to="/tools"*/}
@@ -71,12 +72,6 @@ const NavBar = ({skipUrl, headPortrait}) => {
                     >
                         <FaBilibili size={24}/>
                     </a>
-                    {/*<button*/}
-                    {/*    onClick={toggleTheme}*/}
-                    {/*    className="mt-1 px-4 py-2 bg-blue-500 dark:text-white rounded hover:bg-blue-600 dark:bg-yellow-500 dark:hover:bg-yellow-600"*/}
-                    {/*>*/}
-                    {/*    切换主题*/}
-                    {/*</button>*/}
                 </div>
             </div>
         </nav>

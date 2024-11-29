@@ -58,7 +58,6 @@ const App = () => {
         <div className="bg-gray-900 text-gray-300">
             <NavBar
                 skipUrl={Config.skipUrl}
-                headPortrait={Config.imgUrl.headPortrait}
             />
             <Routes>
                 <Route path="/" element={
