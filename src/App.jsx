@@ -9,6 +9,9 @@ import Tools from "./components/Tools";
 import Urls from "./components/Urls";
 
 const App = () => {
+    // semi-design的主题默认为暗色
+    document.body.setAttribute('theme-mode', 'dark');
+
     const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
 
     useEffect(() => {
