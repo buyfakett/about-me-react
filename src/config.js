@@ -30,7 +30,7 @@ export const pageVariants = {
     exit: { opacity: 0, x: 100 },
 };
 
-export const SOFTWARE_TOOLS = {
+export const softwareTools = {
     development: {
         title: 'Development',
         sections: {
@@ -109,7 +109,7 @@ export const SOFTWARE_TOOLS = {
 }
 
 
-export const DEVICES = {
+export const devices = {
     computing: {
         title: 'Computing Devices',
         sections: {

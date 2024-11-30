@@ -22,12 +22,12 @@ const NavBar = ({skipUrl}) => {
                     <Divider layout="vertical" margin='20px' className="bg-white"/>
 
                     {/* 链接 */}
-                    <Link
-                        to="/tools"
-                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
-                    >
-                        Tools
-                    </Link>
+                    {/*<Link*/}
+                    {/*    to="/tools"*/}
+                    {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
+                    {/*>*/}
+                    {/*    Tools*/}
+                    {/*</Link>*/}
                     {/*<Link*/}
                     {/*    to="/urls"*/}
                     {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
