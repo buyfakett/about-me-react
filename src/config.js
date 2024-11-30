@@ -24,6 +24,12 @@ export const apiList = {
     wakaTime: `${apiBaseUrl}/waka_time.json`,
 }
 
+export const pageVariants = {
+    initial: { opacity: 0, x: -100 },
+    animate: { opacity: 1, x: 0 },
+    exit: { opacity: 0, x: 100 },
+};
+
 export const SOFTWARE_TOOLS = {
     development: {
         title: 'Development',

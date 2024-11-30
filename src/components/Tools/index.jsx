@@ -1,15 +1,21 @@
 import React from "react";
+import {motion} from "framer-motion";
 import {Button} from '@douyinfe/semi-ui';
 import {IoIosArrowBack} from "react-icons/io";
 import {useNavigate} from "react-router-dom";
 import CategorySection from "./CategorySection";
-import {DEVICES, SOFTWARE_TOOLS} from "../../config";
+import {DEVICES, pageVariants, SOFTWARE_TOOLS} from "../../config";
 
 const Tools = () => {
     const navigate = useNavigate()
     return (
-        <div
+        <motion.div
             className="w-[60%] mx-auto min-h-screen dark:bg-gray-900 text-white flex flex-col items-center p-4 mt-3"
+            variants={pageVariants}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{duration: 0.5}}
         >
             <div className="w-full flex justify-start text-white">
                 <Button
@@ -30,7 +36,7 @@ const Tools = () => {
                 <CategorySection title="Software Tools" categories={Object.values(SOFTWARE_TOOLS)}/>
                 <CategorySection title="Hardware Devices" categories={Object.values(DEVICES)}/>
             </div>
-        </div>
+        </motion.div>
     );
 };
 
