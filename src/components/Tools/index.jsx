@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {Button} from '@douyinfe/semi-ui';
 import {IoIosArrowBack} from "react-icons/io";
 import {useNavigate} from "react-router-dom";
-import CategorySection from "./CategorySection";
+import ToolsCategorySection from "./ToolsCategorySection";
 import {devices, pageVariants, softwareTools} from "../../config";
 
 const Tools = () => {
@@ -33,8 +33,8 @@ const Tools = () => {
                     <p>Tools, software, and devices I use daily</p>
                 </div>
 
-                <CategorySection title="Software Tools" categories={Object.values(softwareTools)}/>
-                <CategorySection title="Hardware Devices" categories={Object.values(devices)}/>
+                <ToolsCategorySection title="Software Tools" categories={Object.values(softwareTools)}/>
+                <ToolsCategorySection title="Hardware Devices" categories={Object.values(devices)}/>
             </div>
         </motion.div>
     );

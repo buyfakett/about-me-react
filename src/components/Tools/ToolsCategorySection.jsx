@@ -1,7 +1,7 @@
 import React from 'react';
 import ToolSection from './ToolSection';
 
-const CategorySection = ({title, categories}) => {
+const ToolsCategorySection = ({title, categories}) => {
     return (
         <div>
             <h2 className="mb-6 text-xl font-bold">{title}</h2>
@@ -19,4 +19,4 @@ const CategorySection = ({title, categories}) => {
     );
 };
 
-export default CategorySection;
+export default ToolsCategorySection;
