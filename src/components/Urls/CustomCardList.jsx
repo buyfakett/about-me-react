@@ -11,7 +11,7 @@ const CustomCardList = ({data, className}) => {
                 'flex flex-col rounded-xl border border-gray-200 p-5 gap-y-6 sm:gap-y-8'
             )}
         >
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-4 gap-4">
                 {data.map((item, index) => (
                     <Card
                         key={index}
