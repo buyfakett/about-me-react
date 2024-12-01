@@ -30,6 +30,39 @@ export const pageVariants = {
     exit: { opacity: 0, x: 100 },
 };
 
+export const frindsList = [
+    {
+        title: '声控烤箱',
+        src: 'https://blog.kazoottt.top/',
+        describe: '毛怪俱乐部前端',
+        img_src: 'https://img.tteam.icu/i/2024/11/30/114ctsb-3.webp'
+    },
+    {
+        title: '行走在云端',
+        src: 'https://hexo.tomsawyer2.xyz/',
+        describe: '毛怪俱乐部前端',
+        img_src: 'https://img.tteam.icu/i/2024/11/30/116en4y-3.webp'
+    },
+    {
+        title: 'Poivre',
+        src: 'https://blog.poivrehxx.site/',
+        describe: '毛怪俱乐部前端',
+        img_src: 'https://img.tteam.icu/i/2024/12/01/xu5aoq-3.webp'
+    },
+    {
+        title: 'Roi\'s Blog',
+        src: 'https://roi.moe/',
+        describe: '毛怪俱乐部运维',
+        img_src: 'https://img.tteam.icu/i/2024/12/01/r8p265-3.webp'
+    },
+    {
+        title: '思无道siudao',
+        src: 'https://siwudao.github.io/',
+        describe: '毛怪俱乐部切片',
+        img_src: 'https://img.tteam.icu/i/2024/11/30/12e1ezb-3.webp'
+    }
+]
+
 export const softwareTools = {
     development: {
         title: 'Development',
@@ -136,6 +169,36 @@ export const devices = {
             }
         }
     },
+    computer_device: {
+        title: 'Computer Input Device',
+        sections: {
+            devices: {
+                title: 'Devices',
+                tools: [
+                    {
+                        name: '达尔优 A87 Pro',
+                        description: '家用',
+                    },
+                    {
+                        name: '达尔优 A87',
+                        description: '公司用',
+                    },
+                    {
+                        name: '罗技 G304',
+                        description: '家用&公司用',
+                    },
+                    {
+                        name: '小米挂灯 1S',
+                        description: '家用护眼',
+                    },
+                    {
+                        name: 'KOORUI MB27S7U',
+                        description: '家用副屏',
+                    }
+                ]
+            }
+        }
+    },
     mobile: {
         title: 'Mobile Devices',
         sections: {
@@ -185,6 +248,10 @@ export const devices = {
                     {
                         name: 'Sony WH-XM3',
                         description: '头戴式耳机'
+                    },
+                    {
+                        name: '小爱音响 Pro',
+                        description: '智能邮箱'
                     }
                 ]
             }

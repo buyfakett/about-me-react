@@ -1,6 +1,7 @@
 import React from "react";
 import {FaCloudflare, FaReact} from "react-icons/fa";
 import {RiTailwindCssFill} from "react-icons/ri";
+import {IconSemiLogo} from "@douyinfe/semi-icons";
 
 const Footer = ({github}) => {
     return (
@@ -31,11 +32,18 @@ const Footer = ({github}) => {
                             <span>Tailwind CSS</span>
                         </a>
                         <a
+                            href="https://semi.design/zh-CN/"
+                            className="flex items-center space-x-1 text-blue-400 hover:underline"
+                        >
+                            <IconSemiLogo className="text-black text-lg"/>
+                            <span>Semi Design</span>
+                        </a>
+                        <a
                             href="https://www.cloudflare.com/"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaCloudflare className="text-orange-500 text-lg"/>
-                            <span>Cloudflare</span>
+                            <span>Cloud flare</span>
                         </a>
                     </p>
                 </div>

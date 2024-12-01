@@ -28,12 +28,12 @@ const NavBar = ({skipUrl}) => {
                     {/*>*/}
                     {/*    Tools*/}
                     {/*</Link>*/}
-                    {/*<Link*/}
-                    {/*    to="/urls"*/}
-                    {/*    className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"*/}
-                    {/*>*/}
-                    {/*    Urls*/}
-                    {/*</Link>*/}
+                    <Link
+                        to="/urls"
+                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200"
+                    >
+                        Urls
+                    </Link>
                     <a
                         href={skipUrl.note}
                         target="_blank"

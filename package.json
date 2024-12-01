@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
+    "@douyinfe/semi-icons": "^2.70.1",
     "@douyinfe/semi-ui": "^2.70.1",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
