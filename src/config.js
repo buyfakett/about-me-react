@@ -69,7 +69,7 @@ export const urlList = {
     },
     favorite_blogs: {
         title: 'Favorite Blogs',
-        describe: 'I usually read',
+        describe: 'I usually read for RSS',
         data: [
             {
                 title: '星露谷值班站长',
