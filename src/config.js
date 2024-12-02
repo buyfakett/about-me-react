@@ -25,43 +25,65 @@ export const apiList = {
 }
 
 export const pageVariants = {
-    initial: { opacity: 0, x: -100 },
-    animate: { opacity: 1, x: 0 },
-    exit: { opacity: 0, x: 100 },
+    initial: {opacity: 0, x: -100},
+    animate: {opacity: 1, x: 0},
+    exit: {opacity: 0, x: 100},
 };
 
-export const frindsList = [
-    {
-        title: '声控烤箱',
-        src: 'https://blog.kazoottt.top/',
-        describe: '毛怪俱乐部前端',
-        img_src: 'https://img.tteam.icu/i/2024/11/30/114ctsb-3.webp'
+export const urlList = {
+    friends: {
+        title: 'Friends',
+        describe: 'friends and guys',
+        data: [
+            {
+                title: '声控烤箱',
+                src: 'https://blog.kazoottt.top/',
+                describe: '毛怪俱乐部前端',
+                img_src: 'https://img.tteam.icu/i/2024/11/30/114ctsb-3.webp'
+            },
+            {
+                title: '行走在云端',
+                src: 'https://hexo.tomsawyer2.xyz/',
+                describe: '毛怪俱乐部前端',
+                img_src: 'https://img.tteam.icu/i/2024/11/30/116en4y-3.webp'
+            },
+            {
+                title: 'Poivre',
+                src: 'https://blog.poivrehxx.site/',
+                describe: '毛怪俱乐部前端',
+                img_src: 'https://img.tteam.icu/i/2024/12/01/xu5aoq-3.webp'
+            },
+            {
+                title: 'Roi\'s Blog',
+                src: 'https://roi.moe/',
+                describe: '毛怪俱乐部运维',
+                img_src: 'https://img.tteam.icu/i/2024/12/01/r8p265-3.webp'
+            },
+            {
+                title: '思无道siudao',
+                src: 'https://siwudao.github.io/',
+                describe: '毛怪俱乐部切片',
+                img_src: 'https://img.tteam.icu/i/2024/11/30/12e1ezb-3.webp'
+            }
+        ]
     },
-    {
-        title: '行走在云端',
-        src: 'https://hexo.tomsawyer2.xyz/',
-        describe: '毛怪俱乐部前端',
-        img_src: 'https://img.tteam.icu/i/2024/11/30/116en4y-3.webp'
-    },
-    {
-        title: 'Poivre',
-        src: 'https://blog.poivrehxx.site/',
-        describe: '毛怪俱乐部前端',
-        img_src: 'https://img.tteam.icu/i/2024/12/01/xu5aoq-3.webp'
-    },
-    {
-        title: 'Roi\'s Blog',
-        src: 'https://roi.moe/',
-        describe: '毛怪俱乐部运维',
-        img_src: 'https://img.tteam.icu/i/2024/12/01/r8p265-3.webp'
-    },
-    {
-        title: '思无道siudao',
-        src: 'https://siwudao.github.io/',
-        describe: '毛怪俱乐部切片',
-        img_src: 'https://img.tteam.icu/i/2024/11/30/12e1ezb-3.webp'
+    favorite_blogs: {
+        title: 'Favorite Blogs',
+        describe: 'I usually read',
+        data: [
+            {
+                title: '星露谷值班站长',
+                src: 'https://www.aityp.com/',
+                img_src: 'https://img.tteam.icu/i/2024/12/02/1144rd1-3.webp'
+            },
+            {
+                title: '我不是咕咕鸽',
+                src: 'https://blog.laoda.de/',
+                img_src: 'https://img.tteam.icu/i/2024/12/02/1142pyt-3.webp'
+            }
+        ]
     }
-]
+}
 
 export const softwareTools = {
     development: {

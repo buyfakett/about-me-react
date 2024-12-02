@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import {Button} from "@douyinfe/semi-ui";
 import {IoIosArrowBack} from "react-icons/io";
 import {useNavigate} from "react-router-dom";
-import {frindsList, pageVariants} from "../../config";
+import {pageVariants, urlList} from "../../config";
 import ToolsCategorySection from "./UrlsCategorySection";
 
 const Index = () => {
@@ -28,7 +28,17 @@ const Index = () => {
                 </Button>
             </div>
 
-            <ToolsCategorySection title="Friends" data={frindsList} />
+            {Object.keys(urlList).map((categoryKey) => {
+                const category = urlList[categoryKey];
+                return (
+                    <ToolsCategorySection
+                        key={categoryKey}
+                        title={category.title}
+                        describe={category.describe}
+                        data={category.data}
+                    />
+                );
+            })}
 
         </motion.div>
     );
