@@ -10,7 +10,11 @@ const Footer = ({github}) => {
                 <div className="max-w-4xl mx-auto">
                     <p className="mb-2">
                         © 2024
-                        <a href={github} className="text-blue-400 hover:underline ml-1">
+                        <a
+                            href={github}
+                            target="_blank"
+                            className="text-blue-400 hover:underline ml-1"
+                        >
                             buyfakett
                         </a>.
                         All rights reserved.
@@ -19,6 +23,7 @@ const Footer = ({github}) => {
                         <span>Powered by</span>
                         <a
                             href="https://reactjs.org/"
+                            target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaReact className="text-cyan-500 text-lg"/>
@@ -26,6 +31,7 @@ const Footer = ({github}) => {
                         </a>
                         <a
                             href="https://tailwindcss.com/"
+                            target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <RiTailwindCssFill className="text-teal-400 text-lg"/>
@@ -33,6 +39,7 @@ const Footer = ({github}) => {
                         </a>
                         <a
                             href="https://semi.design/zh-CN/"
+                            target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <IconSemiLogo className="text-black text-lg"/>
@@ -40,6 +47,7 @@ const Footer = ({github}) => {
                         </a>
                         <a
                             href="https://www.cloudflare.com/"
+                            target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaCloudflare className="text-orange-500 text-lg"/>
