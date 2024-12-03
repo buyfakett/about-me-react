@@ -74,7 +74,7 @@ export const urlList = {
             {
                 title: '星露谷值班站长',
                 src: 'https://www.aityp.com/',
-                img_src: 'https://img.tteam.icu/i/2024/12/02/1144rd1-3.webp'
+                img_src: 'https://img.tteam.icu/i/2024/12/03/ikaufc-3.webp'
             },
             {
                 title: '我不是咕咕鸽',
