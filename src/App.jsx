@@ -31,10 +31,10 @@ const App = () => {
     useEffect(() => {
         // 判断生产环境并处理逻辑
         if (process.env.NODE_ENV === "production") {
-            // 判断域名并重定向
-            if (window.location.hostname !== Config.skipUrl.aboutMe) {
-                window.location.replace(`https://${Config.skipUrl.aboutMe}`);
-            }
+            // 判断域名并重定向(cloudflare中开启重定向后代码注释)
+            // if (window.location.hostname !== Config.skipUrl.aboutMe) {
+            //     window.location.replace(`https://${Config.skipUrl.aboutMe}`);
+            // }
 
             // 注入 Umami 脚本
             const script = document.createElement("script");
