@@ -137,8 +137,13 @@ export const urlList = {
             },
             {
                 title: 'servarica',
-                src: 'https://clients.servarica.com/',
+                src: 'https://clients.servarica.com/aff.php?aff=917',
                 describe: '大盘鸡'
+            },
+            {
+                title: 'VKVM',
+                src: 'https://www.vkvm.info/aff/DSJLPDTA',
+                describe: '中转机'
             },
         ]
     }
