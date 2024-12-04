@@ -3,6 +3,8 @@ import {motion} from "framer-motion";
 import clsx from "clsx";
 import {NumberTicker} from "../magicui/NumberTicker";
 import {TypingAnimation} from "../magicui/TypingAnimation";
+import SkillSection from "./SkillSection";
+import {languageSkillData} from "../../config";
 
 const LanguageSection = ({start_time, languages}) => {
     return (
@@ -26,8 +28,13 @@ const LanguageSection = ({start_time, languages}) => {
                 </a>
             </div>
 
+            {/* 技能展示 */}
+            <div className="w-full max-w-xl mt-3">
+                <SkillSection sections={languageSkillData}/>
+            </div>
+
             {/* 语言使用时间排行榜 */}
-            <section className="w-full max-w-xl">
+            <section className="w-full max-w-xl mt-10">
                 <h2 className="text-2xl font-semibold mb-4">Languages I Use</h2>
                 <div className="space-y-4">
                     {languages.map((lang, index) => (

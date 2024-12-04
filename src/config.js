@@ -31,6 +31,21 @@ export const pageVariants = {
     exit: {opacity: 0, x: 100},
 };
 
+export const languageSkillData = [
+    {
+        title: "Frontend",
+        items: ["react(熟悉)", "vue2(熟悉)", "uniapp(了解)"],
+    },
+    {
+        title: "Backend",
+        items: ["python(熟悉)", "golang(了解)", "PHP(了解)", "java(了解)"],
+    },
+    {
+        title: "Others",
+        items: ["shell(熟悉)", "VRL(了解)"],
+    },
+];
+
 export const urlList = {
     friends: {
         title: 'Friends',
