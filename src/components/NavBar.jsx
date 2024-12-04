@@ -4,6 +4,7 @@ import {FaBilibili} from "react-icons/fa6";
 import {CiShare1} from "react-icons/ci";
 import {Link} from "react-router-dom";
 import {Divider} from '@douyinfe/semi-ui';
+import {MdEmail} from "react-icons/md";
 
 const NavBar = ({skipUrl}) => {
     return (
@@ -71,6 +72,14 @@ const NavBar = ({skipUrl}) => {
                         className="hover:text-gray-400 text-blue-400 transition-colors duration-200"
                     >
                         <FaBilibili size={24}/>
+                    </a>
+                    <a
+                        href={skipUrl.email}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-gray-400 text-blue-700 transition-colors duration-200"
+                    >
+                        <MdEmail size={24} />
                     </a>
                 </div>
             </div>

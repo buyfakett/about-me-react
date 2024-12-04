@@ -6,6 +6,7 @@ export const skipUrl = {
     bili: "https://space.bilibili.com/11479221",
     muen: "https://www.tmofamily.com",
     zhenshan: "https://www.gisquest.com",
+    email: "mailto:work@tteam.icu",
 };
 
 export const imgUrl = {
