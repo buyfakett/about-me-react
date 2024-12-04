@@ -51,7 +51,7 @@ const Footer = ({github}) => {
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaReact className="text-red-500 text-lg" />
-                            <span>Semi Design</span>
+                            <span>react icons</span>
                         </a>
                         <a
                             href="https://www.cloudflare.com/"
