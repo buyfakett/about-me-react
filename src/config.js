@@ -10,7 +10,7 @@ export const skipUrl = {
 };
 
 export const imgUrl = {
-    headPortrait: "https://tc.tteam.icu/i/2024/10/22/xhykcg-3.webp",
+    headPortrait: "https://img.tteam.icu/i/2024/10/22/xhykcg-3.webp",
     muen: "https://img.tteam.icu/i/2024/11/23/sc6avk-3.webp",
     zhenshan: "https://img.tteam.icu/i/2024/11/23/sfh8fk-3.webp",
 };
