@@ -65,7 +65,7 @@ export const urlList = {
                 src: 'https://siwudao.github.io/',
                 describe: '毛怪俱乐部切片',
                 img_src: 'https://img.tteam.icu/i/2024/11/30/12e1ezb-3.webp'
-            }
+            },
         ]
     },
     favorite_blogs: {
@@ -81,7 +81,25 @@ export const urlList = {
                 title: '我不是咕咕鸽',
                 src: 'https://blog.laoda.de/',
                 img_src: 'https://img.tteam.icu/i/2024/12/02/1142pyt-3.webp'
-            }
+            },
+        ]
+    },
+    tools: {
+        title: 'Tools',
+        describe: 'Tools commonly used in development',
+        data: [
+            {
+                title: 'Quick Reference',
+                src: 'https://quickref.cn/',
+                describe: '开发人员速查表',
+                img_src: 'https://img.tteam.icu/i/2024/12/04/mgpzfi-3.svg'
+            },
+            {
+                title: 'Image compression',
+                src: 'https://tinypng.com/',
+                describe: '图片无损压缩',
+                img_src: 'https://img.tteam.icu/i/2024/12/04/n9qbcc-3.webp'
+            },
         ]
     }
 }
