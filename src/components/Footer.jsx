@@ -46,6 +46,14 @@ const Footer = ({github}) => {
                             <span>Semi Design</span>
                         </a>
                         <a
+                            href="https://react-icons.github.io/"
+                            target="_blank"
+                            className="flex items-center space-x-1 text-blue-400 hover:underline"
+                        >
+                            <FaReact className="text-red-500 text-lg" />
+                            <span>Semi Design</span>
+                        </a>
+                        <a
                             href="https://www.cloudflare.com/"
                             target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
