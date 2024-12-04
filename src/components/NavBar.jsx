@@ -77,7 +77,7 @@ const NavBar = ({skipUrl}) => {
                         href={skipUrl.email}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="hover:text-gray-400 text-blue-700 transition-colors duration-200"
+                        className="hover:text-gray-400 text-orange-400 transition-colors duration-200"
                     >
                         <MdEmail size={24} />
                     </a>
