@@ -101,6 +101,31 @@ export const urlList = {
                 img_src: 'https://img.tteam.icu/i/2024/12/04/n9qbcc-3.webp'
             },
         ]
+    },
+    cloud_servers: {
+        title: 'Cloud Servers',
+        describe: 'Cloud servers I use',
+        data: [
+            {
+                title: 'aliyun',
+                src: 'https://www.aliyun.com/',
+                img_src: 'https://img.tteam.icu/i/2024/12/04/ulrew2-3.webp'
+            },
+            {
+                title: 'txyun',
+                src: 'https://cloud.tencent.com/',
+                img_src: 'https://img.tteam.icu/i/2024/12/04/umduu0-3.webp'
+            },
+            {
+                title: 'hdy',
+                src: 'https://www.szhdy.com/',
+            },
+            {
+                title: 'servarica',
+                src: 'https://clients.servarica.com/',
+                describe: '大盘鸡'
+            },
+        ]
     }
 }
 
