@@ -52,7 +52,7 @@ const WorkExperience = ({imgUrl, skipUrl}) => {
                         <ul className="text-xs md:text-sm list-disc pl-4 mt-2 space-y-1">
                             <li>内部系统前后端优化</li>
                             <li>自动化系统、监控系统、备份系统优化</li>
-                            <li>服务器、监控、数据库等迁移集群</li>
+                            <li>服务器、监控、数据库等迁移和部署集群</li>
                             <li>线上问题分析, 提出优化方案</li>
                         </ul>
                     </NeonGradientCard>
