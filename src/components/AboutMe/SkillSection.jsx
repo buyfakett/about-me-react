@@ -1,10 +1,17 @@
 import React from "react";
+import {motion} from "framer-motion";
 
 const SkillSection = ({sections}) => {
     return (
         <section className="flex flex-col gap-y-5">
             {sections.map((section, index) => (
-                <div className="flex flex-col gap-y-3" key={index}>
+                <motion.div
+                    className="flex flex-col gap-y-3"
+                    key={index}
+                    initial={{opacity: 0, scale: 0.9}}
+                    animate={{opacity: 1, scale: 1}}
+                    transition={{duration: 0.5, delay: index * 0.2}}
+                >
                     {/* 左侧标题 */}
                     <h3 className="font-medium text-lg">{section.title}</h3>
                     {/* 右侧按钮组 */}
@@ -18,7 +25,7 @@ const SkillSection = ({sections}) => {
                             </button>
                         ))}
                     </div>
-                </div>
+                </motion.div>
             ))}
         </section>
     );
