@@ -7,6 +7,7 @@ import * as Config from "./config"
 import {wakatineDefaultData} from "./default_data/waka_time"
 import Tools from "./components/Tools";
 import Urls from "./components/Urls";
+import NotFound from "./404";
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -78,6 +79,7 @@ const App = () => {
                 }/>
                 <Route path="/tools" element={<Tools />}/>
                 <Route path="/urls" element={<Urls />}/>
+                <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer
                 github={Config.skipUrl.github}
