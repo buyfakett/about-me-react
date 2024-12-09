@@ -37,11 +37,17 @@ const App = () => {
             // }
 
             // 注入 Umami 脚本
-            const script = document.createElement("script");
-            script.src = Config.umamiScript;
-            script.defer = true;
-            script.dataset.websiteId = Config.umamiId;
-            document.head.appendChild(script);
+            const umamiScript = document.createElement("script");
+            umamiScript.src = Config.umamiScript;
+            umamiScript.defer = true;
+            umamiScript.dataset.websiteId = Config.umamiId;
+            document.head.appendChild(umamiScript);
+        } else {
+            // 在开发的时候注入react-scan
+            const reactScanScript = document.createElement("script");
+            reactScanScript.src = "https://unpkg.com/react-scan/dist/auto.global.js";
+            reactScanScript.async = true;
+            document.head.appendChild(reactScanScript);
         }
 
         // 调用 API 获取数据
