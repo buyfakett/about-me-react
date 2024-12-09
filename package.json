@@ -42,7 +42,10 @@
       "/urls",
       "/tools"
     ],
-    "source" : "build"
+    "source": "build",
+    "puppeteerConfig": {
+      "headless": true
+    }
   },
   "devDependencies": {
     "react-scripts": "^5.0.1",
