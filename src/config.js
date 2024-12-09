@@ -115,6 +115,12 @@ export const urlList = {
                 describe: '图片无损压缩',
                 img_src: 'https://img.tteam.icu/i/2024/12/04/n9qbcc-3.webp'
             },
+            {
+                title: 'Ico download',
+                src: 'https://icon-sets.iconify.design/',
+                describe: '图标下载',
+                img_src: 'https://img.tteam.icu/i/2024/12/09/j5s4hk-3.svg'
+            },
         ]
     },
     cloud_servers: {
@@ -122,28 +128,31 @@ export const urlList = {
         describe: 'Cloud servers I use',
         data: [
             {
-                title: 'aliyun',
+                title: '阿里云',
                 src: 'https://www.aliyun.com/',
                 img_src: 'https://img.tteam.icu/i/2024/12/04/ulrew2-3.webp'
             },
             {
-                title: 'txyun',
+                title: '腾讯云',
                 src: 'https://cloud.tencent.com/',
                 img_src: 'https://img.tteam.icu/i/2024/12/04/umduu0-3.webp'
             },
             {
-                title: 'hdy',
+                title: '狐帝云',
                 src: 'https://www.szhdy.com/',
+                img_src: 'https://img.tteam.icu/i/2024/12/09/itpkib-3.webp'
             },
             {
                 title: 'servarica',
                 src: 'https://clients.servarica.com/aff.php?aff=917',
-                describe: '大盘鸡'
+                describe: '大盘鸡',
+                img_src: 'https://img.tteam.icu/i/2024/12/09/iv06il-3.webp'
             },
             {
                 title: 'VKVM',
                 src: 'https://www.vkvm.info/aff/DSJLPDTA',
-                describe: '中转机'
+                describe: '中转机',
+                img_src: 'https://img.tteam.icu/i/2024/12/09/iucx4h-3.webp'
             },
         ]
     }

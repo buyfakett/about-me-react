@@ -32,7 +32,7 @@ const CustomCardList = ({data, className}) => {
                                     size="default"
                                     src={
                                         item.img_src ? item.img_src
-                                            : 'https://lf3-static.bytednsdoc.com/obj/eden-cn/ptlz_zlp/ljhwZthlaukjlkulzlp/card-meta-avatar-docs-demo.jpg'
+                                            : 'https://img.tteam.icu/i/2024/12/09/khalgw-3.webp'
                                     }
                                 />
                             }
