@@ -134,12 +134,12 @@ export const urlList = {
             },
             {
                 title: '腾讯云',
-                src: 'https://cloud.tencent.com/',
+                src: 'https://curl.qcloud.com/893Idsq2',
                 img_src: 'https://img.tteam.icu/i/2024/12/04/umduu0-3.webp'
             },
             {
                 title: '狐帝云',
-                src: 'https://www.szhdy.com/',
+                src: 'https://www.szhdy.com/aff/WVTPJNVJ',
                 img_src: 'https://img.tteam.icu/i/2024/12/09/itpkib-3.webp'
             },
             {
