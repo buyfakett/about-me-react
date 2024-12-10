@@ -4,6 +4,7 @@ import HeadPortrait from "./HeadPortrait";
 import LanguageSection from "./LanguageSection";
 import WorkExperience from "./WorkExperience";
 import {pageVariants} from "../../config";
+// import Projects from "./Projects";
 
 const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
     return (
@@ -13,16 +14,16 @@ const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: 0.5 }}
+            transition={{duration: 0.5}}
         >
 
             <HeadPortrait headPortrait={imgUrl.headPortrait}/>
 
             <motion.h1
                 className="text-4xl font-bold mb-4"
-                initial={{ opacity: 0, y: 50 }} // 从下方开始 (y 设为正值)
-                animate={{ opacity: 1, y: 0 }} // 最终回到原始位置
-                transition={{ duration: 1 }} // 动画持续 1 秒
+                initial={{opacity: 0, y: 50}} // 从下方开始 (y 设为正值)
+                animate={{opacity: 1, y: 0}} // 最终回到原始位置
+                transition={{duration: 1}} // 动画持续 1 秒
             >
                 About Me
             </motion.h1>
@@ -36,6 +37,8 @@ const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
                 skipUrl={skipUrl}
                 imgUrl={imgUrl}
             />
+
+            {/*<Projects/>*/}
 
         </motion.div>
     );

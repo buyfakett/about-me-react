@@ -46,6 +46,17 @@ export const languageSkillData = [
     },
 ];
 
+export const projectData = [
+    {
+        title: "ssl",
+        description: "ycischvwiucs",
+        avatar: "https://cdn-icons-png.flaticon.com/512/875/875778.png",
+        cover: "https://cdn-icons-png.flaticon.com/512/875/875778.png",
+        src: "/",
+        full_description: "test"
+    }
+]
+
 export const urlList = {
     friends: {
         title: 'Friends',
