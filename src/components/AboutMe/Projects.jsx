@@ -24,9 +24,9 @@ const Projects = () => {
                         ? "grid-cols-1 place-items-center"
                         : projectData.length === 2
                             ? "grid-cols-2 justify-center"
-                            : projectData.length === 3
-                                ? "grid-cols-3 justify-center"
-                                : "sm:grid-cols-1 md:grid-cols-4"
+                            // : projectData.length === 3
+                            //     ? "grid-cols-3 justify-center"
+                                : "sm:grid-cols-1 md:grid-cols-3"
                 }`}
             >
                 {projectData.map((item, index) => (
@@ -35,6 +35,7 @@ const Projects = () => {
                         animate={{opacity: 1, scale: 1}}
                         transition={{duration: 0.5, delay: index * 0.2}}
                         key={index}
+                        className="mt-5"
                     >
                         <ProjectCard
                             data={item}

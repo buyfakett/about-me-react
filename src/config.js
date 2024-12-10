@@ -48,12 +48,34 @@ export const languageSkillData = [
 
 export const projectData = [
     {
-        title: "ssl",
-        description: "ycischvwiucs",
-        avatar: "https://cdn-icons-png.flaticon.com/512/875/875778.png",
-        cover: "https://cdn-icons-png.flaticon.com/512/875/875778.png",
-        src: "/",
-        full_description: "test"
+        title: "ding_bot",
+        description: "钉钉机器人",
+        src: "https://github.com/buyfakett/ding_bot",
+        full_description: "@机器人可以配合jenkins自动上线服务和分发nginx配置"
+    },
+    {
+        title: "rsspush",
+        description: "检测rss状态",
+        src: "https://github.com/buyfakett/rsspush",
+        full_description: "推送到微信测试号和钉钉机器人的工具"
+    },
+    {
+        title: "centos7_initialization",
+        description: "初始化centos7脚本",
+        src: "https://github.com/buyfakett/centos7_initialization",
+        full_description: "初始化centos7脚本"
+    },
+    {
+        title: "qiniu_upload",
+        description: "七牛云oss上传",
+        src: "https://github.com/buyfakett/qiniu_upload",
+        full_description: "七牛云oss上传封装到docker"
+    },
+    {
+        title: "easy_send_mail",
+        description: "发送邮件",
+        src: "https://github.com/buyfakett/easy_send_mail",
+        full_description: "用shell实现发送邮件"
     }
 ]
 

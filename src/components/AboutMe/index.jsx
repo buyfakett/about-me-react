@@ -4,7 +4,7 @@ import HeadPortrait from "./HeadPortrait";
 import LanguageSection from "./LanguageSection";
 import WorkExperience from "./WorkExperience";
 import {pageVariants} from "../../config";
-// import Projects from "./Projects";
+import Projects from "./Projects";
 
 const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
     return (
@@ -38,7 +38,7 @@ const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
                 imgUrl={imgUrl}
             />
 
-            {/*<Projects/>*/}
+            <Projects/>
 
         </motion.div>
     );
