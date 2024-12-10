@@ -60,6 +60,12 @@ export const projectData = [
         full_description: "推送到微信测试号和钉钉机器人的工具"
     },
     {
+        title: "jenkins-build",
+        description: "devops",
+        src: "https://github.com/ttdockerfile/jenkins-build2/tree/2.474-debian",
+        full_description: "把jenkins、node、python、golang、java等编译工具打进docker中"
+    },
+    {
         title: "centos7_initialization",
         description: "初始化centos7脚本",
         src: "https://github.com/buyfakett/centos7_initialization",
@@ -76,7 +82,7 @@ export const projectData = [
         description: "发送邮件",
         src: "https://github.com/buyfakett/easy_send_mail",
         full_description: "用shell实现发送邮件"
-    }
+    },
 ]
 
 export const urlList = {
