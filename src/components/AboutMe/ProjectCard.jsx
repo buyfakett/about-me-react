@@ -1,14 +1,13 @@
 import React from "react";
 import {Card, Avatar} from "@douyinfe/semi-ui";
 
-const ProjectCard = ({data, index}) => {
+const ProjectCard = ({data}) => {
     const {Meta} = Card;
 
     return (
         <Card
             style={{width: "100%"}}
             className="cursor-pointer"
-            key={index}
             title={
                 <Meta
                     title={data.title}
