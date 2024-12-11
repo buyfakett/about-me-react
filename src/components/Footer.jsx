@@ -68,7 +68,7 @@ const Footer = ({github}) => {
                         >
                             <img src="https://img.tteam.icu/i/2024/12/11/lsxlk0-3.webp"
                                  alt="motion"
-                                 className="w-4 h-4"
+                                 className="w-4 h-4 rounded-full"
                             />
                             <span>motion</span>
                         </a>
@@ -79,7 +79,7 @@ const Footer = ({github}) => {
                         >
                             <img src="https://img.tteam.icu/i/2024/12/11/lwvuhg-3.webp"
                                  alt="magicui"
-                                 className="w-4 h-4"
+                                 className="w-4 h-4 rounded-full"
                             />
                             <span>magicui</span>
                         </a>
