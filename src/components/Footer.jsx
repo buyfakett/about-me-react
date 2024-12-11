@@ -50,7 +50,7 @@ const Footer = ({github}) => {
                             target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
-                            <FaReact className="text-red-500 text-lg" />
+                            <FaReact className="text-red-500 text-lg"/>
                             <span>react icons</span>
                         </a>
                         <a
@@ -60,6 +60,28 @@ const Footer = ({github}) => {
                         >
                             <FaCloudflare className="text-orange-500 text-lg"/>
                             <span>Cloud flare</span>
+                        </a>
+                        <a
+                            href="https://motion.dev/"
+                            target="_blank"
+                            className="flex items-center space-x-1 text-blue-400 hover:underline"
+                        >
+                            <img src="https://img.tteam.icu/i/2024/12/11/lsxlk0-3.webp"
+                                 alt="motion"
+                                 className="w-4 h-4"
+                            />
+                            <span>motion</span>
+                        </a>
+                        <a
+                            href="https://magicui.design/"
+                            target="_blank"
+                            className="flex items-center space-x-1 text-blue-400 hover:underline"
+                        >
+                            <img src="https://img.tteam.icu/i/2024/12/11/lwvuhg-3.webp"
+                                 alt="magicui"
+                                 className="w-4 h-4"
+                            />
+                            <span>magicui</span>
                         </a>
                     </p>
                 </div>
