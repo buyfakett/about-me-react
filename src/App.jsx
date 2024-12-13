@@ -8,6 +8,7 @@ import {wakatineDefaultData} from "./default_data/waka_time"
 import Tools from "./components/Tools";
 import Urls from "./components/Urls";
 import NotFound from "./404";
+import Pictures from "./components/Pictures";
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -79,6 +80,7 @@ const App = () => {
                 }/>
                 <Route path="/tools" element={<Tools />}/>
                 <Route path="/urls" element={<Urls />}/>
+                <Route path="/pictures" element={<Pictures />}/>
                 <Route path="*" element={<NotFound />} />
             </Routes>
             <Footer

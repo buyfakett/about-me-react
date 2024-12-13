@@ -35,6 +35,13 @@ const NavBar = ({skipUrl}) => {
                     >
                         Urls
                     </Link>
+                    {/*只在电脑端显示这个按钮*/}
+                    <Link
+                        to="/pictures"
+                        className="items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200 hidden md:flex"
+                    >
+                        Pictures
+                    </Link>
                     <a
                         href={skipUrl.note}
                         target="_blank"
@@ -79,7 +86,7 @@ const NavBar = ({skipUrl}) => {
                         rel="noopener noreferrer"
                         className="hover:text-gray-400 text-orange-400 transition-colors duration-200"
                     >
-                        <MdEmail size={24} />
+                        <MdEmail size={24}/>
                     </a>
                 </div>
             </div>
