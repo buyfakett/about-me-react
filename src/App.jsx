@@ -45,11 +45,11 @@ const App = () => {
             umamiScript.dataset.websiteId = Config.umamiId;
             document.head.appendChild(umamiScript);
         } else {
-            // 在开发的时候注入react-scan
-            const reactScanScript = document.createElement("script");
-            reactScanScript.src = "https://unpkg.com/react-scan/dist/auto.global.js";
-            reactScanScript.async = true;
-            document.head.appendChild(reactScanScript);
+            // 在开发的时候注入react-scan(现有浏览器插件，不需要了)
+            // const reactScanScript = document.createElement("script");
+            // reactScanScript.src = "https://unpkg.com/react-scan/dist/auto.global.js";
+            // reactScanScript.async = true;
+            // document.head.appendChild(reactScanScript);
         }
 
         // 调用 API 获取数据
