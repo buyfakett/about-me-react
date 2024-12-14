@@ -8,7 +8,7 @@ const Pictures = () => {
     const [loadedPhotos, setLoadedPhotos] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
 
-    const PHOTOS_PER_LOAD = 5; // 每批要加载的照片数
+    const PHOTOS_PER_LOAD = 10; // 每批要加载的照片数
 
     // 批量加载图像的功能
     useEffect(() => {
@@ -94,6 +94,7 @@ const Pictures = () => {
                         <Image
                             src={photo}
                             alt={`Photo ${index + 1}`} style={{width: "100%", borderRadius: "8px"}}
+                            onClick={() => console.log('图片地址: ', photo)}
                             preview
                         />
                     </motion.div>
