@@ -29,7 +29,7 @@ const LanguageSection = ({start_time, languages}) => {
             </div>
 
             {/* 技能展示 */}
-            <div className="w-full max-w-xl mt-3">
+            <div className="w-full max-w-xl md:mt-3 mt-20">
                 <SkillSection sections={languageSkillData}/>
             </div>
 

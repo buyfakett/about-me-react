@@ -12,15 +12,18 @@ const NavBar = ({skipUrl}) => {
             <div className="container mx-auto flex justify-between items-center">
                 {/* 左侧 */}
                 <div className="flex items-center space-x-4 sm:space-x-6 lg:space-x-10">
-                    {/* 头像 */}
+                    {/* 名字(只在电脑端显示) */}
                     <Link to="/">
-                        <span className="font-bold text-lg">
+                        <span className="font-bold text-lg hidden md:flex">
                         buyfakett
                         </span>
                     </Link>
 
                     {/*分割线*/}
-                    <Divider layout="vertical" margin='20px' className="bg-white"/>
+                    <Divider
+                        layout="vertical"
+                        className="bg-white"
+                    />
 
                     {/* 链接 */}
                     <Link
