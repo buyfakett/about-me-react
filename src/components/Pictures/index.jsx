@@ -6,30 +6,55 @@ import {IoIosArrowBack} from "react-icons/io";
 
 const Pictures = () => {
     const [loadedPhotos, setLoadedPhotos] = useState([]);
+    const [currentIndex, setCurrentIndex] = useState(0);
 
+    const PHOTOS_PER_LOAD = 5; // 每批要加载的照片数
+
+    // 批量加载图像的功能
     useEffect(() => {
         const loadImages = async () => {
-            const uniquePhotos = new Set();
-            for (const photo of pictureList) {
-                if (!uniquePhotos.has(photo)) {
-                    uniquePhotos.add(photo);
-                    const img = new window.Image();
-                    img.src = photo;
-                    await new Promise((resolve) => {
-                        img.onload = resolve;
-                        img.onerror = resolve;
-                    });
-                    setLoadedPhotos((prevPhotos) => {
-                        if (!prevPhotos.includes(photo)) {
-                            return [...prevPhotos, photo];
-                        }
-                        return prevPhotos;
-                    });
-                }
+            const nextBatch = pictureList.slice(currentIndex, currentIndex + PHOTOS_PER_LOAD);
+            for (const photo of nextBatch) {
+                const img = new window.Image();
+                img.src = photo;
+                await new Promise((resolve) => {
+                    img.onload = resolve;
+                    img.onerror = resolve;
+                });
+                setLoadedPhotos((prevPhotos) => {
+                    if (!prevPhotos.includes(photo)) {
+                        return [...prevPhotos, photo];
+                    }
+                    return prevPhotos;
+                });
             }
         };
 
         loadImages();
+    }, [currentIndex]);
+
+    // 无限滚动触发逻辑
+    useEffect(() => {
+        const handleScroll = () => {
+            const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
+            const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
+
+            // Adjust the threshold for triggering new loads
+            if (scrollTop + clientHeight >= scrollHeight - footerHeight - 100) {
+                setCurrentIndex((prevIndex) => {
+                    const newIndex = prevIndex + PHOTOS_PER_LOAD;
+                    if (newIndex < pictureList.length) {
+                        return newIndex;
+                    }
+                    return prevIndex; // 如果加载了所有照片，则停止递增
+                });
+            }
+        };
+
+        window.addEventListener("scroll", handleScroll);
+        return () => {
+            window.removeEventListener("scroll", handleScroll);
+        };
     }, []);
 
     return (
@@ -66,12 +91,14 @@ const Pictures = () => {
                         whileTap={{scale: 0.95}}
                         style={{flex: "0 0 calc(33.333% - 16px)", boxSizing: "border-box"}}
                     >
-                        <Image src={photo} alt={`Photo ${index + 1}`} style={{width: "100%", borderRadius: "8px"}}
-                               preview/>
+                        <Image
+                            src={photo}
+                            alt={`Photo ${index + 1}`} style={{width: "100%", borderRadius: "8px"}}
+                            preview
+                        />
                     </motion.div>
                 ))}
             </div>
-
         </motion.div>
     );
 };
