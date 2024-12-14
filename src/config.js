@@ -412,12 +412,9 @@ export const devices = {
 }
 
 export const pictureList = [
-    "https://img.tteam.icu/i/2024/11/04/12bkt7g-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12csgjv-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12d9w7p-3.webp",
     "https://img.tteam.icu/i/2024/11/04/12dclzf-3.webp",
+    "https://img.tteam.icu/i/2024/11/04/12csgjv-3.webp",
     "https://img.tteam.icu/i/2024/11/04/12e4bn2-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12e5xmf-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12ej2bh-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12eldje-3.webp",
+    "https://img.tteam.icu/i/2024/11/06/x8sd2n-3.webp",
+    "https://img.tteam.icu/i/2024/11/06/x58de2-3.webp",
 ];
