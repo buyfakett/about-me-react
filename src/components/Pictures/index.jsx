@@ -76,6 +76,8 @@ const Pictures = () => {
                     返回首页
                 </Button>
             </div>
+            <h1 className="text-3xl font-bold mb-2">My Pictures</h1>
+            <h2 className="text-1xl font-bold mb-10">The photo records the person behind it</h2>
             <div
                 className="w-full flex flex-wrap gap-4"
                 style={{justifyContent: "center", rowGap: "16px"}}
