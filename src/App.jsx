@@ -9,6 +9,8 @@ import Tools from "./components/Tools";
 import Urls from "./components/Urls";
 import NotFound from "./404";
 import Pictures from "./components/Pictures";
+import Watermark from "@hi-ui/watermark"
+import {BackTop} from '@douyinfe/semi-ui';
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -67,25 +69,30 @@ const App = () => {
 
     return (
         <div className="bg-gray-900 text-gray-300">
-            <NavBar
-                skipUrl={Config.skipUrl}
-            />
-            <Routes>
-                <Route path="/" element={
-                    <AboutMe
-                        wakatimeData={wakatimeData}
-                        imgUrl={Config.imgUrl}
-                        skipUrl={Config.skipUrl}
-                    />
-                }/>
-                <Route path="/tools" element={<Tools />}/>
-                <Route path="/urls" element={<Urls />}/>
-                <Route path="/pictures" element={<Pictures />}/>
-                <Route path="*" element={<NotFound />} />
-            </Routes>
-            <Footer
-                github={Config.skipUrl.github}
-            />
+            <Watermark
+                content={[Config.myName, Config.skipUrl.aboutMe]}
+            >
+                <NavBar
+                    skipUrl={Config.skipUrl}
+                />
+                <Routes>
+                    <Route path="/" element={
+                        <AboutMe
+                            wakatimeData={wakatimeData}
+                            imgUrl={Config.imgUrl}
+                            skipUrl={Config.skipUrl}
+                        />
+                    }/>
+                    <Route path="/tools" element={<Tools/>}/>
+                    <Route path="/urls" element={<Urls/>}/>
+                    <Route path="/pictures" element={<Pictures/>}/>
+                    <Route path="*" element={<NotFound/>}/>
+                </Routes>
+                <Footer
+                    github={Config.skipUrl.github}
+                />
+                <BackTop/>
+            </Watermark>
         </div>
     );
 };

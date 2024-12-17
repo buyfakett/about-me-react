@@ -5,6 +5,7 @@ import {CiShare1} from "react-icons/ci";
 import {Link} from "react-router-dom";
 import {Divider} from '@douyinfe/semi-ui';
 import {MdEmail} from "react-icons/md";
+import {myName} from "../config";
 
 const NavBar = ({skipUrl}) => {
     return (
@@ -15,7 +16,7 @@ const NavBar = ({skipUrl}) => {
                     {/* 名字(只在电脑端显示) */}
                     <Link to="/">
                         <span className="font-bold text-lg hidden md:flex">
-                        buyfakett
+                        {myName}
                         </span>
                     </Link>
 

@@ -1,3 +1,5 @@
+export const myName = "buyfakett";
+
 export const skipUrl = {
     aboutMe: "www.tteam.icu",
     note: "https://note.tteam.icu",

@@ -5,6 +5,7 @@
   "dependencies": {
     "@douyinfe/semi-icons": "^2.71.2",
     "@douyinfe/semi-ui": "^2.71.2",
+    "@hi-ui/watermark": "^4.0.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
     "framer-motion": "^10.18.0",
