@@ -35,7 +35,7 @@ const LanguageSection = ({start_time, languages, update_time}) => {
                     rel="wakatime"
                     className="text-gray-500 text-sm hover:text-gray-700"
                 >
-                    last update by {update_time}
+                    last update at {update_time}
                 </a>
                 <div className="space-y-4 mt-4">
                     {languages.map((lang, index) => (
