@@ -31,6 +31,7 @@ const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
             <LanguageSection
                 start_time={wakatimeData.start_time}
                 languages={wakatimeData.languages}
+                update_time={wakatimeData.update_time}
             />
 
             <WorkExperience
