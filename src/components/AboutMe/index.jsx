@@ -3,10 +3,10 @@ import {motion} from "framer-motion";
 import HeadPortrait from "./HeadPortrait";
 import LanguageSection from "./LanguageSection";
 import WorkExperience from "./WorkExperience";
-import {pageVariants} from "../../config";
+import {imgUrl, pageVariants, skipUrl} from "../../config";
 import Projects from "./Projects";
 
-const AboutMe = ({wakatimeData, imgUrl, skipUrl}) => {
+const AboutMe = ({wakatimeData}) => {
     return (
         <motion.div
             className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4"

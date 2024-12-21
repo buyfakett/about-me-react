@@ -76,13 +76,7 @@ const App = () => {
                     skipUrl={Config.skipUrl}
                 />
                 <Routes>
-                    <Route path="/" element={
-                        <AboutMe
-                            wakatimeData={wakatimeData}
-                            imgUrl={Config.imgUrl}
-                            skipUrl={Config.skipUrl}
-                        />
-                    }/>
+                    <Route path="/" element={<AboutMe wakatimeData={wakatimeData}/>}/>
                     <Route path="/tools" element={<Tools/>}/>
                     <Route path="/urls" element={<Urls/>}/>
                     <Route path="/pictures" element={<Pictures/>}/>
