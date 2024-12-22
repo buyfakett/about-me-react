@@ -46,7 +46,7 @@ const Footer = ({github}) => {
                             <span>Semi Design</span>
                         </a>
                         <a
-                            href="https://react-icons.github.io/"
+                            href="https://react-icons.github.io/react-icons/"
                             target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
