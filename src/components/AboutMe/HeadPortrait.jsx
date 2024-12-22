@@ -1,9 +1,10 @@
 import React from "react";
 import {HeadPortraitCircle} from "../magicui/HeadPortraitCircle";
 import {motion} from "framer-motion";
+import {imgUrl} from "../../config";
 
 
-const HeadPortrait = ({headPortrait}) => {
+const HeadPortrait = () => {
     return (
         <motion.div
             className="dark:bg-gray-900 dark:text-gray-300"
@@ -14,7 +15,7 @@ const HeadPortrait = ({headPortrait}) => {
             <HeadPortraitCircle>
                 <img
                     className="w-32 h-32 rounded-full object-cover"
-                    src={headPortrait}
+                    src={imgUrl.headPortrait}
                     alt=""/>
             </HeadPortraitCircle>
         </motion.div>

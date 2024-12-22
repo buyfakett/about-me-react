@@ -3,7 +3,7 @@ import {motion} from "framer-motion";
 import HeadPortrait from "./HeadPortrait";
 import LanguageSection from "./LanguageSection";
 import WorkExperience from "./WorkExperience";
-import {imgUrl, pageVariants, skipUrl} from "../../config";
+import {pageVariants} from "../../config";
 import Projects from "./Projects";
 
 const AboutMe = ({wakatimeData}) => {
@@ -17,7 +17,7 @@ const AboutMe = ({wakatimeData}) => {
             transition={{duration: 0.5}}
         >
 
-            <HeadPortrait headPortrait={imgUrl.headPortrait}/>
+            <HeadPortrait/>
 
             <motion.h1
                 className="text-4xl font-bold mb-4"
@@ -34,10 +34,7 @@ const AboutMe = ({wakatimeData}) => {
                 update_time={wakatimeData.update_time}
             />
 
-            <WorkExperience
-                skipUrl={skipUrl}
-                imgUrl={imgUrl}
-            />
+            <WorkExperience/>
 
             <Projects/>
 

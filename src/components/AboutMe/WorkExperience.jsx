@@ -2,9 +2,10 @@ import React from "react";
 import {NeonGradientCard} from "../magicui/NeonGradientCard";
 import {motion} from "framer-motion";
 import {Image} from '@douyinfe/semi-ui';
+import {imgUrl, skipUrl} from "../../config";
 
 
-const WorkExperience = ({imgUrl, skipUrl}) => {
+const WorkExperience = () => {
     return (
         <div
             className="dark:bg-gray-900 dark:text-gray-300"
