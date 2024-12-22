@@ -13,8 +13,8 @@ const LanguageSection = ({start_time, languages, update_time}) => {
             <div className="text-center mb-8 h-[70px]">
                 <TypingAnimation
                     text={[
-                        "Hi ! I'm a full stack engineer, mainly responsible for operations and maintenance.",
-                        `The following are language usage statistics starting from ${start_time}`
+                        "Hi ! I'm a full stack engineer,my job position is ops",
+                        "My MBTI type is INFJ-T."
                     ].join('\n')}
                     duration={20}
                     className="text-lg"
@@ -35,6 +35,8 @@ const LanguageSection = ({start_time, languages, update_time}) => {
                     rel="wakatime"
                     className="text-gray-500 text-sm hover:text-gray-700"
                 >
+                    data statistics form {start_time}
+                    <br/>
                     last update at {update_time}
                 </a>
                 <div className="space-y-4 mt-4">
