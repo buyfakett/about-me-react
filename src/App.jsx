@@ -18,6 +18,9 @@ const App = () => {
     // semi-design的主题默认为暗色
     document.body.setAttribute('theme-mode', 'dark');
 
+    // 判断当前环境是生产环境还是开发环境
+    const isProduction = process.env.NODE_ENV === 'production';
+
     const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
 
     useEffect(() => {
@@ -35,27 +38,6 @@ const App = () => {
     }, []); // 此处只执行一次
 
     useEffect(() => {
-        // 判断生产环境并处理逻辑
-        if (process.env.NODE_ENV === "production") {
-            // 判断域名并重定向(cloudflare中开启重定向后代码注释)
-            // if (window.location.hostname !== Config.skipUrl.aboutMe) {
-            //     window.location.replace(`https://${Config.skipUrl.aboutMe}`);
-            // }
-
-            // 注入 Umami 脚本
-            const umamiScript = document.createElement("script");
-            umamiScript.src = Config.umamiScript;
-            umamiScript.defer = true;
-            umamiScript.dataset.websiteId = Config.umamiId;
-            document.head.appendChild(umamiScript);
-        } else {
-            // 在开发的时候注入react-scan(现有浏览器插件，不需要了)
-            // const reactScanScript = document.createElement("script");
-            // reactScanScript.src = "https://unpkg.com/react-scan/dist/auto.global.js";
-            // reactScanScript.async = true;
-            // document.head.appendChild(reactScanScript);
-        }
-
         // 调用 API 获取数据
         const getWakatimeData = async () => {
             const response = await fetch(Config.apiList.wakaTime);
@@ -71,13 +53,21 @@ const App = () => {
 
     return (
         <>
-            <Helmet>
-                {/* 动态注入构建信息到 <head> */}
-                <meta name="git-hash" content={buildInfo.gitHash}/>
-                <meta name="git-branch" content={buildInfo.gitBranch}/>
-                <meta name="commit-date" content={buildInfo.commitDate}/>
-                <meta name="build-time" content={buildInfo.buildTime}/>
-            </Helmet>
+            {isProduction && (
+                <Helmet>
+                    {/* 动态注入构建信息到 <head> */}
+                    <meta name="git-hash" content={buildInfo.gitHash}/>
+                    <meta name="git-branch" content={buildInfo.gitBranch}/>
+                    <meta name="commit-date" content={buildInfo.commitDate}/>
+                    <meta name="build-time" content={buildInfo.buildTime}/>
+                    {/*umami*/}
+                    <script
+                        src={Config.umamiScript}
+                        defer=""
+                        data-website-id={Config.umamiId}
+                    />
+                </Helmet>
+            )}
             <div className="bg-gray-900 text-gray-300">
                 <Watermark
                     content={[Config.myName, Config.skipUrl.aboutMe]}
