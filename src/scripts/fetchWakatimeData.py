@@ -5,7 +5,6 @@ import os
 # 定义API的URL
 API_URL = 'https://api.blog.tteam.icu/waka_time.json'  # 替换为实际的 API 地址
 
-
 # 发送GET请求，获取API数据
 try:
     response = requests.get(API_URL)
@@ -14,7 +13,10 @@ try:
     # 获取返回的JSON数据
     src_data = response.json()
 
-    data = 'export const wakatineDefaultData = ' + str(src_data)
+    # 格式化JSON数据，并将其作为字符串写入到数据
+    formatted_data = json.dumps(src_data, indent=2, ensure_ascii=False)
+
+    data = 'export const wakatineDefaultData = ' + formatted_data
 
     os.makedirs("src/default_data", exist_ok=True)
 
