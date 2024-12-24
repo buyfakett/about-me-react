@@ -382,6 +382,10 @@ export const devices = {
                         description: '无线耳机'
                     },
                     {
+                        name: 'XiaoMi 骨传导耳机',
+                        description: '骨传导耳机'
+                    },
+                    {
                         name: 'Sony WH-XM3',
                         description: '头戴式耳机'
                     },
