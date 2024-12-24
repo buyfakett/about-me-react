@@ -59,6 +59,7 @@ const App = () => {
                     <meta name="git-hash" content={buildInfo.gitHash}/>
                     <meta name="git-branch" content={buildInfo.gitBranch}/>
                     <meta name="commit-date" content={buildInfo.commitDate}/>
+                    <meta name="commit-count" content={buildInfo.commitCount}/>
                     <meta name="build-time" content={buildInfo.buildTime}/>
                     {/*umami*/}
                     <script

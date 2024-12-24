@@ -97,6 +97,10 @@ const Footer = ({buildInfo}) => {
                             <span>{buildInfo.gitHash}</span>
                         </div>
                         <div className="bg-gray-700 px-4 py-2 rounded-md">
+                            <span className="font-medium text-blue-400">提交数:</span>
+                            <span>{buildInfo.commitCount}</span>
+                        </div>
+                        <div className="bg-gray-700 px-4 py-2 rounded-md">
                             <span className="font-medium text-blue-400">Git 分支:</span>
                             <span>{buildInfo.gitBranch}</span>
                         </div>

@@ -23,11 +23,14 @@ const commitDateStr = execSync('git log -1 --format=%cd').toString().trim();
 const commitDate = convertTime(new Date(commitDateStr));
 // 获取构建时间
 const buildTime = convertTime(new Date());
+// 获取 Git 提交次数
+const commitCount = execSync('git rev-list --count HEAD').toString().trim();
 
 const buildInfo = {
     buildTime,
     gitBranch,
     gitHash,
+    commitCount,
     commitDate
 };
 
@@ -38,9 +41,7 @@ if (!fs.existsSync(outputDir)) {
 }
 
 // 写入为 JavaScript 文件，包含 const 变量
-const jsContent = `
-export const buildInfo = ${JSON.stringify(buildInfo, null, 2)};
-`;
+const jsContent = `export const buildInfo = ${JSON.stringify(buildInfo, null, 2)};`;
 
 fs.writeFileSync(path.join(outputDir, 'buildInfo.js'), jsContent);
 console.log('构建信息已保存为 JavaScript 文件:', buildInfo);
