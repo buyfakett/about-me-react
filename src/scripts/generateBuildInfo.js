@@ -42,5 +42,5 @@ const jsContent = `
 export const buildInfo = ${JSON.stringify(buildInfo, null, 2)};
 `;
 
-fs.writeFileSync('../default_data/buildInfo.js', jsContent);
+fs.writeFileSync(path.join(outputDir, 'buildInfo.js'), jsContent);
 console.log('构建信息已保存为 JavaScript 文件:', buildInfo);
