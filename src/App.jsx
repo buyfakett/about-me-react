@@ -5,12 +5,14 @@ import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
 import {wakatineDefaultData} from "./default_data/waka_time"
+import {buildInfo} from "./default_data/buildInfo"
 import Tools from "./components/Tools";
 import Urls from "./components/Urls";
 import NotFound from "./404";
 import Pictures from "./components/Pictures";
 import Watermark from "@hi-ui/watermark"
 import {BackTop} from '@douyinfe/semi-ui';
+import {Helmet} from "react-helmet";
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -68,26 +70,37 @@ const App = () => {
     }, []);
 
     return (
-        <div className="bg-gray-900 text-gray-300">
-            <Watermark
-                content={[Config.myName, Config.skipUrl.aboutMe]}
-            >
-                <NavBar
-                    skipUrl={Config.skipUrl}
-                />
-                <Routes>
-                    <Route path="/" element={<AboutMe wakatimeData={wakatimeData}/>}/>
-                    <Route path="/tools" element={<Tools/>}/>
-                    <Route path="/urls" element={<Urls/>}/>
-                    <Route path="/pictures" element={<Pictures/>}/>
-                    <Route path="*" element={<NotFound/>}/>
-                </Routes>
-                <Footer
-                    github={Config.skipUrl.github}
-                />
-                <BackTop/>
-            </Watermark>
-        </div>
+        <>
+            <Helmet>
+                {/* 动态注入构建信息到 <head> */}
+                <meta name="git-hash" content={buildInfo.gitHash}/>
+                <meta name="git-branch" content={buildInfo.gitBranch}/>
+                <meta name="commit-date" content={buildInfo.commitDate}/>
+                <meta name="build-time" content={buildInfo.buildTime}/>
+            </Helmet>
+            <div className="bg-gray-900 text-gray-300">
+                <Watermark
+                    content={[Config.myName, Config.skipUrl.aboutMe]}
+                >
+                    <NavBar/>
+
+                    <Routes>
+                        <Route path="/" element={<AboutMe wakatimeData={wakatimeData}/>}/>
+                        <Route path="/tools" element={<Tools/>}/>
+                        <Route path="/urls" element={<Urls/>}/>
+                        <Route path="/pictures" element={<Pictures/>}/>
+                        <Route path="*" element={<NotFound/>}/>
+                    </Routes>
+
+                    <Footer
+                        buildInfo={buildInfo}
+                    />
+
+                    {/*返回顶部*/}
+                    <BackTop/>
+                </Watermark>
+            </div>
+        </>
     );
 };
 

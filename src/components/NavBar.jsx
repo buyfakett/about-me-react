@@ -5,9 +5,9 @@ import {CiShare1} from "react-icons/ci";
 import {Link} from "react-router-dom";
 import {Divider} from '@douyinfe/semi-ui';
 import {MdEmail} from "react-icons/md";
-import {myName} from "../config";
+import {myName, skipUrl} from "../config";
 
-const NavBar = ({skipUrl}) => {
+const NavBar = () => {
     return (
         <nav className="dark:bg-gray-800 dark:text-white px-4 py-2 shadow-md">
             <div className="container mx-auto flex justify-between items-center">

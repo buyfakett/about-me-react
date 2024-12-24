@@ -2,8 +2,9 @@ import React from "react";
 import {FaCloudflare, FaReact} from "react-icons/fa";
 import {RiTailwindCssFill} from "react-icons/ri";
 import {IconSemiLogo} from "@douyinfe/semi-icons";
+import {skipUrl} from "../config";
 
-const Footer = ({github}) => {
+const Footer = ({buildInfo}) => {
     return (
         <>
             <footer className="border-t border-gray-700 py-6 text-center text-sm mt-20 bg-gray-800 text-gray-300">
@@ -11,13 +12,13 @@ const Footer = ({github}) => {
                     <p className="mb-2">
                         © 2024
                         <a
-                            href={github}
+                            href={skipUrl.github}
                             target="_blank"
                             className="text-blue-400 hover:underline ml-1"
                         >
                             buyfakett
-                        </a>.
-                        All rights reserved.
+                        </a>
+                        . All rights reserved.
                     </p>
                     <p className="flex flex-wrap justify-center items-center space-x-3">
                         <span>Powered by</span>
@@ -51,7 +52,7 @@ const Footer = ({github}) => {
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaReact className="text-red-500 text-lg"/>
-                            <span>react icons</span>
+                            <span>React Icons</span>
                         </a>
                         <a
                             href="https://www.cloudflare.com/"
@@ -59,18 +60,19 @@ const Footer = ({github}) => {
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
                             <FaCloudflare className="text-orange-500 text-lg"/>
-                            <span>Cloud flare</span>
+                            <span>Cloudflare</span>
                         </a>
                         <a
                             href="https://motion.dev/"
                             target="_blank"
                             className="flex items-center space-x-1 text-blue-400 hover:underline"
                         >
-                            <img src="https://img.tteam.icu/i/2024/12/11/lsxlk0-3.webp"
-                                 alt="motion"
-                                 className="w-4 h-4 rounded-full"
+                            <img
+                                src="https://img.tteam.icu/i/2024/12/11/lsxlk0-3.webp"
+                                alt="motion"
+                                className="w-4 h-4 rounded-full"
                             />
-                            <span>motion</span>
+                            <span>Motion</span>
                         </a>
                         <a
                             href="https://magicui.design/"
@@ -81,13 +83,27 @@ const Footer = ({github}) => {
                                  alt="magicui"
                                  className="w-4 h-4 rounded-full"
                             />
-                            <span>magicui</span>
+                            <span>Magic UI</span>
                         </a>
                     </p>
                 </div>
+
+                {/* 构建信息部分 */}
+                <div className="mt-4 text-sm text-gray-400">
+                    <p className="font-semibold">构建信息</p>
+                    <div className="flex justify-center space-x-4 mt-2">
+                        <div className="bg-gray-700 px-4 py-2 rounded-md">
+                            <span className="font-medium text-blue-400">Git Hash:</span>
+                            <span>{buildInfo.gitHash}</span>
+                        </div>
+                        <div className="bg-gray-700 px-4 py-2 rounded-md">
+                            <span className="font-medium text-blue-400">Git 分支:</span>
+                            <span>{buildInfo.gitBranch}</span>
+                        </div>
+                    </div>
+                </div>
             </footer>
         </>
-
     );
 };
 
