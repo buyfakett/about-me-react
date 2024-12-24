@@ -1,5 +1,6 @@
 const fs = require('fs');
 const { execSync } = require('child_process');
+const path = require('path');
 
 function convertTime(date) {
     date.setUTCHours(date.getUTCHours() + 8);
@@ -29,6 +30,12 @@ const buildInfo = {
     gitHash,
     commitDate
 };
+
+// 确保目录存在
+const outputDir = path.join(__dirname, '../default_data');
+if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+}
 
 // 写入为 JavaScript 文件，包含 const 变量
 const jsContent = `
