@@ -64,8 +64,8 @@ const App = () => {
                     {/*umami*/}
                     <script
                         src={Config.umamiScript}
-                        defer=""
                         data-website-id={Config.umamiId}
+                        defer
                     />
                 </Helmet>
             )}
