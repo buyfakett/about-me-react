@@ -25,6 +25,7 @@ export const umamiId = "12d3e9e9-3982-43a1-a285-e2f611073a71";
 
 export const apiList = {
     wakaTime: `${apiBaseUrl}/waka_time.json`,
+    pictures: `${apiBaseUrl}/pictures.json`,
 }
 
 export const pageVariants = {
@@ -416,11 +417,3 @@ export const devices = {
         }
     }
 }
-
-export const pictureList = [
-    "https://img.tteam.icu/i/2024/11/04/12dclzf-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12csgjv-3.webp",
-    "https://img.tteam.icu/i/2024/11/04/12e4bn2-3.webp",
-    "https://img.tteam.icu/i/2024/11/06/x8sd2n-3.webp",
-    "https://img.tteam.icu/i/2024/11/06/x58de2-3.webp",
-];

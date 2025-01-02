@@ -1,19 +1,36 @@
 import React, {useState, useEffect} from "react";
 import {motion} from "framer-motion";
-import {pageVariants, pictureList} from "../../config";
+import {apiList, pageVariants} from "../../config";
 import {Button, Image} from '@douyinfe/semi-ui';
 import {IoIosArrowBack} from "react-icons/io";
+import {picturesDefaultData} from "../../default_data/pictures";
 
 const Pictures = () => {
     const [loadedPhotos, setLoadedPhotos] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
+    const [pictureList, setPictureList] = useState(picturesDefaultData);
 
-    const PHOTOS_PER_LOAD = 10; // 每批要加载的照片数
+    const PHOTOS_PER_LOAD = 10;
+
+    // 获取图片列表
+    useEffect(() => {
+        const fetchPictures = async () => {
+            try {
+                const response = await fetch(apiList.pictures);
+                const data = await response.json();
+                setPictureList(data);
+            } catch (error) {
+                console.error('获取图片列表失败:', error);
+            }
+        };
+
+        fetchPictures();
+    }, []);
 
     // 批量加载图像的功能
     useEffect(() => {
         const loadImages = async () => {
-            const nextBatch = pictureList.slice(currentIndex, currentIndex + PHOTOS_PER_LOAD);
+            const nextBatch = pictureList.urls.slice(currentIndex, currentIndex + PHOTOS_PER_LOAD);
             for (const photo of nextBatch) {
                 const img = new window.Image();
                 img.src = photo;
@@ -31,7 +48,7 @@ const Pictures = () => {
         };
 
         loadImages();
-    }, [currentIndex]);
+    }, [currentIndex, pictureList.urls]);
 
     // 无限滚动触发逻辑
     useEffect(() => {
@@ -39,14 +56,13 @@ const Pictures = () => {
             const {scrollTop, scrollHeight, clientHeight} = document.documentElement;
             const footerHeight = document.querySelector('footer')?.offsetHeight || 0;
 
-            // Adjust the threshold for triggering new loads
             if (scrollTop + clientHeight >= scrollHeight - footerHeight - 100) {
                 setCurrentIndex((prevIndex) => {
                     const newIndex = prevIndex + PHOTOS_PER_LOAD;
-                    if (newIndex < pictureList.length) {
+                    if (newIndex < pictureList.count) {
                         return newIndex;
                     }
-                    return prevIndex; // 如果加载了所有照片，则停止递增
+                    return prevIndex;
                 });
             }
         };
@@ -55,7 +71,7 @@ const Pictures = () => {
         return () => {
             window.removeEventListener("scroll", handleScroll);
         };
-    }, []);
+    }, [pictureList]);
 
     return (
         <motion.div
@@ -78,6 +94,7 @@ const Pictures = () => {
             </div>
             <h1 className="text-3xl font-bold mb-2">My Pictures</h1>
             <h2 className="text-1xl font-bold mb-10">The photo records the person behind it</h2>
+            
             <div
                 className="w-full flex flex-wrap gap-4"
                 style={{justifyContent: "center", rowGap: "16px"}}
@@ -95,7 +112,8 @@ const Pictures = () => {
                     >
                         <Image
                             src={photo}
-                            alt={`Photo ${index + 1}`} style={{width: "100%", borderRadius: "8px"}}
+                            alt={`Photo ${index + 1}`}
+                            style={{width: "100%", borderRadius: "8px"}}
                             onClick={() => console.log('图片地址: ', photo)}
                             preview
                         />

@@ -4,7 +4,7 @@ import Footer from "./components/Footer";
 import NavBar from "./components/NavBar";
 import AboutMe from "./components/AboutMe";
 import * as Config from "./config"
-import {wakatineDefaultData} from "./default_data/waka_time"
+import {waka_timeDefaultData} from "./default_data/waka_time"
 import {buildInfo} from "./default_data/buildInfo"
 import Tools from "./components/Tools";
 import Urls from "./components/Urls";
@@ -21,7 +21,7 @@ const App = () => {
     // 判断当前环境是生产环境还是开发环境
     const isProduction = process.env.NODE_ENV === 'production';
 
-    const [wakatimeData, setwakatimeData] = useState(wakatineDefaultData);
+    const [wakatimeData, setwakatimeData] = useState(waka_timeDefaultData);
 
     useEffect(() => {
         // 动态设置 Favicon
