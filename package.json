@@ -4,6 +4,7 @@
   "private": true,
   "dependencies": {
     "@douyinfe/semi-icons": "^2.72.0",
+    "@douyinfe/semi-illustrations": "^2.72.1",
     "@douyinfe/semi-ui": "^2.72.0",
     "@hi-ui/watermark": "^4.0.8",
     "class-variance-authority": "^0.7.0",
