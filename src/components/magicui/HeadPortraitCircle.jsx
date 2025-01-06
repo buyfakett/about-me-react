@@ -1,31 +1,28 @@
-import React from "react";
-import {OrbitingCircles} from "./OrbitingCircles";
-import {FaGithub} from "react-icons/fa";
-import { DiPython, DiGo, DiReact } from "react-icons/di";
+import React from 'react';
+import { OrbitingCircles } from './OrbitingCircles';
+import { FaGithub } from 'react-icons/fa';
+import { DiGo, DiPython, DiReact } from 'react-icons/di';
 
-export function HeadPortraitCircle({children}) {
+export function HeadPortraitCircle({ children }) {
     return (
         <div className="relative flex h-[500px] w-[500px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-      <span
-          className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
-        {children}
-      </span>
+            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+                {children}
+            </span>
 
             {/* Inner Circles */}
             <OrbitingCircles
                 className="size-[30px] border-none bg-transparent"
                 duration={20}
                 delay={20}
-                radius={80}
-            >
-                <FaGithub size={50}/>
+                radius={80}>
+                <FaGithub size={50} />
             </OrbitingCircles>
             <OrbitingCircles
                 className="size-[30px] border-none bg-transparent"
                 duration={20}
                 delay={10}
-                radius={80}
-            >
+                radius={80}>
                 <DiPython size={50} />
             </OrbitingCircles>
 
@@ -34,8 +31,7 @@ export function HeadPortraitCircle({children}) {
                 className="size-[50px] border-none bg-transparent"
                 radius={190}
                 duration={20}
-                reverse
-            >
+                reverse>
                 <DiGo size={60} />
             </OrbitingCircles>
             <OrbitingCircles
@@ -43,8 +39,7 @@ export function HeadPortraitCircle({children}) {
                 radius={190}
                 duration={20}
                 delay={20}
-                reverse
-            >
+                reverse>
                 <DiReact size={60} />
             </OrbitingCircles>
         </div>

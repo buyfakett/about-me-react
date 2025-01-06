@@ -1,12 +1,12 @@
-import React from "react";
-import {motion} from "framer-motion";
-import clsx from "clsx";
-import {NumberTicker} from "../magicui/NumberTicker";
-import {TypingAnimation} from "../magicui/TypingAnimation";
-import SkillSection from "./SkillSection";
-import {languageSkillData} from "../../config";
+import React from 'react';
+import { motion } from 'framer-motion';
+import clsx from 'clsx';
+import { NumberTicker } from '../magicui/NumberTicker';
+import { TypingAnimation } from '../magicui/TypingAnimation';
+import SkillSection from './SkillSection';
+import { languageSkillData } from '../../config';
 
-const LanguageSection = ({start_time, languages, update_time}) => {
+const LanguageSection = ({ start_time, languages, update_time }) => {
     return (
         <>
             {/* 文字介绍 */}
@@ -14,7 +14,7 @@ const LanguageSection = ({start_time, languages, update_time}) => {
                 <TypingAnimation
                     text={[
                         "Hi ! I'm a full stack engineer,my job position is ops",
-                        "My MBTI type is INFJ-T."
+                        'My MBTI type is INFJ-T.',
                     ].join('\n')}
                     duration={20}
                     className="text-lg"
@@ -23,7 +23,7 @@ const LanguageSection = ({start_time, languages, update_time}) => {
 
             {/* 技能展示 */}
             <div className="w-full max-w-xl md:mt-0.5 mt-18">
-                <SkillSection sections={languageSkillData}/>
+                <SkillSection sections={languageSkillData} />
             </div>
 
             {/* 语言使用时间排行榜 */}
@@ -33,10 +33,9 @@ const LanguageSection = ({start_time, languages, update_time}) => {
                     href="https://wakatime.com/dashboard"
                     target="_blank"
                     rel="wakatime"
-                    className="text-gray-500 text-sm hover:text-gray-700"
-                >
+                    className="text-gray-500 text-sm hover:text-gray-700">
                     data statistics form {start_time}
-                    <br/>
+                    <br />
                     last update at {update_time}
                 </a>
                 <div className="space-y-4 mt-4">
@@ -44,24 +43,23 @@ const LanguageSection = ({start_time, languages, update_time}) => {
                         <motion.div
                             key={lang.name}
                             className="w-full bg-gray-800 rounded-lg overflow-hidden"
-                            initial={{opacity: 0, scale: 0.9}}
-                            animate={{opacity: 1, scale: 1}}
-                            transition={{duration: 0.5, delay: index * 0.2}}
-                        >
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            animate={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.5, delay: index * 0.2 }}>
                             <div
                                 className={clsx(
-                                    "h-9 flex items-center px-0.1 text-sm font-medium",
-                                    lang.color
+                                    'h-9 flex items-center px-0.1 text-sm font-medium',
+                                    lang.color,
                                 )}
-                                style={{width: `${lang.percentage}%`}}
-                            >
+                                style={{ width: `${lang.percentage}%` }}>
                                 &nbsp;&nbsp;
                                 {lang.name}
                                 &nbsp;&nbsp;
                                 <NumberTicker
                                     value={lang.percentage}
                                     decimalPlaces={2}
-                                />%
+                                />
+                                %
                             </div>
                         </motion.div>
                     ))}

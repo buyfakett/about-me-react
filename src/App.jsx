@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from "react";
-import {Routes, Route} from "react-router-dom";
-import Footer from "./components/Footer";
-import NavBar from "./components/NavBar";
-import AboutMe from "./components/AboutMe";
-import * as Config from "./config"
-import {waka_timeDefaultData} from "./default_data/waka_time"
-import {buildInfo} from "./default_data/buildInfo"
-import Tools from "./components/Tools";
-import Urls from "./components/Urls";
-import NotFound from "./404";
-import Pictures from "./components/Pictures";
-import Watermark from "@hi-ui/watermark"
-import BackToTop from "./components/BackToTop";
-import {Helmet} from "react-helmet";
+import React, { useEffect, useState } from 'react';
+import { Route, Routes } from 'react-router-dom';
+import Footer from './components/Footer';
+import NavBar from './components/NavBar';
+import AboutMe from './components/AboutMe';
+import * as Config from './config';
+import { waka_timeDefaultData } from './default_data/waka_time';
+import { buildInfo } from './default_data/buildInfo';
+import Tools from './components/Tools';
+import Urls from './components/Urls';
+import NotFound from './404';
+import Pictures from './components/Pictures';
+import Watermark from '@hi-ui/watermark';
+import BackToTop from './components/BackToTop';
+import { Helmet } from 'react-helmet';
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -25,9 +25,9 @@ const App = () => {
 
     useEffect(() => {
         // 动态设置 Favicon
-        const link = document.createElement("link");
-        link.rel = "icon";
-        link.type = "image/x-icon";
+        const link = document.createElement('link');
+        link.rel = 'icon';
+        link.type = 'image/x-icon';
         link.href = Config.imgUrl.headPortrait;
         document.head.appendChild(link);
 
@@ -56,11 +56,11 @@ const App = () => {
             {isProduction && (
                 <Helmet>
                     {/* 动态注入构建信息到 <head> */}
-                    <meta name="git-hash" content={buildInfo.gitHash}/>
-                    <meta name="git-branch" content={buildInfo.gitBranch}/>
-                    <meta name="commit-date" content={buildInfo.commitDate}/>
-                    <meta name="commit-count" content={buildInfo.commitCount}/>
-                    <meta name="build-time" content={buildInfo.buildTime}/>
+                    <meta name="git-hash" content={buildInfo.gitHash} />
+                    <meta name="git-branch" content={buildInfo.gitBranch} />
+                    <meta name="commit-date" content={buildInfo.commitDate} />
+                    <meta name="commit-count" content={buildInfo.commitCount} />
+                    <meta name="build-time" content={buildInfo.buildTime} />
                     {/*umami*/}
                     <script
                         src={Config.umamiScript}
@@ -70,25 +70,24 @@ const App = () => {
                 </Helmet>
             )}
             <div className="bg-gray-900 text-gray-300">
-                <Watermark
-                    content={[Config.myName, Config.skipUrl.aboutMe]}
-                >
-                    <NavBar/>
+                <Watermark content={[Config.myName, Config.skipUrl.aboutMe]}>
+                    <NavBar />
 
                     <Routes>
-                        <Route path="/" element={<AboutMe wakatimeData={wakatimeData}/>}/>
-                        <Route path="/tools" element={<Tools/>}/>
-                        <Route path="/urls" element={<Urls/>}/>
-                        <Route path="/pictures" element={<Pictures/>}/>
-                        <Route path="*" element={<NotFound/>}/>
+                        <Route
+                            path="/"
+                            element={<AboutMe wakatimeData={wakatimeData} />}
+                        />
+                        <Route path="/tools" element={<Tools />} />
+                        <Route path="/urls" element={<Urls />} />
+                        <Route path="/pictures" element={<Pictures />} />
+                        <Route path="*" element={<NotFound />} />
                     </Routes>
 
-                    <Footer
-                        buildInfo={buildInfo}
-                    />
+                    <Footer buildInfo={buildInfo} />
 
                     {/*返回顶部*/}
-                    <BackToTop/>
+                    <BackToTop />
                 </Watermark>
             </div>
         </>

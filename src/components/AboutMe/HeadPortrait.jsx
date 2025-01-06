@@ -1,25 +1,23 @@
-import React from "react";
-import {HeadPortraitCircle} from "../magicui/HeadPortraitCircle";
-import {motion} from "framer-motion";
-import {imgUrl} from "../../config";
-
+import React from 'react';
+import { HeadPortraitCircle } from '../magicui/HeadPortraitCircle';
+import { motion } from 'framer-motion';
+import { imgUrl } from '../../config';
 
 const HeadPortrait = () => {
     return (
         <motion.div
             className="dark:bg-gray-900 dark:text-gray-300"
-            initial={{opacity: 0, scale: 0.9}}
-            animate={{opacity: 1, scale: 1}}
-            transition={{duration: 0.3, delay: 0.5}}
-        >
+            initial={{ opacity: 0, scale: 0.9 }}
+            animate={{ opacity: 1, scale: 1 }}
+            transition={{ duration: 0.3, delay: 0.5 }}>
             <HeadPortraitCircle>
                 <img
                     className="w-32 h-32 rounded-full object-cover"
                     src={imgUrl.headPortrait}
-                    alt=""/>
+                    alt=""
+                />
             </HeadPortraitCircle>
         </motion.div>
-
     );
 };
 

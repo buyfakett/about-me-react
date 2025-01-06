@@ -1,9 +1,9 @@
-"use client";
+'use client';
 
-import React, { useEffect, useRef, useState } from "react";
-import { AnimatePresence, motion, Variants } from "framer-motion";
+import React, { useEffect, useRef, useState } from 'react';
+import { AnimatePresence, motion, Variants } from 'framer-motion';
 
-import { cn } from "../../lib/utils";
+import { cn } from '../../lib/utils';
 
 interface HyperTextProps {
     text: string;
@@ -13,22 +13,22 @@ interface HyperTextProps {
     animateOnLoad?: boolean;
 }
 
-const alphabets = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+const alphabets = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('');
 
 const getRandomInt = (max: number) => Math.floor(Math.random() * max);
 
 export function HyperText({
-                              text,
-                              duration = 800,
-                              framerProps = {
-                                  initial: { opacity: 0, y: -10 },
-                                  animate: { opacity: 1, y: 0 },
-                                  exit: { opacity: 0, y: 3 },
-                              },
-                              className,
-                              animateOnLoad = true,
-                          }: HyperTextProps) {
-    const [displayText, setDisplayText] = useState(text.split(""));
+    text,
+    duration = 800,
+    framerProps = {
+        initial: { opacity: 0, y: -10 },
+        animate: { opacity: 1, y: 0 },
+        exit: { opacity: 0, y: 3 },
+    },
+    className,
+    animateOnLoad = true,
+}: HyperTextProps) {
+    const [displayText, setDisplayText] = useState(text.split(''));
     const [trigger, setTrigger] = useState(false);
     const interations = useRef(0);
     const isFirstRender = useRef(true);
@@ -49,11 +49,11 @@ export function HyperText({
                 if (interations.current < text.length) {
                     setDisplayText((t) =>
                         t.map((l, i) =>
-                            l === " "
+                            l === ' '
                                 ? l
                                 : i <= interations.current
-                                    ? text[i]
-                                    : alphabets[getRandomInt(26)],
+                                  ? text[i]
+                                  : alphabets[getRandomInt(26)],
                         ),
                     );
                     interations.current = interations.current + 0.1;
@@ -71,15 +71,17 @@ export function HyperText({
     return (
         <div
             className="overflow-hidden py-0.5 flex cursor-default scale-100"
-            onMouseEnter={triggerAnimation}
-        >
+            onMouseEnter={triggerAnimation}>
             <AnimatePresence mode="wait">
                 {displayText.map((letter, i) => (
                     <motion.h1
                         key={i}
-                        className={cn("font-mono", letter === " " ? "w-1" : "", className)}
-                        {...framerProps}
-                    >
+                        className={cn(
+                            'font-mono',
+                            letter === ' ' ? 'w-1' : '',
+                            className,
+                        )}
+                        {...framerProps}>
                         {letter.toUpperCase()}
                     </motion.h1>
                 ))}

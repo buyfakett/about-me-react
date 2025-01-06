@@ -1,23 +1,25 @@
-import React from "react";
-import {Card, Avatar} from "@douyinfe/semi-ui";
-import {imgUrl} from "../../config";
+import React from 'react';
+import { Avatar, Card } from '@douyinfe/semi-ui';
+import { imgUrl } from '../../config';
 
-const ProjectCard = ({data}) => {
-    const {Meta} = Card;
+const ProjectCard = ({ data }) => {
+    const { Meta } = Card;
 
     return (
         <Card
-            style={{width: "100%"}}
+            style={{ width: '100%' }}
             className="cursor-pointer"
             title={
                 <Meta
                     title={data.title}
-                    description={data.description ? data.description : ""}
+                    description={data.description ? data.description : ''}
                     avatar={
                         <Avatar
                             alt={data.title}
                             size="default"
-                            src={data.avatar ? data.avatar : imgUrl.headPortrait}
+                            src={
+                                data.avatar ? data.avatar : imgUrl.headPortrait
+                            }
                         />
                     }
                 />
@@ -36,9 +38,10 @@ const ProjectCard = ({data}) => {
             //         </div>
             //     )
             // }
-            onClick={data.src ? () => window.open(data.src, "_blank") : undefined}
-        >
-            {data.full_description ? data.full_description : ""}
+            onClick={
+                data.src ? () => window.open(data.src, '_blank') : undefined
+            }>
+            {data.full_description ? data.full_description : ''}
         </Card>
     );
 };
