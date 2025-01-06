@@ -11,7 +11,7 @@ import Urls from "./components/Urls";
 import NotFound from "./404";
 import Pictures from "./components/Pictures";
 import Watermark from "@hi-ui/watermark"
-import {BackTop} from '@douyinfe/semi-ui';
+import BackToTop from "./components/BackToTop";
 import {Helmet} from "react-helmet";
 
 const App = () => {
@@ -88,7 +88,7 @@ const App = () => {
                     />
 
                     {/*返回顶部*/}
-                    <BackTop/>
+                    <BackToTop/>
                 </Watermark>
             </div>
         </>
