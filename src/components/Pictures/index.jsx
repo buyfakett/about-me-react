@@ -43,16 +43,16 @@ const Pictures = () => {
                 currentIndex,
                 currentIndex + PHOTOS_PER_LOAD,
             );
-            for (const photo of nextBatch) {
+            for (const photoData of nextBatch) {
                 const img = new window.Image();
-                img.src = photo;
+                img.src = photoData.url;
                 await new Promise((resolve) => {
                     img.onload = resolve;
                     img.onerror = resolve;
                 });
                 setLoadedPhotos((prevPhotos) => {
-                    if (!prevPhotos.includes(photo)) {
-                        return [...prevPhotos, photo];
+                    if (!prevPhotos.some(photo => photo.url === photoData.url)) {
+                        return [...prevPhotos, photoData];
                     }
                     return prevPhotos;
                 });
@@ -165,14 +165,14 @@ const Pictures = () => {
                                     boxSizing: 'border-box',
                                 }}>
                                 <Image
-                                    src={photo}
+                                    src={photo.url}
                                     alt={`Photo ${index + 1}`}
                                     style={{
                                         width: '100%',
                                         borderRadius: '8px',
                                     }}
                                     onClick={() =>
-                                        console.log('图片地址: ', photo)
+                                        console.log('图片信息: ', photo)
                                     }
                                     preview
                                 />
