@@ -4,8 +4,8 @@ import os
 
 # 定义API的URL列表
 API_URLS = [
-    'https://api.blog.tteam.icu/waka_time.json',
-    'https://api.blog.tteam.icu/pictures.json',
+    'https://api.blog.tteam.icu/waka_time',
+    'https://api.blog.tteam.icu/pictures',
 ]
 
 # 遍历每个 API URL
