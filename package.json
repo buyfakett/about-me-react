@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "dependencies": {
-    "@douyinfe/semi-icons": "^2.72.2",
-    "@douyinfe/semi-illustrations": "^2.72.2",
-    "@douyinfe/semi-ui": "^2.72.2",
+    "@douyinfe/semi-icons": "^2.73.0-beta.1",
+    "@douyinfe/semi-illustrations": "^2.73.0-beta.1",
+    "@douyinfe/semi-ui": "^2.73.0-beta.1",
     "@hi-ui/watermark": "^4.0.8",
     "class-variance-authority": "^0.7.0",
     "clsx": "^1.2.1",
