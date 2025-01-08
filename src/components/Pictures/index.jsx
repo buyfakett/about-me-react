@@ -15,11 +15,21 @@ const Pictures = () => {
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
     const [displayCount, setDisplayCount] = useState(10);
+    const [shouldStartLoading, setShouldStartLoading] = useState(false);
 
     const PHOTOS_PER_LOAD = 5;
     const PHOTOS_PER_ROW = 3; // 假设每行显示3张图片
     const observerRef = useRef(null);
     const loadTriggerRef = useRef(null);
+
+    // 添加延迟加载控制
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setShouldStartLoading(true);
+        }, 1000);
+
+        return () => clearTimeout(timer);
+    }, []);
 
     // 计算图片在一行中应该占据的宽度百分比
     const calculateImageWidth = (width, height) => {
@@ -29,6 +39,8 @@ const Pictures = () => {
 
     // 获取图片列表
     useEffect(() => {
+        if (!shouldStartLoading) return;
+
         const fetchPictures = async () => {
             try {
                 setLoading(true);
@@ -44,10 +56,12 @@ const Pictures = () => {
         };
 
         fetchPictures();
-    }, []);
+    }, [shouldStartLoading]);
 
     // 批量加载图像的功能
     useEffect(() => {
+        if (!shouldStartLoading) return;
+
         const loadImages = async () => {
             const nextBatch = pictureList.urls.slice(
                 currentIndex,
@@ -72,7 +86,7 @@ const Pictures = () => {
         };
 
         loadImages();
-    }, [currentIndex, pictureList.urls]);
+    }, [currentIndex, pictureList.urls, shouldStartLoading]);
 
     // 修改无限滚动触发逻辑
     useEffect(() => {
@@ -219,7 +233,7 @@ const Pictures = () => {
                                         delay: loadedPhotos.some(
                                             (p) => p.url === photo.url,
                                         )
-                                            ? 0.1
+                                            ? 1.5
                                             : 0,
                                     }}
                                     whileHover={{ scale: 1.05 }}
