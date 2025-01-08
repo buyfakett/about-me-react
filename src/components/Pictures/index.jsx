@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { apiList, pageVariants } from '../../config';
 import { Button, Empty, Image, Spin } from '@douyinfe/semi-ui';
@@ -14,8 +14,18 @@ const Pictures = () => {
     const [pictureList, setPictureList] = useState({ urls: [], count: 0 });
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+    const [displayCount, setDisplayCount] = useState(10);
 
-    const PHOTOS_PER_LOAD = 10;
+    const PHOTOS_PER_LOAD = 5;
+    const PHOTOS_PER_ROW = 3; // 假设每行显示3张图片
+    const observerRef = useRef(null);
+    const loadTriggerRef = useRef(null);
+
+    // 计算图片在一行中应该占据的宽度百分比
+    const calculateImageWidth = (width, height) => {
+        const aspectRatio = width / height;
+        return `${aspectRatio * 30}%`; // 基础高度为30%，根据宽高比调整宽度
+    };
 
     // 获取图片列表
     useEffect(() => {
@@ -51,7 +61,9 @@ const Pictures = () => {
                     img.onerror = resolve;
                 });
                 setLoadedPhotos((prevPhotos) => {
-                    if (!prevPhotos.some(photo => photo.url === photoData.url)) {
+                    if (
+                        !prevPhotos.some((photo) => photo.url === photoData.url)
+                    ) {
                         return [...prevPhotos, photoData];
                     }
                     return prevPhotos;
@@ -62,18 +74,23 @@ const Pictures = () => {
         loadImages();
     }, [currentIndex, pictureList.urls]);
 
-    // 无限滚动触发逻辑
+    // 修改无限滚动触发逻辑
     useEffect(() => {
-        const handleScroll = () => {
-            const { scrollTop, scrollHeight, clientHeight } =
-                document.documentElement;
-            const footerHeight =
-                document.querySelector('footer')?.offsetHeight || 0;
+        if (!pictureList?.urls?.length) return;
 
-            if (scrollTop + clientHeight >= scrollHeight - footerHeight - 100) {
+        const options = {
+            root: null,
+            rootMargin: '0px',
+            threshold: 0.1,
+        };
+
+        const handleIntersection = (entries) => {
+            const entry = entries[0];
+            if (entry.isIntersecting) {
                 setCurrentIndex((prevIndex) => {
                     const newIndex = prevIndex + PHOTOS_PER_LOAD;
                     if (newIndex < pictureList.count) {
+                        setDisplayCount((prev) => prev + PHOTOS_PER_LOAD);
                         return newIndex;
                     }
                     return prevIndex;
@@ -81,11 +98,28 @@ const Pictures = () => {
             }
         };
 
-        window.addEventListener('scroll', handleScroll);
+        observerRef.current = new IntersectionObserver(
+            handleIntersection,
+            options,
+        );
+
+        if (loadTriggerRef.current) {
+            observerRef.current.observe(loadTriggerRef.current);
+        }
+
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            if (observerRef.current) {
+                observerRef.current.disconnect();
+            }
         };
-    }, [pictureList]);
+    }, [pictureList, displayCount]);
+
+    // 计算触发加载的元素位置
+    const getTriggerElementIndex = () => {
+        const totalDisplayed = Math.min(displayCount, pictureList.urls.length);
+        const rowCount = Math.ceil(totalDisplayed / PHOTOS_PER_ROW);
+        return Math.max(0, (rowCount - 2) * PHOTOS_PER_ROW - 1);
+    };
 
     return (
         <motion.div
@@ -148,36 +182,83 @@ const Pictures = () => {
                     <div
                         className="w-full flex flex-wrap gap-4"
                         style={{ justifyContent: 'center', rowGap: '16px' }}>
-                        {loadedPhotos.map((photo, index) => (
-                            <motion.div
-                                key={index}
-                                className="rounded-lg shadow-md"
-                                initial={{ opacity: 0, x: -50 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{
-                                    delay: index * 0.2,
-                                    duration: 0.5,
-                                }}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                style={{
-                                    flex: '0 0 calc(33.333% - 16px)',
-                                    boxSizing: 'border-box',
-                                }}>
-                                <Image
-                                    src={photo.url}
-                                    alt={`Photo ${index + 1}`}
-                                    style={{
-                                        width: '100%',
-                                        borderRadius: '8px',
-                                    }}
-                                    onClick={() =>
-                                        console.log('图片信息: ', photo)
+                        {pictureList.urls
+                            .slice(0, displayCount)
+                            .map((photo, index) => (
+                                <motion.div
+                                    key={index}
+                                    ref={
+                                        index === getTriggerElementIndex()
+                                            ? loadTriggerRef
+                                            : null
                                     }
-                                    preview
-                                />
-                            </motion.div>
-                        ))}
+                                    className="rounded-lg shadow-md overflow-hidden"
+                                    initial={{
+                                        opacity: 0,
+                                        x: -20,
+                                        scale: 0.98,
+                                    }}
+                                    animate={
+                                        loadedPhotos.some(
+                                            (p) => p.url === photo.url,
+                                        )
+                                            ? {
+                                                  opacity: 1,
+                                                  x: 0,
+                                                  scale: 1,
+                                              }
+                                            : {
+                                                  opacity: 0,
+                                                  x: -20,
+                                                  scale: 0.98,
+                                              }
+                                    }
+                                    transition={{
+                                        duration: 0.3,
+                                        ease: 'easeOut',
+                                        delay: loadedPhotos.some(
+                                            (p) => p.url === photo.url,
+                                        )
+                                            ? 0.1
+                                            : 0,
+                                    }}
+                                    whileHover={{ scale: 1.05 }}
+                                    whileTap={{ scale: 0.95 }}
+                                    style={{
+                                        width: calculateImageWidth(
+                                            photo.width,
+                                            photo.height,
+                                        ),
+                                        aspectRatio: `${photo.width} / ${photo.height}`,
+                                        minWidth: '300px',
+                                        maxWidth: '800px',
+                                    }}>
+                                    {loadedPhotos.some(
+                                        (p) => p.url === photo.url,
+                                    ) ? (
+                                        <Image
+                                            src={photo.url}
+                                            alt={`Photo ${index + 1}`}
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                                objectFit: 'cover',
+                                            }}
+                                            onClick={() =>
+                                                console.log('图片信息: ', photo)
+                                            }
+                                            preview
+                                        />
+                                    ) : (
+                                        <div
+                                            style={{
+                                                width: '100%',
+                                                height: '100%',
+                                            }}
+                                        />
+                                    )}
+                                </motion.div>
+                            ))}
                     </div>
                 </>
             )}
