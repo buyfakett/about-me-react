@@ -196,6 +196,12 @@ export const urlList = {
                 describe: '中转机',
                 img_src: 'https://img.tteam.icu/i/2024/12/09/iucx4h-3.webp'
             },
+            {
+                title: 'claw爪云',
+                src: 'https://claw.cloud/',
+                describe: '“阿里云母公司”',
+                img_src: 'https://img.tteam.icu/i/2025/01/09/ua8hki-3.webp '
+            },
         ]
     }
 }
