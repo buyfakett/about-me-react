@@ -19,7 +19,7 @@ export const imgUrl = {
 
 export const umamiScript = "https://umami.tteam.icu/script.js";
 
-const apiBaseUrl = "https://api.blog.tteam.icu";
+const apiBaseUrl = "https://blog-api.tteam.icu";
 
 export const umamiId = "12d3e9e9-3982-43a1-a285-e2f611073a71";
 
