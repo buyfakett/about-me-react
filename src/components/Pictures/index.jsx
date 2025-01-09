@@ -1,4 +1,4 @@
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
 import { apiList, pageVariants } from '../../config';
 import { Button, Empty, Image, Spin } from '@douyinfe/semi-ui';
@@ -252,14 +252,16 @@ const Pictures = () => {
                                     ) ? (
                                         <Image
                                             src={photo.url}
-                                            alt={`Photo ${index + 1}`}
+                                            alt={photo.description}
                                             style={{
                                                 width: '100%',
                                                 height: '100%',
                                                 objectFit: 'cover',
                                             }}
                                             onClick={() =>
-                                                console.log('图片信息: ', photo)
+                                                console.log(
+                                                    `图片 ${index + 1}\n图片地址：${photo.url}\n图片描述：${photo.description}`,
+                                                )
                                             }
                                             preview
                                         />
