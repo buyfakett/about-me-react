@@ -1,9 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import App from './App.jsx';
 import { BrowserRouter } from 'react-router-dom'; // 引入 BrowserRouter
-import { ThemeProvider } from './util/ThemeContext';
+import { ThemeProvider } from './util/ThemeContext.jsx';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 

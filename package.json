@@ -1,5 +1,6 @@
 {
   "name": "about-me-react",
+  "type": "module",
   "version": "1.0.0",
   "private": true,
   "dependencies": {
@@ -22,7 +23,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-    "prebuild": "python3 src/scripts/fetchWakatimeData.py",
+    "prebuild": "node src/scripts/fetchWakatimeData.js",
     "getgitinfo": "node src/scripts/generateBuildInfo.js",
     "build": "react-scripts build",
     "test": "react-scripts test",

@@ -1,6 +1,13 @@
-const fs = require('fs');
-const { execSync } = require('child_process');
-const path = require('path');
+import { promises as fs } from 'fs';
+import { execSync } from 'child_process';
+import { fileURLToPath } from 'url';
+import { dirname, join } from 'path';
+
+/**
+ * 生成构建信息
+ * @module generateBuildInfo
+ * @description 生成包含 Git 信息和构建时间的构建信息文件
+ */
 
 function convertTime(date) {
     date.setUTCHours(date.getUTCHours() + 8);
@@ -35,13 +42,18 @@ const buildInfo = {
 };
 
 // 确保目录存在
-const outputDir = path.join(__dirname, '../default_data');
-if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = dirname(__filename);
+const outputDir = join(__dirname, '../default_data');
+
+try {
+    await fs.access(outputDir);
+} catch {
+    await fs.mkdir(outputDir, { recursive: true });
 }
 
 // 写入为 JavaScript 文件，包含 const 变量
 const jsContent = `export const buildInfo = ${JSON.stringify(buildInfo, null, 2)};`;
 
-fs.writeFileSync(path.join(outputDir, 'buildInfo.js'), jsContent);
+await fs.writeFile(join(outputDir, 'buildInfo.js'), jsContent);
 console.log('构建信息已保存为 JavaScript 文件:', buildInfo);
