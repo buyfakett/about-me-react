@@ -9,6 +9,14 @@ class BackToTop extends React.Component {
     };
 
     // 计算滚动进度
+    // 返回顶部功能
+    scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     handleScroll = () => {
         const scrollHeight =
             document.documentElement.scrollHeight -
@@ -57,7 +65,7 @@ class BackToTop extends React.Component {
             position: 'fixed',
             bottom: 50,
             right: 100,
-            width: 50, // 调整容器大小
+            width: 50,
             height: 50,
             display: 'flex',
             justifyContent: 'center',
@@ -88,7 +96,12 @@ class BackToTop extends React.Component {
         return (
             <div style={containerStyle}>
                 {/* 进度条填充 */}
-                <div style={progressFillStyle} />
+                <div
+                    style={progressFillStyle}
+                    onClick={this.scrollToTop}
+                    role="button"
+                    aria-label="返回顶部"
+                />
                 {/* BackTop 按钮 */}
                 <BackTop style={buttonStyle}>
                     <FaArrowUpLong />
