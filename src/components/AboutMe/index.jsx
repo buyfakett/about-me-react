@@ -4,7 +4,7 @@ import HeadPortrait from './HeadPortrait';
 import LanguageSection from './LanguageSection';
 import WorkExperience from './WorkExperience';
 import { pageVariants } from '../../config';
-import Projects from './Projects';
+import OpenSourceProjects from './OpenSourceProjects.jsx';
 
 const AboutMe = ({ wakatimeData }) => {
     return (
@@ -34,7 +34,7 @@ const AboutMe = ({ wakatimeData }) => {
 
             <WorkExperience />
 
-            <Projects />
+            <OpenSourceProjects />
         </motion.div>
     );
 };

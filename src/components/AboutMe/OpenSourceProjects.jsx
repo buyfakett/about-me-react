@@ -3,7 +3,7 @@ import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 import { projectData } from '../../config';
 
-const Projects = () => {
+const OpenSourceProjects = () => {
     return (
         <div className="dark:bg-gray-900 dark:text-gray-300">
             <motion.div
@@ -12,7 +12,7 @@ const Projects = () => {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}>
                 <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center">
-                    Projects
+                    My Open Source Projects
                 </h1>
             </motion.div>
 
@@ -42,4 +42,4 @@ const Projects = () => {
     );
 };
 
-export default Projects;
+export default OpenSourceProjects;
