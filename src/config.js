@@ -6,7 +6,7 @@ export const skipUrl = {
     blog: "https://blog.tteam.icu",
     github: "https://github.com/buyfakett",
     bili: "https://space.bilibili.com/11479221",
-    muen: "https://www.tmofamily.com",
+    muen: "https://website.tmofamily.com",
     zhenshan: "https://www.gisquest.com",
     email: "mailto:work@tteam.icu",
 };
