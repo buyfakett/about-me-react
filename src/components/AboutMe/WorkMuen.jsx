@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NeonGradientCard } from '../magicui/NeonGradientCard';
 import { Image } from '@douyinfe/semi-ui';
 import { imgUrl, skipUrl } from '../../config';
+import { Button } from '@douyinfe/semi-ui';
 
 const WorkMuen = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -59,10 +60,38 @@ const WorkMuen = () => {
 
 const WorkProjectMuen = () => {
     return (
-        <div className="w-full h-full p-6">
-            <a href={skipUrl.muen} target="_blank">
-                跳转官网
-            </a>
+        <div className="w-full h-full p-6 flex">
+            <div className="w-[20%] flex items-center justify-center">
+                <Button
+                    theme="outline"
+                    type="tertiary"
+                    size="large"
+                    onClick={() => window.open(skipUrl.muen, '_blank')}>
+                    跳转官网
+                </Button>
+            </div>
+            <div className="border-r border-white mx-3 h-full" />
+            <div className="w-[80%] flex flex-col gap-4">
+                {/* 第一行 */}
+                <div className="flex gap-4 h-1/2">
+                    <div className="flex-1 p-4">xxx</div>
+                    <div className="border-r border-white mx-2 h-full" />
+                    <div className="flex-1 p-4">xxx</div>
+                    <div className="border-r border-white mx-2 h-full" />
+                    <div className="flex-1 p-4">xxx</div>
+                </div>
+
+                {/* 第二行 */}
+                <div className="border-b border-white my-2 w-full" />
+
+                <div className="flex gap-4 h-1/2">
+                    <div className="flex-1 p-4">xxx</div>
+                    <div className="border-r border-white mx-2 h-full" />
+                    <div className="flex-1 p-4">xxx</div>
+                    <div className="border-r border-white mx-2 h-full" />
+                    <div className="flex-1 p-4">xxx</div>
+                </div>
+            </div>
         </div>
     );
 };
