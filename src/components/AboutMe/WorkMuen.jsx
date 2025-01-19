@@ -77,13 +77,9 @@ const WorkProjectMuen = () => {
             <div className="w-full md:w-[80%] flex flex-col gap-4">
                 <AnimatePresence>
                     {selectedProject ? (
-                        <motion.div
+                        <div
                             key="detail"
-                            className="w-full h-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ opacity: { duration: 0.3 } }}>
+                            className="w-full h-full">
                             <button
                                 className="absolute top-5 left-10 text-sm"
                                 onClick={() => setSelectedProject(null)}>
@@ -97,15 +93,11 @@ const WorkProjectMuen = () => {
                                     {selectedProject.content}
                                 </div>
                             </div>
-                        </motion.div>
+                        </div>
                     ) : (
-                        <motion.div
+                        <div
                             key="list"
-                            className="w-full h-full"
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ opacity: { duration: 0.3 } }}>
+                            className="w-full h-full">
                             <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 h-full">
                                 {muenProjects.map((project, index) => (
                                     <motion.div
@@ -121,7 +113,7 @@ const WorkProjectMuen = () => {
                                     </motion.div>
                                 ))}
                             </div>
-                        </motion.div>
+                        </div>
                     )}
                 </AnimatePresence>
             </div>
