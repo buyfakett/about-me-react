@@ -4,9 +4,11 @@ import md from '!!raw-loader!../CHANGELOG.md';
 import { pageVariants } from '../config.js';
 import { Button } from '@douyinfe/semi-ui';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
 
 const ChangeLog = () => {
+    const navigate = useNavigate();
     return (
         <motion.div
             className="w-[60%] mx-auto min-h-screen dark:bg-gray-900 text-white flex flex-col items-center p-4 mt-3"
