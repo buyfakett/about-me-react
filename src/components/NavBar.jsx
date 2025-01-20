@@ -40,6 +40,11 @@ const NavBar = () => {
                         className="items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200 hidden md:flex">
                         Pictures
                     </Link>
+                    <Link
+                        to="/changelog"
+                        className="items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200 hidden md:flex">
+                        ChangeLog
+                    </Link>
                     <a
                         href={skipUrl.note}
                         target="_blank"
