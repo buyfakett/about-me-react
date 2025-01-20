@@ -3,7 +3,12 @@
     "jsx": "react",
     "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
-    }
+      "@/*": [
+        "./*"
+      ]
+    },
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "strict": true
   }
 }
