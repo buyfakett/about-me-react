@@ -76,6 +76,21 @@ export const muenProjects = [
     },
 ];
 
+export const zhenshanProjects = [
+    {
+        title: '杭州各区县数据清洗',
+        content: `项目背景：各区县的库很多脏数据，如幢户数据不匹配
+        项目思路：对比图形等数据进行手动/自动清洗
+        项目成果：在合库前把脏数据清理完毕`,
+    },
+    {
+        title: '杭州各区县合库',
+        content: `项目背景：各区县的库在不同区县，查询不方便
+        项目思路：各区县的图形和数据库合并
+        项目成果：各区县查询同一个库`,
+    },
+];
+
 export const projectData = [
     {
         title: "ding_bot",
