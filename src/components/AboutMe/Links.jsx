@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Typography } from '@douyinfe/semi-ui';
-// import { FaCoffee } from 'react-icons/fa';
+import { FaCoffee } from 'react-icons/fa';
 
 const Links = () => {
     const { Paragraph } = Typography;
@@ -29,13 +29,13 @@ const Links = () => {
                     className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200">
                     Change Logs
                 </Link>
-                {/*<span className="mx-2">|</span>*/}
-                {/*<Link*/}
-                {/*    to="/coffee"*/}
-                {/*    className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 flex items-center">*/}
-                {/*    <FaCoffee className="mr-1" />*/}
-                {/*    Buy Some Coffee*/}
-                {/*</Link>*/}
+                <span className="mx-2">|</span>
+                <Link
+                    to="/coffee"
+                    className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 flex items-center">
+                    <FaCoffee className="mr-1" />
+                    Buy Some Coffee
+                </Link>
             </div>
         </motion.div>
     );
