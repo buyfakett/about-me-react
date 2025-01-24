@@ -13,7 +13,8 @@ import Pictures from './components/Pictures';
 import Watermark from '@hi-ui/watermark';
 import BackToTop from './components/BackToTop';
 import { Helmet } from 'react-helmet';
-import ChangeLog from "./util/ChangeLog.jsx";
+import ChangeLog from './util/ChangeLog';
+import Coffee from './components/Coffee';
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -83,6 +84,7 @@ const App = () => {
                         <Route path="/urls" element={<Urls />} />
                         <Route path="/pictures" element={<Pictures />} />
                         <Route path="/changelog" element={<ChangeLog />} />
+                        <Route path="/coffee" element={<Coffee />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
 

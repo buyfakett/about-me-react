@@ -4,7 +4,8 @@ import HeadPortrait from './HeadPortrait';
 import LanguageSection from './LanguageSection';
 import WorkExperience from './WorkExperience';
 import { pageVariants } from '../../config';
-import OpenSourceProjects from './OpenSourceProjects.jsx';
+import OpenSourceProjects from './OpenSourceProjects';
+import Links from './Links';
 
 const AboutMe = ({ wakatimeData }) => {
     return (
@@ -17,14 +18,7 @@ const AboutMe = ({ wakatimeData }) => {
             transition={{ duration: 0.5 }}>
             <HeadPortrait />
 
-            <motion.h1
-                className="text-4xl font-bold mb-4"
-                initial={{ opacity: 0, y: 50 }} // 从下方开始 (y 设为正值)
-                animate={{ opacity: 1, y: 0 }} // 最终回到原始位置
-                transition={{ duration: 1 }} // 动画持续 1 秒
-            >
-                About Me
-            </motion.h1>
+            <Links />
 
             <LanguageSection
                 start_time={wakatimeData.start_time}

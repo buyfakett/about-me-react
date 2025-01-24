@@ -7,8 +7,10 @@ import {
     IllustrationConstructionDark,
 } from '@douyinfe/semi-illustrations';
 import { IoIosArrowBack } from 'react-icons/io';
+import { useNavigate } from 'react-router-dom';
 
 const Pictures = () => {
+    const navigate = useNavigate();
     const [loadedPhotos, setLoadedPhotos] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [pictureList, setPictureList] = useState({ urls: [], count: 0 });
