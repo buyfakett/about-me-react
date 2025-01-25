@@ -46,7 +46,10 @@ const OpenSourceProjects = () => {
                     transition={{ duration: 0.5, delay: 6 * 0.2 }}
                     className="mt-5 col-span-full flex justify-center">
                     <button
-                        onClick={() => navigate('/project')}
+                        onClick={() => {
+                            navigate('/projects');
+                            window.scrollTo(0, 0);
+                        }}
                         className="flex items-center gap-2 text-white ml-auto mr-10">
                         <CiLink className="w-5 h-5" />
                         <span className="text-sm">More Projects</span>

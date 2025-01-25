@@ -3,8 +3,10 @@ import { pageVariants } from './config.js';
 import { Button } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { motion } from 'framer-motion';
+import { useNavigate } from 'react-router-dom';
 
 const NotFound = () => {
+    const navigate = useNavigate();
     React.useEffect(() => {
         document.title = '404 - 你走错了呢';
     }, []);
