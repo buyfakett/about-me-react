@@ -1,9 +1,12 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 import { projectData } from '../../config';
+import { CiLink } from 'react-icons/ci';
 
 const OpenSourceProjects = () => {
+    const navigate = useNavigate();
     return (
         <div className="dark:bg-gray-900 dark:text-gray-300">
             <motion.div
@@ -27,7 +30,7 @@ const OpenSourceProjects = () => {
                             //     ? "grid-cols-3 justify-center"
                             'sm:grid-cols-1 md:grid-cols-3'
                 }`}>
-                {projectData.map((item, index) => (
+                {projectData.slice(0, 6).map((item, index) => (
                     <motion.div
                         initial={{ opacity: 0, scale: 0.9 }}
                         animate={{ opacity: 1, scale: 1 }}
@@ -37,6 +40,18 @@ const OpenSourceProjects = () => {
                         <ProjectCard data={item} />
                     </motion.div>
                 ))}
+                <motion.div
+                    initial={{ opacity: 0, scale: 0.9 }}
+                    animate={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.5, delay: 6 * 0.2 }}
+                    className="mt-5 col-span-full flex justify-center">
+                    <button
+                        onClick={() => navigate('/project')}
+                        className="flex items-center gap-2 text-white ml-auto mr-10">
+                        <CiLink className="w-5 h-5" />
+                        <span className="text-sm">More Projects</span>
+                    </button>
+                </motion.div>
             </div>
         </div>
     );

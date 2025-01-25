@@ -15,6 +15,7 @@ import BackToTop from './components/BackToTop';
 import { Helmet } from 'react-helmet';
 import ChangeLog from './util/ChangeLog';
 import Coffee from './components/Coffee';
+import Projects from './components/Projects/index';
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -85,6 +86,7 @@ const App = () => {
                         <Route path="/pictures" element={<Pictures />} />
                         <Route path="/changelog" element={<ChangeLog />} />
                         <Route path="/coffee" element={<Coffee />} />
+                        <Route path="/projects" element={<Projects />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
 
