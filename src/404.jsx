@@ -8,7 +8,11 @@ import { useNavigate } from 'react-router-dom';
 const NotFound = () => {
     const navigate = useNavigate();
     React.useEffect(() => {
+        const originalTitle = document.title;
         document.title = '404 - 你走错了呢';
+        return () => {
+            document.title = originalTitle;
+        };
     }, []);
 
     return (
