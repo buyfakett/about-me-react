@@ -11,7 +11,7 @@ const Projects = () => {
 
     return (
         <motion.div
-            className="w-[80%] mx-auto min-h-screen dark:bg-gray-900 text-white flex flex-col items-center p-4 mt-3"
+            className="w-[70%] mx-auto min-h-screen dark:bg-gray-900 text-white flex flex-col items-center p-4 mt-3"
             variants={pageVariants}
             initial="initial"
             animate="animate"
