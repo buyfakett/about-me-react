@@ -1,16 +1,19 @@
 import React from 'react';
-import { FaCloudflare, FaReact } from 'react-icons/fa';
+import { FaCloudflare, FaReact, FaRegCopyright } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { IconSemiLogo } from '@douyinfe/semi-icons';
 import { skipUrl } from '../config';
 
 const Footer = ({ buildInfo }) => {
+    const year = new Date().getFullYear();
+
     return (
         <>
             <footer className="border-t border-gray-700 py-6 text-center text-sm mt-20 bg-gray-800 text-gray-300">
                 <div className="max-w-4xl mx-auto">
-                    <p className="mb-2">
-                        © 2024
+                    <p className="mb-2 flex items-center justify-center">
+                        <FaRegCopyright className="mr-1 text-sm" />
+                        2024 - {year}
                         <a
                             href={skipUrl.github}
                             target="_blank"

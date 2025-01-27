@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Typography } from '@douyinfe/semi-ui';
 import { FaCoffee } from 'react-icons/fa';
+import { skipUrl } from '../../config';
 
 const Links = () => {
     const { Paragraph } = Typography;
@@ -17,16 +18,13 @@ const Links = () => {
             <div className="flex items-center justify-center">
                 <Paragraph
                     copyable={{
-                        content: 'https://blog.tteam.icu/rss.xml',
+                        content: `${skipUrl.blog}/rss.xml`,
                         copyTip: 'copy',
                     }}
                     className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer">
                     <span
                         onClick={() =>
-                            window.open(
-                                'https://blog.tteam.icu/rss.xml',
-                                '_blank',
-                            )
+                            window.open(`${skipUrl.blog}/rss.xml`, '_blank')
                         }>
                         Follow Me
                     </span>
