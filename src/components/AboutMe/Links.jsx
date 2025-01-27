@@ -21,7 +21,15 @@ const Links = () => {
                         copyTip: 'copy',
                     }}
                     className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer">
-                    Follow Me
+                    <span
+                        onClick={() =>
+                            window.open(
+                                'https://blog.tteam.icu/rss.xml',
+                                '_blank',
+                            )
+                        }>
+                        Follow Me
+                    </span>
                 </Paragraph>
                 <span className="mx-2">|</span>
                 <Link
