@@ -4,7 +4,6 @@
 
 - 用 `nvm` 安装 `node > 20@stable` `nvm install stable` 最佳 。windows 用户可以使用 [nvm-windows](https://github.com/coreybutler/nvm-windows)
 - 依赖使用`pnpm`进行安装
-- 
 
 ## 技术栈
 
