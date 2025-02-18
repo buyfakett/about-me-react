@@ -22,4 +22,10 @@ export default defineConfig({
             root: 'build',
         },
     },
+    performance: {
+        chunkSplit: {
+            // 代码拆分
+            strategy: 'split-by-experience',
+        },
+    },
 });

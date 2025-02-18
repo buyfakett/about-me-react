@@ -81,6 +81,17 @@ const Footer = ({ buildInfo }) => {
                             />
                             <span>Magic UI</span>
                         </a>
+                        <a
+                            href="https://rsbuild.dev/zh/index"
+                            target="_blank"
+                            className="flex items-center space-x-1 text-blue-400 hover:underline">
+                            <img
+                                src="https://assets.rspack.dev/rsbuild/rsbuild-logo.svg"
+                                alt="Rsbuild"
+                                className="w-4 h-4 rounded-full"
+                            />
+                            <span>Rsbuild</span>
+                        </a>
                     </p>
                 </div>
 
