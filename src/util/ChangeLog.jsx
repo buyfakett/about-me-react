@@ -1,6 +1,6 @@
 import React from 'react';
 import Markdown from 'react-markdown';
-import md from '!!raw-loader!../CHANGELOG.md';
+import changelog from '../../CHANGELOG.md';
 import { pageVariants } from '../config.js';
 import { Button } from '@douyinfe/semi-ui';
 import { motion } from 'framer-motion';
@@ -26,7 +26,7 @@ const ChangeLog = () => {
                     返回首页
                 </Button>
             </div>
-            <Markdown className="mt-10 text-xl leading-loose">{md}</Markdown>
+            <Markdown className="mt-10 text-xl leading-loose">{changelog}</Markdown> {/* 这里渲染Markdown */}
         </motion.div>
     );
 };
