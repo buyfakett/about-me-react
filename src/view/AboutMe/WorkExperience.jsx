@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import WorkMuen from './WorkMuen.jsx';
-import WorkZhenShan from './WorkZhenShan.jsx';
+import WorkMuen from './WorkMuen';
+import WorkZhenShan from './WorkZhenShan';
 
 const WorkExperience = () => {
     return (

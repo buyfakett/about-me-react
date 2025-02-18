@@ -1,6 +1,6 @@
 import React from 'react';
 import { Avatar, Card } from '@douyinfe/semi-ui';
-import { imgUrl } from '../../config';
+import { imgUrl } from '@/config';
 
 const ProjectCard = ({ data }) => {
     const { Meta } = Card;

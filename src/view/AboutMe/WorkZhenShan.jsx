@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
-import { NeonGradientCard } from '../magicui/NeonGradientCard';
+import { NeonGradientCard } from '@/view/magicui/NeonGradientCard';
 import { Button, Image } from '@douyinfe/semi-ui';
-import { imgUrl, skipUrl, zhenshanProjects } from '../../config';
+import { imgUrl, skipUrl, zhenshanProjects } from '@/config';
 import { AnimatePresence, motion } from 'framer-motion';
 
 const WorkZhenShan = () => {

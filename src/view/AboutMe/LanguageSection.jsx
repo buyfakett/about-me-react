@@ -1,10 +1,10 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import clsx from 'clsx';
-import { NumberTicker } from '../magicui/NumberTicker';
-import { TypingAnimation } from '../magicui/TypingAnimation';
+import { NumberTicker } from '@/view/magicui/NumberTicker';
+import { TypingAnimation } from '@/view/magicui/TypingAnimation';
 import SkillSection from './SkillSection';
-import { languageSkillData } from '../../config';
+import { languageSkillData } from '@/config';
 
 const LanguageSection = ({ start_time, languages, update_time }) => {
     return (

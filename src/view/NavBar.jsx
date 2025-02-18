@@ -5,7 +5,7 @@ import { CiShare1 } from 'react-icons/ci';
 import { Link } from 'react-router-dom';
 import { Divider } from '@douyinfe/semi-ui';
 import { MdEmail } from 'react-icons/md';
-import { myName, skipUrl } from '../config';
+import { myName, skipUrl } from '@/config';
 
 const NavBar = () => {
     return (

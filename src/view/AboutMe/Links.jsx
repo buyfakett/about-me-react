@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Link } from 'react-router-dom';
 import { Typography } from '@douyinfe/semi-ui';
 import { FaCoffee } from 'react-icons/fa';
-import { skipUrl } from '../../config';
+import { skipUrl } from '@/config';
 
 const Links = () => {
     const { Paragraph } = Typography;

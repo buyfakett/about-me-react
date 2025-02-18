@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
-import { projectData } from '../../config';
+import { projectData } from '@/config';
 import { CiLink } from 'react-icons/ci';
 
 const OpenSourceProjects = () => {

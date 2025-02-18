@@ -1,21 +1,21 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router-dom';
-import Footer from './components/Footer';
-import NavBar from './components/NavBar';
-import AboutMe from './components/AboutMe';
-import * as Config from './config';
-import { waka_timeDefaultData } from './default_data/waka_time';
-import { buildInfo } from './default_data/buildInfo';
-import Tools from './components/Tools';
-import Urls from './components/Urls';
-import NotFound from './404';
-import Pictures from './components/Pictures';
+import Footer from '@/view/Footer';
+import NavBar from '@/view/NavBar';
+import AboutMe from '@/view/AboutMe';
+import * as Config from '@/config';
+import { waka_timeDefaultData } from '@/default_data/waka_time';
+import { buildInfo } from '@/default_data/buildInfo';
+import Tools from '@/view/Tools';
+import Urls from '@/view/Urls';
+import NotFound from '@/404';
+import Pictures from '@/view/Pictures';
 import Watermark from '@hi-ui/watermark';
-import BackToTop from './components/BackToTop';
+import BackToTop from '@/view/BackToTop';
 import { Helmet } from 'react-helmet';
-import ChangeLog from './util/ChangeLog';
-import Coffee from './components/Coffee';
-import Projects from './components/Projects/index';
+import ChangeLog from '@/util/ChangeLog';
+import Coffee from '@/view/Coffee';
+import Projects from '@/view/Projects/index';
 
 const App = () => {
     // semi-design的主题默认为暗色

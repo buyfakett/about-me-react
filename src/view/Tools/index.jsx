@@ -4,7 +4,7 @@ import { Button } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
 import ToolsCategorySection from './ToolsCategorySection';
-import { devices, pageVariants, softwareTools } from '../../config';
+import { devices, pageVariants, softwareTools } from '@/config';
 
 const Tools = () => {
     const navigate = useNavigate();

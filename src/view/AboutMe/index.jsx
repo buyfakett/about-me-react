@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import HeadPortrait from './HeadPortrait';
 import LanguageSection from './LanguageSection';
 import WorkExperience from './WorkExperience';
-import { pageVariants } from '../../config';
+import { pageVariants } from '@/config';
 import OpenSourceProjects from './OpenSourceProjects';
 import Links from './Links';
 

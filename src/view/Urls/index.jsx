@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { Button } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';
-import { pageVariants, urlList } from '../../config';
+import { pageVariants, urlList } from '@/config';
 import ToolsCategorySection from './UrlsCategorySection';
 
 const Index = () => {

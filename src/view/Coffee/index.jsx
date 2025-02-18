@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { pageVariants } from '../../config';
+import { pageVariants } from '@/config';
 import { Button, Image } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router-dom';

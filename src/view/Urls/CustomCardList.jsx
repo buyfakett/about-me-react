@@ -1,7 +1,7 @@
 import React from 'react';
 import { Avatar, Card, Popover } from '@douyinfe/semi-ui';
 import { IconInfoCircle } from '@douyinfe/semi-icons';
-import { cn } from '../../lib/utils';
+import { cn } from '@/lib/utils';
 
 const CustomCardList = ({ data, className }) => {
     return (

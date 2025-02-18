@@ -2,7 +2,7 @@ import React from 'react';
 import { FaCloudflare, FaReact, FaRegCopyright } from 'react-icons/fa';
 import { RiTailwindCssFill } from 'react-icons/ri';
 import { IconSemiLogo } from '@douyinfe/semi-icons';
-import { skipUrl } from '../config';
+import { skipUrl } from '@/config';
 
 const Footer = ({ buildInfo }) => {
     const year = new Date().getFullYear();

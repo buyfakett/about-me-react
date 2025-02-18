@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { apiList, pageVariants } from '../../config';
+import { apiList, pageVariants } from '@/config';
 import { Button, Empty, Image, Spin } from '@douyinfe/semi-ui';
 import {
     IllustrationConstruction,
