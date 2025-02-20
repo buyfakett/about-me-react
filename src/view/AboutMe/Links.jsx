@@ -30,15 +30,15 @@ const Links = () => {
                     </span>
                 </Paragraph>
                 <span className="mx-2">|</span>
-                <Link
-                    to="/changelog"
-                    className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200">
-                    Change Logs
-                </Link>
-                <span className="mx-2">|</span>
+                {/*<Link*/}
+                {/*    to="/changelog"*/}
+                {/*    className="text-sm font-bold text-white dark:hover:text-blue-400 transition-colors duration-200">*/}
+                {/*    Change Logs*/}
+                {/*</Link>*/}
+                {/*<span className="mx-2">|</span>*/}
                 <Link
                     to="/coffee"
-                    className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 flex items-center">
+                    className="text-sm font-bold text-white dark:hover:text-blue-400 transition-colors duration-200 flex items-center">
                     <FaCoffee className="mr-1" />
                     Buy Some Coffee
                 </Link>
