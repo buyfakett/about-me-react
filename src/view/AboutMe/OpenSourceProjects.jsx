@@ -10,7 +10,7 @@ const OpenSourceProjects = () => {
     return (
         <div className="dark:bg-gray-900 dark:text-gray-300">
             <motion.div
-                className="w-full max-w-screen-lg mx-auto flex flex-col items-center mt-20 px-4"
+                className="w-full max-w-(--breakpoint-lg) mx-auto flex flex-col items-center mt-20 px-4"
                 initial={{ opacity: 0, y: 50 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 1 }}>

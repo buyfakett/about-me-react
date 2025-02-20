@@ -26,7 +26,7 @@ const NavBar = () => {
                     {/* 链接 */}
                     <Link
                         to="/tools"
-                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200">
+                        className="flex items-center text-lg font-bold dark:hover:text-blue-400 transition-colors duration-200 md:ml-10 ml-5">
                         Tools
                     </Link>
                     <Link

@@ -6,7 +6,7 @@ import { DiGo, DiPython, DiReact } from 'react-icons/di';
 export function HeadPortraitCircle({ children }) {
     return (
         <div className="relative flex h-[500px] w-[500px] flex-col items-center justify-center overflow-hidden rounded-lg bg-background">
-            <span className="pointer-events-none whitespace-pre-wrap bg-gradient-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
+            <span className="pointer-events-none whitespace-pre-wrap bg-linear-to-b from-black to-gray-300 bg-clip-text text-center text-8xl font-semibold leading-none text-transparent dark:from-white dark:to-black">
                 {children}
             </span>
 

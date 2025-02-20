@@ -9,12 +9,12 @@ const WorkZhenShan = () => {
 
     return (
         <>
-            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 w-full max-w-screen-lg mx-auto">
-                <div className="flex-shrink-0">
+            <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 w-full max-w-(--breakpoint-lg) mx-auto">
+                <div className="shrink-0">
                     <Image
                         src={imgUrl.zhenshan}
                         alt="臻善科技"
-                        className="w-16 h-16 md:w-12 md:h-12 md:mt-20 rounded"
+                        className="w-16 h-16 md:w-12 md:h-12 md:mt-20 rounded-sm"
                     />
                 </div>
                 <div

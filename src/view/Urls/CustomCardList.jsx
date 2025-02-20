@@ -45,7 +45,7 @@ const CustomCardList = ({ data, className }) => {
                                 position="top"
                                 showArrow
                                 content={
-                                    <article className="p-2 text-sm text-gray-200 bg-gray-800 rounded shadow-lg">
+                                    <article className="p-2 text-sm text-gray-200 bg-gray-800 rounded-sm shadow-lg">
                                         {item.describe}
                                     </article>
                                 }>
