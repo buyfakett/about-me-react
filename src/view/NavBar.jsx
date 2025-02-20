@@ -2,7 +2,7 @@ import React from 'react';
 import { FaGithub } from 'react-icons/fa';
 import { FaBilibili } from 'react-icons/fa6';
 import { CiShare1 } from 'react-icons/ci';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Divider } from '@douyinfe/semi-ui';
 import { MdEmail } from 'react-icons/md';
 import { myName, skipUrl } from '@/config';

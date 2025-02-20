@@ -1,5 +1,5 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import ProjectCard from './ProjectCard';
 import { motion } from 'framer-motion';
 import { projectData } from '@/config';

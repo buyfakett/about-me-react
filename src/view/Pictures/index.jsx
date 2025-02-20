@@ -7,7 +7,7 @@ import {
     IllustrationConstructionDark,
 } from '@douyinfe/semi-illustrations';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 
 const Pictures = () => {
     const navigate = useNavigate();

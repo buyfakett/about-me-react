@@ -4,7 +4,7 @@ import changelog from '@/../CHANGELOG.md';
 import { pageVariants } from '@/config.js';
 import { Button } from '@douyinfe/semi-ui';
 import { motion } from 'framer-motion';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import { IoIosArrowBack } from 'react-icons/io';
 
 const ChangeLog = () => {

@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router';
 import Footer from '@/view/Footer';
 import NavBar from '@/view/NavBar';
 import AboutMe from '@/view/AboutMe';

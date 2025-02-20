@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Button } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import ToolsCategorySection from './ToolsCategorySection';
 import { devices, pageVariants, softwareTools } from '@/config';
 

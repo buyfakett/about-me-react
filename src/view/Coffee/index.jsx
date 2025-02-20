@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { pageVariants } from '@/config';
 import { Button, Image } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router';
 import Giscus from '@giscus/react';
 
 const Coffee = () => {

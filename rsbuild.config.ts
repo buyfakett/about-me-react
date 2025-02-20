@@ -15,7 +15,7 @@ export default defineConfig({
             index: './src/index.jsx',
         },
         // 编译所有 JS 文件并排除 core-js
-        include: [{ not: /[\\/]core-js[\\/]/ }],
+        // include: [{ not: /[\\/]core-js[\\/]/ }],
         tsconfigPath: './jsconfig.json',
     },
     output: {

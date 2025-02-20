@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
+import { Link } from 'react-router';
 import { Typography } from '@douyinfe/semi-ui';
 import { FaCoffee } from 'react-icons/fa';
 import { skipUrl } from '@/config';
