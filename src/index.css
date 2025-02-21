@@ -4,29 +4,30 @@
 
 @custom-variant dark (&:is(.dark *));
 
-@theme {
-  --animate-*: initial;
-  --animate-background-position-spin: background-position-spin 3000ms infinite
-    alternate;
-  --animate-orbit: orbit calc(var(--duration) * 1s) linear infinite;
+@layer utilities {
+    .animate-orbit {
+        animation: orbit calc(var(--duration) * 1s) linear infinite;
+    }
+}
 
-  @keyframes background-position-spin {
-    0% {
-      background-position: top center;
+@layer keyframes {
+    @keyframes orbit {
+        from {
+            transform: rotate(calc(var(--initial-rotation) * 1deg)) translateX(calc(var(--radius) * 1px)) rotate(calc(-1 * var(--initial-rotation) * 1deg));
+        }
+        to {
+            transform: rotate(calc(360deg + var(--initial-rotation) * 1deg)) translateX(calc(var(--radius) * 1px)) rotate(calc(-360deg - var(--initial-rotation) * 1deg));
+        }
     }
-    100% {
-      background-position: bottom center;
+
+    @keyframes background-position-spin {
+        0% {
+            background-position: top center;
+        }
+        100% {
+            background-position: bottom center;
+        }
     }
-  }
-  @keyframes orbit {
-    0% {
-      transform: rotate(0deg) translateY(calc(var(--radius) * 1px)) rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg) translateY(calc(var(--radius) * 1px))
-        rotate(-360deg);
-    }
-  }
 }
 
 /*
@@ -38,11 +39,11 @@
   color utility to any element that depends on these defaults.
 */
 @layer base {
-  *,
-  ::after,
-  ::before,
-  ::backdrop,
-  ::file-selector-button {
-    border-color: var(--color-gray-200, currentColor);
-  }
+    *,
+    ::after,
+    ::before,
+    ::backdrop,
+    ::file-selector-button {
+        border-color: var(--color-gray-200, currentColor);
+    }
 }

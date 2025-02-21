@@ -9,6 +9,7 @@ export interface OrbitingCirclesProps {
     delay?: number;
     radius?: number;
     path?: boolean;
+    initialRotation?: number;
 }
 
 export function OrbitingCircles({
@@ -16,9 +17,10 @@ export function OrbitingCircles({
     children,
     reverse,
     duration = 20,
-    delay = 10,
+    delay = 0,
     radius = 50,
     path = true,
+    initialRotation = 0,
 }: OrbitingCirclesProps) {
     return (
         <>
@@ -26,6 +28,9 @@ export function OrbitingCircles({
                 <svg
                     xmlns="http://www.w3.org/2000/svg"
                     version="1.1"
+                    style={{
+                        transform: `rotate(${initialRotation}deg)`,
+                    }}
                     className="pointer-events-none absolute inset-0 size-full">
                     <circle
                         className="stroke-black/10 stroke-1 dark:stroke-white/10"
@@ -42,11 +47,13 @@ export function OrbitingCircles({
                     {
                         '--duration': duration,
                         '--radius': radius,
-                        '--delay': -delay,
+                        '--delay': delay,
+                        '--initial-rotation': initialRotation,
+                        transform: `rotate(${initialRotation}deg)`,
                     } as React.CSSProperties
                 }
                 className={cn(
-                    'absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border bg-black/10 [animation-delay:calc(var(--delay)*1000ms)] dark:bg-white/10',
+                    'absolute flex size-full transform-gpu animate-orbit items-center justify-center rounded-full border-none bg-transparent [animation-delay:calc(var(--delay)*1s)]',
                     { '[animation-direction:reverse]': reverse },
                     className,
                 )}>

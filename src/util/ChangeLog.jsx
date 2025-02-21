@@ -26,9 +26,9 @@ const ChangeLog = () => {
                     返回首页
                 </Button>
             </div>
-            <Markdown className="mt-10 text-xl leading-loose">
-                {changelog}
-            </Markdown>
+            <div className="mt-10 text-xl leading-loose">
+                <Markdown>{changelog}</Markdown>
+            </div>
         </motion.div>
     );
 };
