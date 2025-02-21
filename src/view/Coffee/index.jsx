@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { pageVariants } from '@/config';
+import { imgUrl, pageVariants } from '@/config';
 import { Button, Image } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router';
@@ -33,14 +33,8 @@ const Coffee = () => {
                     ☕ Thank you for your support.
                 </p>
                 <div className="flex gap-8 justify-center mb-10">
-                    <Image
-                        src="https://img.tteam.icu/i/2025/01/24/qngxzy-3.webp"
-                        className="w-64 h-auto"
-                    />
-                    <Image
-                        src="https://img.tteam.icu/i/2025/01/24/qt78qk-3.webp"
-                        className="w-64 h-auto"
-                    />
+                    <Image src={imgUrl.pay.wechat} className="w-64 h-auto" />
+                    <Image src={imgUrl.pay.ali} className="w-64 h-auto" />
                 </div>
                 <div className="text-lg mb-10">
                     <h2 className="mb-2 text-xl font-semibold">
