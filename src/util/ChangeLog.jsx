@@ -1,7 +1,7 @@
 import React from 'react';
 import Markdown from 'react-markdown';
 import changelog from '@/../CHANGELOG.md';
-import { pageVariants } from '@/config.js';
+import { pageVariants } from '@/config';
 import { Button } from '@douyinfe/semi-ui';
 import { motion } from 'framer-motion';
 import { useNavigate } from 'react-router';

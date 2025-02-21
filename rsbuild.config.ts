@@ -1,12 +1,8 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
-import { pluginMdx } from "@rsbuild/plugin-mdx";
 
 export default defineConfig({
-    plugins: [
-        pluginReact(),
-        pluginMdx(),
-    ],
+    plugins: [pluginReact()],
     html: {
         template: './index.html',
     },
@@ -17,6 +13,12 @@ export default defineConfig({
         // 编译所有 JS 文件并排除 core-js
         // include: [{ not: /[\\/]core-js[\\/]/ }],
         tsconfigPath: './jsconfig.json',
+        include: [/\.md$/],
+    },
+    tools: {
+        bundlerChain: (chain) => {
+            chain.module.rule('markdown').test(/\.md$/).type('asset/source');
+        },
     },
     output: {
         distPath: {
