@@ -29,6 +29,6 @@
 
 ## buy coffee
 
-![微信](https://img.tteam.icu/i/2025/01/24/qngxzy-3.webp)
-
-![支付宝](https://img.tteam.icu/i/2025/01/24/qt78qk-3.webp)
+| wechat                           | alipay                        |
+| -------------------------------- | ----------------------------- |
+| ![支付宝](https://img.tteam.icu/i/2025/01/24/qt78qk-3.webp) | ![微信](https://img.tteam.icu/i/2025/01/24/qngxzy-3.webp) |
