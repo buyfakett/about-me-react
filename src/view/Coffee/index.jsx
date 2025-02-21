@@ -4,7 +4,6 @@ import { imgUrl, pageVariants } from '@/config';
 import { Button, Image } from '@douyinfe/semi-ui';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router';
-import Giscus from '@giscus/react';
 
 const Coffee = () => {
     const navigate = useNavigate();
@@ -41,21 +40,6 @@ const Coffee = () => {
                         Communicate with me
                     </h2>
                 </div>
-                <Giscus
-                    id="comments"
-                    repo="buyfakett/blog-comments"
-                    repoId="R_kgDONjzEIQ"
-                    category="Q&A"
-                    categoryId="DIC_kwDONjzEIc4Clmn0"
-                    mapping="pathname"
-                    term="Welcome to @giscus/react component!"
-                    reactionsEnabled="1"
-                    emitMetadata="0"
-                    inputPosition="bottom"
-                    theme="noborder_dark"
-                    lang="zh-CN"
-                    loading="lazy"
-                />
             </div>
         </motion.div>
     );

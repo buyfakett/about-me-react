@@ -16,6 +16,7 @@ import { Helmet } from 'react-helmet';
 import ChangeLog from '@/util/ChangeLog';
 import Coffee from '@/view/Coffee';
 import Projects from '@/view/Projects/index';
+import Comment from "@/util/Comment";
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -89,6 +90,8 @@ const App = () => {
                         <Route path="/projects" element={<Projects />} />
                         <Route path="*" element={<NotFound />} />
                     </Routes>
+
+                    <Comment />
 
                     <Footer buildInfo={buildInfo} />
 
