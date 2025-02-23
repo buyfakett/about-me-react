@@ -1,22 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Route, Routes } from 'react-router';
-import Footer from '@/view/Footer';
-import NavBar from '@/view/NavBar';
 import AboutMe from '@/view/AboutMe';
-import * as Config from '@/config';
+import { apiList, imgUrl, umamiId, umamiScript } from '@/config';
 import { waka_timeDefaultData } from '@/default_data/waka_time';
 import { buildInfo } from '@/default_data/buildInfo';
 import Tools from '@/view/Tools';
 import Urls from '@/view/Urls';
 import NotFound from '@/404';
 import Pictures from '@/view/Pictures';
-import Watermark from '@hi-ui/watermark';
-import BackToTop from '@/view/BackToTop';
 import { Helmet } from 'react-helmet';
 import ChangeLog from '@/util/ChangeLog';
 import Coffee from '@/view/Coffee';
 import Projects from '@/view/Projects/index';
-import Comment from "@/util/Comment";
+import Layout from '@/layout/index';
 
 const App = () => {
     // semi-design的主题默认为暗色
@@ -32,7 +28,7 @@ const App = () => {
         const link = document.createElement('link');
         link.rel = 'icon';
         link.type = 'image/x-icon';
-        link.href = Config.imgUrl.headPortrait;
+        link.href = imgUrl.headPortrait;
         document.head.appendChild(link);
 
         // 清理副作用
@@ -44,7 +40,7 @@ const App = () => {
     useEffect(() => {
         // 调用 API 获取数据
         const getWakatimeData = async () => {
-            const response = await fetch(Config.apiList.wakaTime);
+            const response = await fetch(apiList.wakaTime);
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
             }
@@ -66,39 +62,24 @@ const App = () => {
                     <meta name="commit-count" content={buildInfo.commitCount} />
                     <meta name="build-time" content={buildInfo.buildTime} />
                     {/*umami*/}
-                    <script
-                        src={Config.umamiScript}
-                        data-website-id={Config.umamiId}
-                        defer
-                    />
+                    <script src={umamiScript} data-website-id={umamiId} defer />
                 </Helmet>
             )}
-            <div className="bg-gray-900 text-gray-300">
-                <Watermark content={[Config.myName, Config.skipUrl.aboutMe]}>
-                    <NavBar />
-
-                    <Routes>
-                        <Route
-                            path="/"
-                            element={<AboutMe wakatimeData={wakatimeData} />}
-                        />
-                        <Route path="/tools" element={<Tools />} />
-                        <Route path="/urls" element={<Urls />} />
-                        <Route path="/pictures" element={<Pictures />} />
-                        <Route path="/changelog" element={<ChangeLog />} />
-                        <Route path="/coffee" element={<Coffee />} />
-                        <Route path="/projects" element={<Projects />} />
-                        <Route path="*" element={<NotFound />} />
-                    </Routes>
-
-                    <Comment />
-
-                    <Footer buildInfo={buildInfo} />
-
-                    {/*返回顶部*/}
-                    <BackToTop />
-                </Watermark>
-            </div>
+            <Routes>
+                <Route element={<Layout />}>
+                    <Route
+                        path="/"
+                        element={<AboutMe wakatimeData={wakatimeData} />}
+                    />
+                    <Route path="/tools" element={<Tools />} />
+                    <Route path="/urls" element={<Urls />} />
+                    <Route path="/pictures" element={<Pictures />} />
+                    <Route path="/changelog" element={<ChangeLog />} />
+                    <Route path="/coffee" element={<Coffee />} />
+                    <Route path="/projects" element={<Projects />} />
+                    <Route path="*" element={<NotFound />} />
+                </Route>
+            </Routes>
         </>
     );
 };
