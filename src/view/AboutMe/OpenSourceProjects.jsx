@@ -50,7 +50,7 @@ const OpenSourceProjects = () => {
                             navigate('/projects');
                             window.scrollTo(0, 0);
                         }}
-                        className="flex items-center gap-2 text-white ml-auto mr-10">
+                        className="flex items-center cursor-pointer gap-2 text-white ml-auto mr-10">
                         <CiLink className="w-5 h-5" />
                         <span className="text-sm">More Projects</span>
                     </button>

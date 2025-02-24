@@ -1,9 +1,27 @@
 import React from 'react';
 import Giscus from '@giscus/react';
+import { useLocation } from 'react-router';
 
 const Comment = () => {
+    const location = useLocation(); // 获取当前路径
+    const currentPath = location.pathname;
+    let commentWidth;
+
+    switch (currentPath) {
+        case '/pictures':
+        case '/coffee':
+            commentWidth = 'w-[80%]';
+            break;
+        case '/projects':
+            commentWidth = 'w-[70%]';
+            break;
+        default:
+            commentWidth = 'w-[60%]';
+            break;
+    }
+
     return (
-        <div className="w-[60%] mx-auto mt-10">
+        <div className={`${commentWidth} mx-auto mt-10`}>
             <Giscus
                 id="comments"
                 repo="buyfakett/blog-comments"
