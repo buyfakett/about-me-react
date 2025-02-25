@@ -7,7 +7,7 @@ import { pageVariants } from '@/config';
 import OpenSourceProjects from './OpenSourceProjects';
 import Links from './Links';
 
-const AboutMe = ({ wakatimeData }) => {
+const AboutMe = () => {
     return (
         <motion.div
             className="min-h-screen dark:bg-gray-900 text-white flex flex-col items-center justify-center p-4"
@@ -20,11 +20,7 @@ const AboutMe = ({ wakatimeData }) => {
 
             <Links />
 
-            <LanguageSection
-                start_time={wakatimeData.start_time}
-                languages={wakatimeData.languages}
-                update_time={wakatimeData.update_time}
-            />
+            <LanguageSection />
 
             <WorkExperience />
 

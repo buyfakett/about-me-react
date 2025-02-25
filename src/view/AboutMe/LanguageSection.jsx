@@ -5,8 +5,11 @@ import { NumberTicker } from '@/view/magicui/NumberTicker';
 import { TypingAnimation } from '@/view/magicui/TypingAnimation';
 import SkillSection from './SkillSection';
 import { languageSkillData } from '@/config';
+import useWakatimeStore from '@/stores/wakatime';
 
-const LanguageSection = ({ start_time, languages, update_time }) => {
+const LanguageSection = () => {
+    const wakatimeData = useWakatimeStore((state) => state.wakatimeData);
+
     return (
         <>
             {/* 文字介绍 */}
@@ -34,12 +37,12 @@ const LanguageSection = ({ start_time, languages, update_time }) => {
                     target="_blank"
                     rel="wakatime"
                     className="text-gray-500 text-sm hover:text-gray-700">
-                    data statistics form {start_time}
+                    data statistics form {wakatimeData.start_time}
                     <br />
-                    last update at {update_time}
+                    last update at {wakatimeData.update_time}
                 </a>
                 <div className="space-y-4 mt-4">
-                    {languages.map((lang, index) => (
+                    {wakatimeData.languages.map((lang, index) => (
                         <motion.div
                             key={lang.name}
                             className="w-full bg-gray-800 rounded-lg overflow-hidden"
