@@ -12,6 +12,14 @@ const Footer = ({ buildInfo }) => {
             <footer className="border-t border-gray-700 py-6 text-center text-sm mt-20 bg-gray-800 text-gray-300">
                 <div className="max-w-4xl mx-auto">
                     <p className="mb-2 flex items-center justify-center">
+                        <a
+                            href="https://icp.gov.moe/?keyword=20252555"
+                            target="_blank"
+                            className="text-blue-400 hover:underline">
+                            萌ICP备20252555号
+                        </a>
+                    </p>
+                    <p className="mb-2 flex items-center justify-center">
                         <FaRegCopyright className="mr-1 text-sm" />
                         2024 - {year}
                         <a
