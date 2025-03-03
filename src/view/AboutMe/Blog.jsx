@@ -47,7 +47,9 @@ const Blog = () => {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.3, delay: 0.5 }}>
-            <h1 className="text-4xl font-bold mb-10">Recent Blogs</h1>
+            <h1 className="text-2xl md:text-4xl font-bold mb-4 text-center">
+                Recent Blogs
+            </h1>
             <div className="mt-10 px-4">
                 <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
                     {blogs.slice(0, 8).map((item, index) => (
