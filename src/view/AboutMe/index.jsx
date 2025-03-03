@@ -6,6 +6,7 @@ import WorkExperience from './WorkExperience';
 import { pageVariants } from '@/config';
 import OpenSourceProjects from './OpenSourceProjects';
 import Links from './Links';
+import Blog from "./Blog";
 
 const AboutMe = () => {
     return (
@@ -25,6 +26,8 @@ const AboutMe = () => {
             <WorkExperience />
 
             <OpenSourceProjects />
+
+            <Blog />
         </motion.div>
     );
 };
