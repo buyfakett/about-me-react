@@ -1,16 +1,14 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { apiList, pageVariants } from '@/config';
-import { Button, Empty, Image, Spin } from '@douyinfe/semi-ui';
+import { apiList } from '@/config';
+import { Empty, Image, Spin } from '@douyinfe/semi-ui';
 import {
     IllustrationConstruction,
     IllustrationConstructionDark,
 } from '@douyinfe/semi-illustrations';
-import { IoIosArrowBack } from 'react-icons/io';
-import { useNavigate } from 'react-router';
+import SecondaryInterface from '@/util/SecondaryInterface';
 
 const Pictures = () => {
-    const navigate = useNavigate();
     const [loadedPhotos, setLoadedPhotos] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
     const [pictureList, setPictureList] = useState({ urls: [], count: 0 });
@@ -138,23 +136,7 @@ const Pictures = () => {
     };
 
     return (
-        <motion.div
-            className="w-[80%] mx-auto min-h-screen dark:bg-gray-900 text-white flex flex-col items-center p-4 mt-3"
-            variants={pageVariants}
-            initial="initial"
-            animate="animate"
-            exit="exit"
-            transition={{ duration: 0.5 }}>
-            <div className="w-full flex justify-start text-white mb-10">
-                <Button
-                    theme="outline"
-                    type="tertiary"
-                    onClick={() => navigate('/')}>
-                    <IoIosArrowBack />
-                    返回首页
-                </Button>
-            </div>
-
+        <SecondaryInterface width="w-[80%]">
             {loading ? (
                 <div className="flex justify-center items-center h-[200px]">
                     <Spin size="large" />
@@ -191,7 +173,7 @@ const Pictures = () => {
                 />
             ) : (
                 <>
-                    <h1 className="text-3xl font-bold mb-2">My Pictures</h1>
+                    <h1 className="text-3xl font-bold mb-2 mt-10">My Pictures</h1>
                     <h2 className="text-1xl font-bold mb-10">
                         The photo records the person behind it
                     </h2>
@@ -280,7 +262,7 @@ const Pictures = () => {
                     </div>
                 </>
             )}
-        </motion.div>
+        </SecondaryInterface>
     );
 };
 
