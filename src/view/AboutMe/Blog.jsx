@@ -3,11 +3,16 @@ import { motion } from 'framer-motion';
 import { Spin } from '@douyinfe/semi-ui';
 import { apiList, skipUrl } from '@/config';
 import { CiLink } from 'react-icons/ci';
+import { useMediaQuery } from 'react-responsive';
 
 const Blog = () => {
     const [blogs, setBlogs] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
+
+    // 监听屏幕宽度，动态调整显示条数
+    const isMobile = useMediaQuery({ maxWidth: 768 });
+    const visibleCount = isMobile ? 5 : 10; // 手机端 5 条，桌面端 10 条
 
     useEffect(() => {
         const fetchBlogs = async () => {
@@ -52,7 +57,7 @@ const Blog = () => {
             </h1>
             <div className="mt-10 px-4">
                 <div className="grid gap-4 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
-                    {blogs.slice(0, 8).map((item, index) => (
+                    {blogs.slice(0, visibleCount).map((item, index) => (
                         <motion.div
                             key={index}
                             className="p-4 bg-white dark:bg-gray-800 rounded-lg shadow hover:shadow-md transition-shadow"
