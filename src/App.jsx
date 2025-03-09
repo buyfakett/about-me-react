@@ -2,12 +2,10 @@ import React, { useEffect } from 'react';
 import { Route, Routes } from 'react-router';
 import AboutMe from '@/view/AboutMe';
 import { apiList, imgUrl, umamiId, umamiScript } from '@/config';
-import { buildInfo } from '@/default_data/buildInfo';
 import Tools from '@/view/Tools';
 import Urls from '@/view/Urls';
 import NotFound from '@/404';
 import Pictures from '@/view/Pictures';
-import { Helmet } from 'react-helmet';
 import ChangeLog from '@/util/ChangeLog';
 import Coffee from '@/view/Coffee';
 import Projects from '@/view/Projects/index';
@@ -38,6 +36,21 @@ const App = () => {
     }, []); // 此处只执行一次
 
     useEffect(() => {
+        if (isProduction) {
+            const script = document.createElement('script');
+            script.src = umamiScript;
+            script.defer = true;
+            script.setAttribute('data-website-id', umamiId);
+            document.head.appendChild(script);
+
+            // 清理副作用
+            return () => {
+                document.head.removeChild(script);
+            };
+        }
+    }, [isProduction]); // 仅当生产环境变更时执行
+
+    useEffect(() => {
         // 调用 API 获取数据
         const getWakatimeData = async () => {
             const response = await fetch(apiList.wakaTime);
@@ -53,18 +66,6 @@ const App = () => {
 
     return (
         <>
-            {isProduction && (
-                <Helmet>
-                    {/* 动态注入构建信息到 <head> */}
-                    <meta name="git-hash" content={buildInfo.gitHash} />
-                    <meta name="git-branch" content={buildInfo.gitBranch} />
-                    <meta name="commit-date" content={buildInfo.commitDate} />
-                    <meta name="commit-count" content={buildInfo.commitCount} />
-                    <meta name="build-time" content={buildInfo.buildTime} />
-                    {/*umami*/}
-                    <script src={umamiScript} data-website-id={umamiId} defer />
-                </Helmet>
-            )}
             <Routes>
                 <Route element={<Layout />}>
                     <Route path="/" element={<AboutMe />} />

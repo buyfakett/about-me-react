@@ -1,10 +1,23 @@
 import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
+// @ts-ignore
+import { buildInfo } from './src/default_data/buildInfo';
 
 export default defineConfig({
     plugins: [pluginReact()],
     html: {
-        template: './index.html',
+        title: 'buyfakett - About Me',
+        meta: {
+            viewport: 'width=device-width, initial-scale=1.0',
+            author: 'buyfakett',
+            description: 'about me • buyfakett',
+            'time-zone': 'Asia/Shanghai',
+            'git-hash': buildInfo.gitHash,
+            'git-branch': buildInfo.gitBranch,
+            'commit-date': buildInfo.commitDate,
+            'commit-count': buildInfo.commitCount,
+            'build-time': buildInfo.buildTime,
+        },
     },
     source: {
         entry: {
@@ -23,6 +36,9 @@ export default defineConfig({
     output: {
         distPath: {
             root: 'build',
+        },
+        inlineScripts({ size }) {
+            return size < 10 * 1000;
         },
     },
     performance: {
