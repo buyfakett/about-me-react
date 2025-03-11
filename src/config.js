@@ -227,6 +227,12 @@ export const urlList = {
                 img_src: 'https://img.tteam.icu/i/2024/12/04/umduu0-3.webp'
             },
             {
+                title: '搬瓦工',
+                src: 'https://bandwagonhost.com/aff.php?aff=54032',
+                describe: '国内最出名的vps',
+                img_src: 'https://img.tteam.icu/i/2025/03/11/ij5jfq-3.webp'
+            },
+            {
                 title: '狐帝云',
                 src: 'https://www.szhdy.com/aff/WVTPJNVJ',
                 img_src: 'https://img.tteam.icu/i/2024/12/09/itpkib-3.webp'
@@ -321,10 +327,15 @@ export const softwareTools = {
                         href: 'https://github.com/Molunerfinn/PicGo'
                     },
                     {
+                        name: 'Follow',
+                        description: 'RSS Reader',
+                        href: 'https://follow.is'
+                    },
+                    {
                         name: 'Fluent Reader',
                         description: 'RSS Reader',
                         href: 'https://github.com/yang991178/fluent-reader'
-                    }
+                    },
                 ]
             }
         }
