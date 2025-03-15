@@ -62,7 +62,7 @@ export function HeadPortraitCircle({ children }) {
                 className="size-[40px] border-none bg-transparent"
                 radius={200}
                 duration={20}
-                initialRotation={0}
+                initialRotation={45}
                 path={true}
                 reverse>
                 <DiGo size={35} className="text-gray-600 dark:text-gray-300" />
@@ -72,7 +72,7 @@ export function HeadPortraitCircle({ children }) {
                 className="size-[40px] border-none bg-transparent"
                 radius={200}
                 duration={20}
-                initialRotation={90}
+                initialRotation={140}
                 path={false}
                 reverse>
                 <FaReact
@@ -84,7 +84,7 @@ export function HeadPortraitCircle({ children }) {
                 className="size-[40px] border-none bg-transparent"
                 radius={200}
                 duration={20}
-                initialRotation={180}
+                initialRotation={225}
                 path={false}
                 reverse>
                 <FaVuejs
@@ -96,7 +96,7 @@ export function HeadPortraitCircle({ children }) {
                 className="size-[40px] border-none bg-transparent"
                 radius={200}
                 duration={20}
-                initialRotation={250}
+                initialRotation={315}
                 path={false}
                 reverse>
                 <FaPhp size={30} className="text-gray-600 dark:text-gray-300" />
