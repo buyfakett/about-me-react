@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react';
-import { Route, Routes } from 'react-router';
+import { Route, Routes, useLocation } from 'react-router';
 import AboutMe from '@/view/AboutMe';
 import { apiList, imgUrl, umamiId, umamiScript } from '@/config';
 import Tools from '@/view/Tools';
@@ -20,6 +20,26 @@ const App = () => {
     const isProduction = process.env.NODE_ENV === 'production';
 
     const setwakatimeData = useWakatimeStore((state) => state.setwakatimeData);
+
+    const location = useLocation();
+
+    useEffect(() => {
+        // 处理路由变化时移除哈希
+        if (location.pathname === '/tools' || location.pathname === '/urls') {
+            const handleScroll = () => {
+                if (window.scrollY === 0) {
+                    window.history.replaceState(
+                        null,
+                        '',
+                        window.location.pathname,
+                    );
+                }
+            };
+
+            window.addEventListener('scroll', handleScroll);
+            return () => window.removeEventListener('scroll', handleScroll);
+        }
+    }, [location.pathname]);
 
     useEffect(() => {
         // 动态设置 Favicon
