@@ -1,51 +1,18 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import { motion } from 'framer-motion';
-import { Spin } from '@douyinfe/semi-ui';
-import { apiList, skipUrl } from '@/config';
 import { CiLink } from 'react-icons/ci';
 import { useMediaQuery } from 'react-responsive';
+import useBlogsStore from '@/stores/blogs';
+import { useNavigate } from 'react-router';
 
 const Blog = () => {
-    const [blogs, setBlogs] = useState([]);
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const navigate = useNavigate();
+    const blogs = useBlogsStore((state) => state.blogsData);
 
     // 监听屏幕宽度，动态调整显示条数
     const isMobile = useMediaQuery({ maxWidth: 768 });
     const visibleCount = isMobile ? 5 : 10; // 手机端 5 条，桌面端 10 条
 
-    useEffect(() => {
-        const fetchBlogs = async () => {
-            try {
-                const response = await fetch(apiList.blog);
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
-                const data = await response.json();
-                setBlogs(data);
-            } catch (error) {
-                setError(error.message);
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchBlogs();
-    }, []);
-
-    if (loading) {
-        return (
-            <div className="text-center py-4">
-                <Spin size="large" />
-            </div>
-        );
-    }
-
-    if (error) {
-        return (
-            <div className="text-center py-4 text-red-500">错误：{error}</div>
-        );
-    }
     return (
         <motion.div
             className="dark:bg-gray-900 dark:text-gray-300 mt-10"
@@ -86,7 +53,7 @@ const Blog = () => {
                         className="mt-5 col-span-full flex justify-center">
                         <button
                             onClick={() => {
-                                window.open(`${skipUrl.blog}`, '_blank');
+                                navigate('/blogs');
                                 window.scrollTo(0, 0);
                             }}
                             className="flex items-center cursor-pointer gap-2 text-white ml-auto mr-10">
