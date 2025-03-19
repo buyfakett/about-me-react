@@ -1,19 +1,18 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { apiList } from '@/config';
-import { Empty, Image, Spin } from '@douyinfe/semi-ui';
+import { Empty, Image } from '@douyinfe/semi-ui';
 import {
     IllustrationConstruction,
     IllustrationConstructionDark,
 } from '@douyinfe/semi-illustrations';
 import SecondaryInterface from '@/util/SecondaryInterface';
+import usePicturesStore from '@/stores/pictures';
 
 const Pictures = () => {
     const [loadedPhotos, setLoadedPhotos] = useState([]);
     const [currentIndex, setCurrentIndex] = useState(0);
-    const [pictureList, setPictureList] = useState({ urls: [], count: 0 });
-    const [loading, setLoading] = useState(true);
-    const [error, setError] = useState(null);
+    const pictureList = usePicturesStore((state) => state.pictureList);
+    const error = usePicturesStore((state) => state.error);
     const [displayCount, setDisplayCount] = useState(10);
     const [shouldStartLoading, setShouldStartLoading] = useState(false);
 
@@ -36,27 +35,6 @@ const Pictures = () => {
         const aspectRatio = width / height;
         return `${aspectRatio * 30}%`; // 基础高度为30%，根据宽高比调整宽度
     };
-
-    // 获取图片列表
-    useEffect(() => {
-        if (!shouldStartLoading) return;
-
-        const fetchPictures = async () => {
-            try {
-                setLoading(true);
-                const response = await fetch(apiList.pictures);
-                const data = await response.json();
-                setPictureList(data);
-            } catch (error) {
-                console.error('获取图片列表失败:', error);
-                setError('获取图片列表失败，请稍后重试');
-            } finally {
-                setLoading(false);
-            }
-        };
-
-        fetchPictures();
-    }, [shouldStartLoading]);
 
     // 批量加载图像的功能
     useEffect(() => {
@@ -137,11 +115,7 @@ const Pictures = () => {
 
     return (
         <SecondaryInterface width="w-[80%]">
-            {loading ? (
-                <div className="flex justify-center items-center h-[200px]">
-                    <Spin size="large" />
-                </div>
-            ) : error ? (
+            {error ? (
                 <Empty
                     image={
                         <IllustrationConstruction
@@ -173,7 +147,9 @@ const Pictures = () => {
                 />
             ) : (
                 <>
-                    <h1 className="text-3xl font-bold mb-2 mt-10">My Pictures</h1>
+                    <h1 className="text-3xl font-bold mb-2 mt-10">
+                        My Pictures
+                    </h1>
                     <h2 className="text-1xl font-bold mb-10">
                         The photo records the person behind it
                     </h2>
