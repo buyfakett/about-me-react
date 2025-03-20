@@ -4,6 +4,7 @@ import { Image } from '@douyinfe/semi-ui';
 import { imgUrl, muenProjects, skipUrl } from '@/config';
 import { Button } from '@douyinfe/semi-ui';
 import { motion, AnimatePresence } from 'framer-motion';
+import useLanguageStore from "@/stores/language";
 
 const WorkMuen = () => {
     const [isHovered, setIsHovered] = useState(false);
@@ -61,6 +62,7 @@ const WorkMuen = () => {
 
 const WorkProjectMuen = () => {
     const [selectedProject, setSelectedProject] = useState(null);
+    const isChinese = useLanguageStore((state) => state.isChinese);
 
     return (
         <div className="w-full h-full p-6 flex flex-col md:flex-row">
@@ -69,7 +71,7 @@ const WorkProjectMuen = () => {
                     theme="outline"
                     type="tertiary"
                     size="large"
-                    onClick={() => window.open(skipUrl.muen, '_blank')}>
+                    onClick={() => window.open(isChinese? skipUrl.muen.cn : skipUrl.muen.en, '_blank')}>
                     跳转官网
                 </Button>
             </div>
