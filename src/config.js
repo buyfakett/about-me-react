@@ -61,7 +61,7 @@ export const muenProjects = [
     {
         title: '日志系统重构',
         content: `项目背景：旧日志系统ELK占用资源多查询慢
-        项目思路：修改为rsyslog、filebeat等收集日志到kafka，再由vector入clickhouse
+        项目思路：修改为rsyslog、filebeat等收集日志到kafka，再由vector入Clickhouse
         项目成果：几十TB级日志查询能在秒级查询成功，且占用系统资源相对低`,
     },
     {
@@ -73,14 +73,14 @@ export const muenProjects = [
     {
         title: '监控/报警系统重构',
         content: `项目背景：旧监控系统分散、不全，项目监控几乎没有
-        项目思路：修改为zabbix+Prometheus+grafana整合监控系统
-        项目成果：zabbix主要监控服务器宿主机、虚拟机性能，Prometheus监控各种项目返回时间/占用率等指标、各种云平台余额/套餐剩余等`,
+        项目思路：修改为Zabbix+Prometheus+Grafana整合监控系统
+        项目成果：Zabbix主要监控服务器宿主机、虚拟机性能，Prometheus监控各种项目返回时间/占用率等指标、各种云平台余额/套餐剩余等`,
     },
     {
         title: '运维系统编写',
         content: `项目背景：上百个服务器、服务、域名信息没地方登记，测试、运营等同事经常私聊问
         项目思路：服务上线时自动上报版本信息，新增服务器就登记
-        项目成果：用fastapi+vue完成编写，全公司权限分离自行查询上千个服务器、数据库，降低运维重复的工作`,
+        项目成果：用FastAPI+Vue完成编写，全公司权限分离自行查询上千个服务器、数据库，降低运维重复的工作`,
     },
 ];
 
@@ -249,7 +249,7 @@ export const urlList = {
             {
                 title: 'VKVM',
                 src: 'https://www.vkvm.info/aff/DSJLPDTA',
-                describe: '中转机',
+                describe: '可能要跑路了',
                 img_src: 'https://img.tteam.icu/i/2024/12/09/iucx4h-3.webp'
             },
             {
