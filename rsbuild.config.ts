@@ -44,7 +44,9 @@ export default defineConfig({
     performance: {
         chunkSplit: {
             // 代码拆分
-            strategy: 'split-by-experience',
+            strategy: 'split-by-size',
+            minSize: 30000, // 30k
+            maxSize: 500000, // 50k
         },
     },
 });
