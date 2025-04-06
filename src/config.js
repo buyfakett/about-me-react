@@ -33,6 +33,10 @@ export const umamiId = "12d3e9e9-3982-43a1-a285-e2f611073a71";
 export const apiList = {
     wakaTime: `${apiBaseUrl}/waka_time`,
     blog: `${apiBaseUrl}/blog`,
+    projectData: `${apiBaseUrl}/project_list`,
+    urlList: `${apiBaseUrl}/url_list`,
+    softwareTools: `${apiBaseUrl}/software_tools`,
+    device: `${apiBaseUrl}/devices`,
     pictures: 'https://picture-list.tteam.icu/pictures',
 }
 
@@ -200,6 +204,11 @@ export const urlList = {
                 src: 'https://quickref.cn/',
                 describe: '开发人员速查表',
                 img_src: 'https://img.tteam.icu/i/2024/12/04/mgpzfi-3.svg'
+            },
+            {
+                title: 'Grep App',
+                src: 'https://grep.app/',
+                describe: '快速查询代码',
             },
             {
                 title: 'Image compression',
