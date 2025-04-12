@@ -1,11 +1,11 @@
 import React from 'react';
 import { imgUrl } from '@/config';
 import { Image } from '@douyinfe/semi-ui';
-import SecondaryInterface from "@/util/SecondaryInterface";
+import SecondaryInterface from '@/util/SecondaryInterface';
 
 const Coffee = () => {
     return (
-            <SecondaryInterface width="w-[80%]">
+        <SecondaryInterface width="w-[80%]">
             <div className="text-center mt-10">
                 <h1 className="mb-4 text-3xl font-bold">Buy me a coffee</h1>
                 <p className="mb-8 text-lg text-gray-400">
@@ -22,7 +22,7 @@ const Coffee = () => {
                     </h2>
                 </div>
             </div>
-            </SecondaryInterface>
+        </SecondaryInterface>
     );
 };
 
