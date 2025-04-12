@@ -7,7 +7,7 @@ jobs:
       - uses: actions/checkout@v4
       - name: Await CF Pages and send Slack notification
         id: cf-pages
-        uses: buyfakett/cloudflare-pages-dingding-webhook@v6
+        uses: buyfakett/cloudflare-pages-dingding-webhook@v6.2
         with:
           apiToken: ${{ secrets.CF_API_TOKEN }}
           accountId: ${{ secrets.CF_ACC_ID  }}
