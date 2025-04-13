@@ -83,7 +83,7 @@ const WorkProjectMuen = () => {
                             key="detail"
                             className="w-full h-full">
                             <button
-                                className="absolute top-5 left-10 text-sm"
+                                className="cursor-pointer absolute top-5 left-10 text-sm"
                                 onClick={() => setSelectedProject(null)}>
                                 ← 返回项目列表
                             </button>
