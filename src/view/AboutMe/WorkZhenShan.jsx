@@ -13,7 +13,7 @@ const WorkZhenShan = () => {
                 <div className="shrink-0">
                     <Image
                         src={imgUrl.zhenshan}
-                        alt="臻善科技"
+                        alt="浙江臻善科技股份有限公司"
                         className="w-16 h-16 md:w-12 md:h-12 md:mt-20 rounded-sm"
                     />
                 </div>
@@ -29,7 +29,7 @@ const WorkZhenShan = () => {
                             firstColor: '#ff00aa',
                             secondColor: '#00FFF1',
                         }}>
-                        <h1 className="text-xl md:text-3xl">臻善科技</h1>
+                        <h1 className="text-xl md:text-3xl">浙江臻善科技股份有限公司</h1>
                         <h2 className="mt-0.5 text-sm md:text-lg">
                             数据师(实习)
                         </h2>

@@ -15,7 +15,7 @@ const WorkMuen = () => {
                 <div className="shrink-0">
                     <Image
                         src={imgUrl.muen}
-                        alt="沐恩网络"
+                        alt="浙江沐恩网络科技有限公司"
                         className="w-16 h-16 md:w-12 md:h-12 md:mt-20 rounded-sm"
                     />
                 </div>
@@ -31,7 +31,7 @@ const WorkMuen = () => {
                             firstColor: '#ff00aa',
                             secondColor: '#00FFF1',
                         }}>
-                        <h1 className="text-xl md:text-3xl">沐恩网络</h1>
+                        <h1 className="text-xl md:text-3xl">浙江沐恩网络科技有限公司</h1>
                         <h2 className="mt-0.5 text-sm md:text-lg">
                             运维工程师
                         </h2>
