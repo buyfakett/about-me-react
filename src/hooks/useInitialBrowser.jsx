@@ -33,20 +33,6 @@ const useInitialBrowser = () => {
     }, [location.pathname]);
 
     useEffect(() => {
-        // 动态设置 Favicon
-        const link = document.createElement('link');
-        link.rel = 'icon';
-        link.type = 'image/x-icon';
-        link.href = imgUrl.headPortrait;
-        document.head.appendChild(link);
-
-        // 清理副作用
-        return () => {
-            document.head.removeChild(link);
-        };
-    }, []); // 此处只执行一次
-
-    useEffect(() => {
         if (isProduction) {
             const script = document.createElement('script');
             script.src = umamiScript;

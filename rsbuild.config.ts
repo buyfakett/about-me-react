@@ -2,12 +2,17 @@ import { defineConfig } from '@rsbuild/core';
 import { pluginReact } from '@rsbuild/plugin-react';
 // @ts-ignore
 import { buildInfo } from './src/default_data/buildInfo';
+// @ts-ignore
+import { imgUrl } from './src/config';
 
 export default defineConfig({
     plugins: [pluginReact()],
     html: {
         title: 'buyfakett - About Me',
         meta: {
+            charset: {
+                charset: 'utf-8',
+            },
             viewport: 'width=device-width, initial-scale=1.0',
             author: 'buyfakett',
             description: 'about me • buyfakett',
@@ -17,6 +22,12 @@ export default defineConfig({
             'commit-date': buildInfo.commitDate,
             'commit-count': buildInfo.commitCount,
             'build-time': buildInfo.buildTime,
+        },
+        favicon: imgUrl.headPortrait,
+        appIcon: {
+            icons: [
+                { src: imgUrl.headPortrait, size: 192 },
+            ],
         },
     },
     source: {
