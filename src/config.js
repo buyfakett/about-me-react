@@ -53,7 +53,7 @@ export const languageSkillData = [
     },
     {
         title: "Backend",
-        items: ["python(熟悉)", "golang(了解)", "PHP(了解)", "java(了解)"],
+        items: ["python(熟悉)", "golang(熟悉)", "PHP(了解)", "java(了解)"],
     },
     {
         title: "Others",
@@ -423,6 +423,10 @@ export const devices = {
                         description: '手机 (512GB)'
                     },
                     {
+                        name: 'XiaoMi 10',
+                        description: '手机 (256GB)'
+                    },
+                    {
                         name: 'iPhone 10',
                         description: '手机 (128GB)'
                     }
@@ -468,7 +472,7 @@ export const devices = {
                     },
                     {
                         name: '小爱音响 Pro',
-                        description: '智能邮箱'
+                        description: '智能音响'
                     }
                 ]
             }
@@ -483,6 +487,10 @@ export const devices = {
                     {
                         name: 'Nikon ZFC',
                         description: '相机'
+                    },
+                    {
+                        name: 'DJI Osmo Pocket 3',
+                        description: 'VLOG 相机'
                     },
                     {
                         name: 'Nikon 16-50mm',
