@@ -4,6 +4,9 @@ import { motion } from 'framer-motion';
 const SkillSection = ({ sections }) => {
     return (
         <section className="flex flex-col gap-y-5">
+            <div className="font-bold">
+                The following levels are from the perspective of OPS
+            </div>
             {sections.map((section, index) => (
                 <motion.div
                     className="flex flex-col gap-y-3"
