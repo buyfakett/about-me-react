@@ -419,6 +419,10 @@ export const devices = {
                 title: 'Phone',
                 tools: [
                     {
+                        name: 'iPhone 16 pro',
+                        description: '手机 (256GB)'
+                    },
+                    {
                         name: 'XiaoMi 13 Pro',
                         description: '手机 (512GB)'
                     },
@@ -450,7 +454,7 @@ export const devices = {
                 title: 'Smart Watch',
                 tools: [
                     {
-                        name: 'XiaoMi Bond 8 NFC',
+                        name: 'XiaoMi Bond 9 pro',
                         description: '手环'
                     }
                 ]
