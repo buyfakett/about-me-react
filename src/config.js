@@ -12,6 +12,7 @@ export const skipUrl = {
     },
     zhenshan: "https://www.gisquest.com",
     email: "mailto:work@tteam.icu",
+    x: "https://x.com/buyfakettOvO",
 };
 
 export const imgUrl = {

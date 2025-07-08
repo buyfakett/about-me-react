@@ -2,8 +2,10 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
 import { Typography } from '@douyinfe/semi-ui';
-import { FaCoffee } from 'react-icons/fa';
+import { FaCoffee, FaGithub } from 'react-icons/fa';
 import { skipUrl } from '@/config';
+import { FaBilibili, FaTwitter } from 'react-icons/fa6';
+import { MdEmail } from 'react-icons/md';
 
 const Links = () => {
     const { Paragraph } = Typography;
@@ -42,6 +44,48 @@ const Links = () => {
                     <FaCoffee className="mr-1" />
                     Buy Some Coffee
                 </Link>
+            </div>
+
+            <div className="flex items-center justify-center space-x-4 mt-2">
+                {/* Twitter */}
+                <a
+                    href={skipUrl.x}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200"
+                    aria-label="Twitter">
+                    <FaTwitter className="text-xl" />
+                </a>
+
+                {/* Bilibili */}
+                <a
+                    href={skipUrl.bili}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-blue-400 dark:hover:text-blue-400 transition-colors duration-200"
+                    aria-label="Bilibili">
+                    <FaBilibili className="text-xl" />
+                </a>
+
+                {/* GitHub */}
+                <a
+                    href={skipUrl.github}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 dark:text-gray-300 hover:text-gray-800 dark:hover:text-white transition-colors duration-200"
+                    aria-label="GitHub">
+                    <FaGithub className="text-xl" />
+                </a>
+
+                {/* Email */}
+                <a
+                    href={skipUrl.email}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-gray-600 hover:text-blue-700 dark:text-gray-300 dark:hover:text-blue-300 transition-colors duration-200"
+                    aria-label="Email">
+                    <MdEmail className="text-xl" />
+                </a>
             </div>
         </motion.div>
     );
