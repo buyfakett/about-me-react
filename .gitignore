@@ -24,5 +24,4 @@ yarn-error.log*
 
 .idea/
 
-pnpm-lock.yaml
 src/default_data/*.js
