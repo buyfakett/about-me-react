@@ -50,15 +50,15 @@ export const pageVariants = {
 export const languageSkillData = [
     {
         title: "Frontend",
-        items: ["react(熟悉)", "vue2(熟悉)", "uniapp(了解)"],
+        items: ["React", "Vue2", "Uniapp"],
     },
     {
         title: "Backend",
-        items: ["python(熟悉)", "golang(熟悉)", "PHP(了解)", "java(了解)"],
+        items: ["Golang", "Python", "PHP", "Java"],
     },
     {
         title: "Others",
-        items: ["shell(熟悉)", "VRL(了解)"],
+        items: ["Shell", "VRL"],
     },
 ];
 
