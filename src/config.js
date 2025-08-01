@@ -106,6 +106,12 @@ export const zhenshanProjects = [
 
 export const projectData = [
     {
+        title: "rspress-plugin-code",
+        description: "rspress插件",
+        src: "https://github.com/buyfakett/rspress-plugin-code",
+        full_description: "rspress插件，用于在文章中插入文件路径，渲染成代码块"
+    },
+    {
         title: "ding_bot",
         description: "钉钉机器人",
         src: "https://github.com/buyfakett/ding_bot",
@@ -244,6 +250,12 @@ export const urlList = {
                 src: 'https://bandwagonhost.com/aff.php?aff=54032',
                 describe: '国内最出名的vps',
                 img_src: 'https://img.tteam.icu/i/2025/03/11/ij5jfq-3.webp'
+            },
+            {
+                title: 'cloudcone',
+                src: 'https://app.cloudcone.com/?ref=12869',
+                describe: '性价比高的vps',
+                img_src: 'https://img.tteam.icu/i/2025/07/29/m3mytr-3.webp'
             },
             {
                 title: '狐帝云',
