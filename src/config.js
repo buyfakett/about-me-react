@@ -106,6 +106,12 @@ export const zhenshanProjects = [
 
 export const projectData = [
     {
+        title: "confkeeper(暂未开源)",
+        description: "你的配置文件中心",
+        src: "https://confkeeper.tteam.icu",
+        full_description: "使用golang+react编写，在生产环境中已在上千个项目验证"
+    },
+    {
         title: "rspress-plugin-code",
         description: "rspress插件",
         src: "https://github.com/buyfakett/rspress-plugin-code",
