@@ -258,6 +258,12 @@ export const urlList = {
                 img_src: 'https://img.tteam.icu/i/2025/03/11/ij5jfq-3.webp'
             },
             {
+                title: 'hetzner',
+                src: 'https://hetzner.com/',
+                describe: '欧洲阿里云',
+                img_src: 'https://img.tteam.icu/i/2025/09/24/m9lj6n-3.webp'
+            },
+            {
                 title: 'cloudcone',
                 src: 'https://app.cloudcone.com/?ref=12869',
                 describe: '性价比高的vps',
