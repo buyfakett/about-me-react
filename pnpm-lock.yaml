@@ -71,7 +71,7 @@ importers:
         version: 1.5.12
       '@rsbuild/plugin-react':
         specifier: ^1.4.0
-        version: 1.4.0(@rsbuild/core@1.5.12)
+        version: 1.4.1(@rsbuild/core@1.5.12)
       '@rsdoctor/rspack-plugin':
         specifier: ^1.2.3
         version: 1.2.3(@rsbuild/core@1.5.12)(@rspack/core@1.5.7(@swc/helpers@0.5.17))(webpack@5.97.1)
@@ -503,8 +503,8 @@ packages:
       '@rsbuild/core':
         optional: true
 
-  '@rsbuild/plugin-react@1.4.0':
-    resolution: {integrity: sha512-YhhOUOonJBjnKpUf7E4iXKidldPWAGmYBRtDjQgcSmW4tbW0DasFpNCqLn5870Q2Ly6oCU06sLv+8G597I36+w==}
+  '@rsbuild/plugin-react@1.4.1':
+    resolution: {integrity: sha512-kahvnfRPQTsG0tReR6h0KuVfyjKJfpv/PoU5qW5SDkON7vmbGn8Jx7l3fI+yU3lR/7qDiAO19QnNjkqxPsFT3Q==}
     peerDependencies:
       '@rsbuild/core': 1.x
 
@@ -3329,7 +3329,7 @@ snapshots:
     optionalDependencies:
       '@rsbuild/core': 1.5.12
 
-  '@rsbuild/plugin-react@1.4.0(@rsbuild/core@1.5.12)':
+  '@rsbuild/plugin-react@1.4.1(@rsbuild/core@1.5.12)':
     dependencies:
       '@rsbuild/core': 1.5.12
       '@rspack/plugin-react-refresh': 1.5.1(react-refresh@0.17.0)
