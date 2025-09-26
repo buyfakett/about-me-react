@@ -10,22 +10,22 @@ importers:
     dependencies:
       '@douyinfe/semi-icons':
         specifier: ^2.86.0
-        version: 2.86.0(react@18.3.1)
+        version: 2.86.0(react@19.1.1)
       '@douyinfe/semi-illustrations':
         specifier: ^2.86.0
-        version: 2.86.0(react@18.3.1)
+        version: 2.86.0(react@19.1.1)
       '@douyinfe/semi-ui':
         specifier: ^2.86.0
-        version: 2.86.0(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 2.86.0(acorn@8.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@emotion/is-prop-valid':
         specifier: ^1.4.0
         version: 1.4.0
       '@giscus/react':
         specifier: ^3.1.0
-        version: 3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 3.1.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@hi-ui/watermark':
         specifier: ^4.0.8
-        version: 4.0.8(@hi-ui/core@4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 4.0.8(@hi-ui/core@4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       class-variance-authority:
         specifier: ^0.7.0
         version: 0.7.1
@@ -34,25 +34,25 @@ importers:
         version: 2.1.1
       framer-motion:
         specifier: ^12.23.16
-        version: 12.23.21(@emotion/is-prop-valid@1.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 12.23.21(@emotion/is-prop-valid@1.4.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       react:
-        specifier: ^18.3.1
-        version: 18.3.1
+        specifier: ^19.0.0
+        version: 19.1.1
       react-dom:
-        specifier: ^18.3.1
-        version: 18.3.1(react@18.3.1)
+        specifier: ^19.0.0
+        version: 19.1.1(react@19.1.1)
       react-icons:
         specifier: ^5.5.0
-        version: 5.5.0(react@18.3.1)
+        version: 5.5.0(react@19.1.1)
       react-markdown:
         specifier: ^10.1.0
-        version: 10.1.0(@types/react@18.3.18)(react@18.3.1)
+        version: 10.1.0(@types/react@19.1.14)(react@19.1.1)
       react-responsive:
         specifier: ^10.0.1
-        version: 10.0.1(react@18.3.1)
+        version: 10.0.1(react@19.1.1)
       react-router:
         specifier: ^7.9.1
-        version: 7.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+        version: 7.9.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       tailwind-merge:
         specifier: ^3.3.1
         version: 3.3.1
@@ -61,7 +61,7 @@ importers:
         version: 1.0.7(tailwindcss@4.1.13)
       zustand:
         specifier: ^5.0.8
-        version: 5.0.8(@types/react@18.3.18)(react@18.3.1)
+        version: 5.0.8(@types/react@19.1.14)(react@19.1.1)
     devDependencies:
       '@babel/plugin-proposal-private-property-in-object':
         specifier: ^7.21.11
@@ -82,11 +82,11 @@ importers:
         specifier: ^22.13.4
         version: 22.13.4
       '@types/react':
-        specifier: ^18.3.1
-        version: 18.3.18
+        specifier: ^19.0.0
+        version: 19.1.14
       '@types/react-dom':
-        specifier: ^18.3.1
-        version: 18.3.5(@types/react@18.3.18)
+        specifier: ^19.0.0
+        version: 19.1.9(@types/react@19.1.14)
       prettier:
         specifier: 3.6.2
         version: 3.6.2
@@ -770,16 +770,13 @@ packages:
   '@types/node@22.18.6':
     resolution: {integrity: sha512-r8uszLPpeIWbNKtvWRt/DbVi5zbqZyj1PTmhRMqBMvDnaz1QpmSKujUtJLrqGZeoM8v72MfYggDceY4K1itzWQ==}
 
-  '@types/prop-types@15.7.14':
-    resolution: {integrity: sha512-gNMvNH49DJ7OJYv+KAKn0Xp45p8PLl6zo2YnvDIbTd4J6MER2BmWN49TG7n9LvkyihINxeKW8+3bfS2yDC9dzQ==}
-
-  '@types/react-dom@18.3.5':
-    resolution: {integrity: sha512-P4t6saawp+b/dFrUr2cvkVsfvPguwsxtH6dNIYRllMsefqFzkZk5UIjzyDOv5g1dXIPdG4Sp1yCR4Z6RCUsG/Q==}
+  '@types/react-dom@19.1.9':
+    resolution: {integrity: sha512-qXRuZaOsAdXKFyOhRBg6Lqqc0yay13vN7KrIg4L7N4aaHN68ma9OK3NE1BoDFgFOTfM7zg+3/8+2n8rLUH3OKQ==}
     peerDependencies:
-      '@types/react': ^18.0.0
+      '@types/react': ^19.0.0
 
-  '@types/react@18.3.18':
-    resolution: {integrity: sha512-t4yC+vtgnkYjNSKlFx1jkAhH8LgTo2N/7Qvi83kdEaUtMDiwpbLAktKDaAMlRcJ5eSxZkH74eEGt1ky31d7kfQ==}
+  '@types/react@19.1.14':
+    resolution: {integrity: sha512-ukd93VGzaNPMAUPy0gRDSC57UuQbnH9Kussp7HBjM06YFi9uZTFhOvMSO2OKqXm1rSgzOE+pVx1k1PYHGwlc8Q==}
 
   '@types/tapable@2.2.7':
     resolution: {integrity: sha512-D6QzACV9vNX3r8HQQNTOnpG+Bv1rko+yEA82wKs3O9CQ5+XW7HI7TED17/UE7+5dIxyxZIWTxKbsBeF6uKFCwA==}
@@ -2240,10 +2237,10 @@ packages:
     peerDependencies:
       webpack: ^4.0.0 || ^5.0.0
 
-  react-dom@18.3.1:
-    resolution: {integrity: sha512-5m4nQKp+rZRb09LNH59GM4BxTh9251/ylbKIbpe7TpGxfJ+9kv6BLkLBXIjjspbgbnIBNqlI23tRnTWT0snUIw==}
+  react-dom@19.1.1:
+    resolution: {integrity: sha512-Dlq/5LAZgF0Gaz6yiqZCf6VCcZs1ghAJyrsu84Q/GT0gV+mCxbfmKNoGRKBYMJ8IEdGPqu49YWXD02GCknEDkw==}
     peerDependencies:
-      react: ^18.3.1
+      react: ^19.1.1
 
   react-draggable@4.4.6:
     resolution: {integrity: sha512-LtY5Xw1zTPqHkVmtM3X8MUOxNDOUhv/khTgBgrUvwaS064bwVvxT+q5El0uUFNx5IEPKXuRejr7UqLwBIg5pdw==}
@@ -2302,8 +2299,8 @@ packages:
       react: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
       react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  react@18.3.1:
-    resolution: {integrity: sha512-wS+hAgJShR0KhEvPJArfuPVN1+Hz1t0Y6n5jLrGQbkb4urgPE/0Rve+1kMB1v/oWgHgm4WIcV+i7F2pTVj+2iQ==}
+  react@19.1.1:
+    resolution: {integrity: sha512-w8nqGImo45dmMIfljjMwOGtbmC/mk4CMYhWIicdSflH91J9TyCyczcPFXJzrZ/ZXcgGRFeP6BU0BEJTw6tZdfQ==}
     engines: {node: '>=0.10.0'}
 
   readable-stream@2.3.8:
@@ -2371,8 +2368,8 @@ packages:
   safer-buffer@2.1.2:
     resolution: {integrity: sha512-YZo3K82SD7Riyi0E1EQPojLz7kpepnSQI9IyPbHHg1XXXevb5dJI7tpyN2ADxGcQbHG7vcyRHk0cbwqcQriUtg==}
 
-  scheduler@0.23.2:
-    resolution: {integrity: sha512-UOShsPwz7NrMUqhR6t0hWjFduvOzbtv7toDH1/hIrfRNIDBnnBWd0CwJTGvTpngVlmwGCdP9/Zl/tVrDqcuYzQ==}
+  scheduler@0.26.0:
+    resolution: {integrity: sha512-NlHwttCI/l5gCPR3D1nNXtWABUmBwvZpEQiD4IXSbIDq8BzLIK/7Ir5gTFSGZDUu37K5cMNp0hFtzO38sC7gWA==}
 
   schema-utils@3.3.0:
     resolution: {integrity: sha512-pN/yOAvcC+5rQ5nERGuwrjLlYvLTbCibnZ1I7B1LaiAz9BRBlE9GMgE/eqV30P7aJQUf7Ddimy/RsbYO/GrVGg==}
@@ -2965,29 +2962,29 @@ snapshots:
       '@babel/helper-string-parser': 7.27.1
       '@babel/helper-validator-identifier': 7.27.1
 
-  '@dnd-kit/accessibility@3.1.1(react@18.3.1)':
+  '@dnd-kit/accessibility@3.1.1(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
       tslib: 2.8.1
 
-  '@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@dnd-kit/core@6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@dnd-kit/accessibility': 3.1.1(react@18.3.1)
-      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      '@dnd-kit/accessibility': 3.1.1(react@19.1.1)
+      '@dnd-kit/utilities': 3.2.2(react@19.1.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
       tslib: 2.8.1
 
-  '@dnd-kit/sortable@7.0.2(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)':
+  '@dnd-kit/sortable@7.0.2(@dnd-kit/core@6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@dnd-kit/core': 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
-      react: 18.3.1
+      '@dnd-kit/core': 6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@dnd-kit/utilities': 3.2.2(react@19.1.1)
+      react: 19.1.1
       tslib: 2.8.1
 
-  '@dnd-kit/utilities@3.2.2(react@18.3.1)':
+  '@dnd-kit/utilities@3.2.2(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
       tslib: 2.8.1
 
   '@douyinfe/semi-animation-react@2.86.0':
@@ -3022,14 +3019,14 @@ snapshots:
       - acorn
       - supports-color
 
-  '@douyinfe/semi-icons@2.86.0(react@18.3.1)':
+  '@douyinfe/semi-icons@2.86.0(react@19.1.1)':
     dependencies:
       classnames: 2.5.1
-      react: 18.3.1
+      react: 19.1.1
 
-  '@douyinfe/semi-illustrations@2.86.0(react@18.3.1)':
+  '@douyinfe/semi-illustrations@2.86.0(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
   '@douyinfe/semi-json-viewer-core@2.86.0':
     dependencies:
@@ -3037,16 +3034,16 @@ snapshots:
 
   '@douyinfe/semi-theme-default@2.86.0': {}
 
-  '@douyinfe/semi-ui@2.86.0(acorn@8.15.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@douyinfe/semi-ui@2.86.0(acorn@8.15.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
-      '@dnd-kit/core': 6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react@18.3.1)
-      '@dnd-kit/utilities': 3.2.2(react@18.3.1)
+      '@dnd-kit/core': 6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react@19.1.1)
+      '@dnd-kit/utilities': 3.2.2(react@19.1.1)
       '@douyinfe/semi-animation': 2.86.0
       '@douyinfe/semi-animation-react': 2.86.0
       '@douyinfe/semi-foundation': 2.86.0(acorn@8.15.0)
-      '@douyinfe/semi-icons': 2.86.0(react@18.3.1)
-      '@douyinfe/semi-illustrations': 2.86.0(react@18.3.1)
+      '@douyinfe/semi-icons': 2.86.0(react@19.1.1)
+      '@douyinfe/semi-illustrations': 2.86.0(react@19.1.1)
       '@douyinfe/semi-theme-default': 2.86.0
       async-validator: 3.5.2
       classnames: 2.5.1
@@ -3057,10 +3054,10 @@ snapshots:
       jsonc-parser: 3.3.1
       lodash: 4.17.21
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
-      react-resizable: 3.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      react-window: 1.8.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
+      react-resizable: 3.0.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      react-window: 1.8.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       scroll-into-view-if-needed: 2.2.31
       utility-types: 3.11.0
     transitivePeerDependencies:
@@ -3089,11 +3086,11 @@ snapshots:
 
   '@emotion/memoize@0.9.0': {}
 
-  '@giscus/react@3.1.0(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@giscus/react@3.1.0(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       giscus: 1.6.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   '@hi-ui/array-utils@4.0.5':
     dependencies:
@@ -3107,11 +3104,11 @@ snapshots:
 
   '@hi-ui/core-css@4.1.5': {}
 
-  '@hi-ui/core@4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hi-ui/core@4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@hi-ui/core-css': 4.1.5
-      '@hi-ui/locale-context': 4.0.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@hi-ui/portal-context': 4.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hi-ui/locale-context': 4.0.13(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@hi-ui/portal-context': 4.0.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
     transitivePeerDependencies:
       - react
       - react-dom
@@ -3127,76 +3124,76 @@ snapshots:
       '@hi-ui/object-utils': 4.0.4
       '@hi-ui/type-assertion': 4.0.4
 
-  '@hi-ui/locale-context@4.0.13(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hi-ui/locale-context@4.0.13(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@hi-ui/classname': 4.0.5
       '@hi-ui/env': 4.0.9
       '@hi-ui/func-utils': 4.0.4
       '@hi-ui/object-utils': 4.0.4
       '@hi-ui/type-assertion': 4.0.4
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   '@hi-ui/object-utils@4.0.4':
     dependencies:
       '@hi-ui/array-utils': 4.0.5
       '@hi-ui/type-assertion': 4.0.4
 
-  '@hi-ui/portal-context@4.0.1(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hi-ui/portal-context@4.0.1(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@hi-ui/env': 4.0.9
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  '@hi-ui/portal@4.0.8(@hi-ui/core@4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hi-ui/portal@4.0.8(@hi-ui/core@4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@hi-ui/classname': 4.0.5
       '@hi-ui/container': 4.1.1
-      '@hi-ui/core': 4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hi-ui/core': 4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@hi-ui/env': 4.0.9
-      '@hi-ui/use-force-update': 4.0.4(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      '@hi-ui/use-force-update': 4.0.4(react@19.1.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  '@hi-ui/react-utils@4.0.4(react@18.3.1)':
+  '@hi-ui/react-utils@4.0.4(react@19.1.1)':
     dependencies:
       '@hi-ui/env': 4.0.9
       '@hi-ui/type-assertion': 4.0.4
-      react: 18.3.1
+      react: 19.1.1
 
   '@hi-ui/style-inject@4.0.0': {}
 
   '@hi-ui/type-assertion@4.0.4': {}
 
-  '@hi-ui/use-force-update@4.0.4(react@18.3.1)':
+  '@hi-ui/use-force-update@4.0.4(react@19.1.1)':
     dependencies:
-      '@hi-ui/use-unmount-effect': 4.0.4(react@18.3.1)
-      react: 18.3.1
+      '@hi-ui/use-unmount-effect': 4.0.4(react@19.1.1)
+      react: 19.1.1
 
-  '@hi-ui/use-latest@4.0.4(react@18.3.1)':
+  '@hi-ui/use-latest@4.0.4(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
-  '@hi-ui/use-merge-refs@4.0.4(react@18.3.1)':
+  '@hi-ui/use-merge-refs@4.0.4(react@19.1.1)':
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
-  '@hi-ui/use-unmount-effect@4.0.4(react@18.3.1)':
+  '@hi-ui/use-unmount-effect@4.0.4(react@19.1.1)':
     dependencies:
-      '@hi-ui/use-latest': 4.0.4(react@18.3.1)
-      react: 18.3.1
+      '@hi-ui/use-latest': 4.0.4(react@19.1.1)
+      react: 19.1.1
 
-  '@hi-ui/watermark@4.0.8(@hi-ui/core@4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)':
+  '@hi-ui/watermark@4.0.8(@hi-ui/core@4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)':
     dependencies:
       '@hi-ui/classname': 4.0.5
-      '@hi-ui/core': 4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      '@hi-ui/core': 4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
       '@hi-ui/env': 4.0.9
-      '@hi-ui/portal': 4.0.8(@hi-ui/core@4.0.9(react-dom@18.3.1(react@18.3.1))(react@18.3.1))(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
-      '@hi-ui/react-utils': 4.0.4(react@18.3.1)
+      '@hi-ui/portal': 4.0.8(@hi-ui/core@4.0.9(react-dom@19.1.1(react@19.1.1))(react@19.1.1))(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
+      '@hi-ui/react-utils': 4.0.4(react@19.1.1)
       '@hi-ui/type-assertion': 4.0.4
-      '@hi-ui/use-merge-refs': 4.0.4(react@18.3.1)
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      '@hi-ui/use-merge-refs': 4.0.4(react@19.1.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   '@isaacs/fs-minipass@4.0.1':
     dependencies:
@@ -3662,15 +3659,12 @@ snapshots:
     dependencies:
       undici-types: 6.21.0
 
-  '@types/prop-types@15.7.14': {}
-
-  '@types/react-dom@18.3.5(@types/react@18.3.18)':
+  '@types/react-dom@19.1.9(@types/react@19.1.14)':
     dependencies:
-      '@types/react': 18.3.18
+      '@types/react': 19.1.14
 
-  '@types/react@18.3.18':
+  '@types/react@19.1.14':
     dependencies:
-      '@types/prop-types': 15.7.14
       csstype: 3.1.3
 
   '@types/tapable@2.2.7':
@@ -4413,15 +4407,15 @@ snapshots:
 
   forwarded@0.2.0: {}
 
-  framer-motion@12.23.21(@emotion/is-prop-valid@1.4.0)(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  framer-motion@12.23.21(@emotion/is-prop-valid@1.4.0)(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       motion-dom: 12.23.21
       motion-utils: 12.23.6
       tslib: 2.8.1
     optionalDependencies:
       '@emotion/is-prop-valid': 1.4.0
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
   fresh@0.5.2: {}
 
@@ -5440,35 +5434,34 @@ snapshots:
       schema-utils: 3.3.0
       webpack: 5.97.1
 
-  react-dom@18.3.1(react@18.3.1):
+  react-dom@19.1.1(react@19.1.1):
     dependencies:
-      loose-envify: 1.4.0
-      react: 18.3.1
-      scheduler: 0.23.2
+      react: 19.1.1
+      scheduler: 0.26.0
 
-  react-draggable@4.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-draggable@4.4.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       clsx: 1.2.1
       prop-types: 15.8.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  react-icons@5.5.0(react@18.3.1):
+  react-icons@5.5.0(react@19.1.1):
     dependencies:
-      react: 18.3.1
+      react: 19.1.1
 
   react-is@16.13.1: {}
 
-  react-markdown@10.1.0(@types/react@18.3.18)(react@18.3.1):
+  react-markdown@10.1.0(@types/react@19.1.14)(react@19.1.1):
     dependencies:
       '@types/hast': 3.0.4
       '@types/mdast': 4.0.4
-      '@types/react': 18.3.18
+      '@types/react': 19.1.14
       devlop: 1.1.0
       hast-util-to-jsx-runtime: 2.3.2
       html-url-attributes: 3.0.1
       mdast-util-to-hast: 13.2.0
-      react: 18.3.1
+      react: 19.1.1
       remark-parse: 11.0.0
       remark-rehype: 11.1.1
       unified: 11.0.5
@@ -5479,29 +5472,29 @@ snapshots:
 
   react-refresh@0.17.0: {}
 
-  react-resizable@3.0.5(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-resizable@3.0.5(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       prop-types: 15.8.1
-      react: 18.3.1
-      react-draggable: 4.4.6(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
+      react: 19.1.1
+      react-draggable: 4.4.6(react-dom@19.1.1(react@19.1.1))(react@19.1.1)
     transitivePeerDependencies:
       - react-dom
 
-  react-responsive@10.0.1(react@18.3.1):
+  react-responsive@10.0.1(react@19.1.1):
     dependencies:
       hyphenate-style-name: 1.1.0
       matchmediaquery: 0.4.2
       prop-types: 15.8.1
-      react: 18.3.1
+      react: 19.1.1
       shallow-equal: 3.1.0
 
-  react-router@7.9.2(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-router@7.9.2(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       cookie: 1.0.2
-      react: 18.3.1
+      react: 19.1.1
       set-cookie-parser: 2.7.1
     optionalDependencies:
-      react-dom: 18.3.1(react@18.3.1)
+      react-dom: 19.1.1(react@19.1.1)
 
   react-snap@1.23.0:
     dependencies:
@@ -5520,16 +5513,14 @@ snapshots:
       - supports-color
       - utf-8-validate
 
-  react-window@1.8.11(react-dom@18.3.1(react@18.3.1))(react@18.3.1):
+  react-window@1.8.11(react-dom@19.1.1(react@19.1.1))(react@19.1.1):
     dependencies:
       '@babel/runtime': 7.26.0
       memoize-one: 5.2.1
-      react: 18.3.1
-      react-dom: 18.3.1(react@18.3.1)
+      react: 19.1.1
+      react-dom: 19.1.1(react@19.1.1)
 
-  react@18.3.1:
-    dependencies:
-      loose-envify: 1.4.0
+  react@19.1.1: {}
 
   readable-stream@2.3.8:
     dependencies:
@@ -5644,9 +5635,7 @@ snapshots:
 
   safer-buffer@2.1.2: {}
 
-  scheduler@0.23.2:
-    dependencies:
-      loose-envify: 1.4.0
+  scheduler@0.26.0: {}
 
   schema-utils@3.3.0:
     dependencies:
@@ -6028,9 +6017,9 @@ snapshots:
       buffer-crc32: 0.2.13
       fd-slicer: 1.1.0
 
-  zustand@5.0.8(@types/react@18.3.18)(react@18.3.1):
+  zustand@5.0.8(@types/react@19.1.14)(react@19.1.1):
     optionalDependencies:
-      '@types/react': 18.3.18
-      react: 18.3.1
+      '@types/react': 19.1.14
+      react: 19.1.1
 
   zwitch@2.0.4: {}
