@@ -64,6 +64,13 @@ export const languageSkillData = [
 
 export const muenProjects = [
     {
+        title: '配置文件中心开发(go+react)',
+        content: `项目背景：旧配置系统nacos繁重不符合日益增长的项目
+        项目思路：重新设计一套自研系统，并且兼容nacos的接口
+        项目成果：所有项目的配置文件迁移到新系统，运行稳定
+        备注：该项目完全为本人下班时间编写，所以未来会开源`,
+    },
+    {
         title: '日志系统重构',
         content: `项目背景：旧日志系统ELK占用资源多查询慢
         项目思路：修改为rsyslog、filebeat等收集日志到kafka，再由vector入Clickhouse
