@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Card } from '@douyinfe/semi-ui';
+import { Avatar, Card } from '@douyinfe/semi-ui-19';
 import { imgUrl } from '@/config';
 
 const ProjectCard = ({ data }) => {

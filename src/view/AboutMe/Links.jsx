@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
-import { Typography } from '@douyinfe/semi-ui';
+import { Typography } from '@douyinfe/semi-ui-19';
 import { FaCoffee, FaGithub } from 'react-icons/fa';
 import { skipUrl } from '@/config';
 import { FaBilibili, FaTwitter } from 'react-icons/fa6';

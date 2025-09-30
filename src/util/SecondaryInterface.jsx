@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { pageVariants } from '@/config';
-import { Button } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui-19';
 import { IoIosArrowBack } from 'react-icons/io';
 import { useNavigate } from 'react-router';
 

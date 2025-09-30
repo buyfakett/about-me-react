@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Card, Popover } from '@douyinfe/semi-ui';
+import { Avatar, Card, Popover } from '@douyinfe/semi-ui-19';
 import { IconInfoCircle } from '@douyinfe/semi-icons';
 import { cn } from '@/lib/utils';
 

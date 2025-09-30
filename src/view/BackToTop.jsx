@@ -1,5 +1,5 @@
 import React from 'react';
-import { BackTop } from '@douyinfe/semi-ui';
+import { BackTop } from '@douyinfe/semi-ui-19';
 import { FaArrowUpLong } from 'react-icons/fa6';
 
 class BackToTop extends React.Component {

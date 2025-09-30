@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'framer-motion';
-import { Empty, Image } from '@douyinfe/semi-ui';
+import { Empty, Image } from '@douyinfe/semi-ui-19';
 import {
     IllustrationConstruction,
     IllustrationConstructionDark,

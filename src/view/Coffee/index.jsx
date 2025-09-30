@@ -1,6 +1,6 @@
 import React from 'react';
 import { imgUrl } from '@/config';
-import { Image } from '@douyinfe/semi-ui';
+import { Image } from '@douyinfe/semi-ui-19';
 import SecondaryInterface from '@/util/SecondaryInterface';
 
 const Coffee = () => {

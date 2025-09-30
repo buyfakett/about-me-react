@@ -1,7 +1,7 @@
 import React from 'react';
 import { CiShare1 } from 'react-icons/ci';
 import { Link } from 'react-router';
-import { Divider } from '@douyinfe/semi-ui';
+import { Divider } from '@douyinfe/semi-ui-19';
 import { myName, skipUrl } from '@/config';
 
 const NavBar = () => {

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { NeonGradientCard } from '@/view/magicui/NeonGradientCard';
-import { Image } from '@douyinfe/semi-ui';
+import { Image } from '@douyinfe/semi-ui-19';
 import { imgUrl, muenProjects, skipUrl } from '@/config';
-import { Button } from '@douyinfe/semi-ui';
+import { Button } from '@douyinfe/semi-ui-19';
 import { motion, AnimatePresence } from 'framer-motion';
 import useLanguageStore from "@/stores/language";
 
