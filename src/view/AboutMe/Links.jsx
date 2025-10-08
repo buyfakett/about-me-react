@@ -1,15 +1,12 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 import { Link } from 'react-router';
-import { Typography } from '@douyinfe/semi-ui-19';
 import { FaCoffee, FaGithub } from 'react-icons/fa';
 import { skipUrl } from '@/config';
 import { FaBilibili, FaTwitter } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
 
 const Links = () => {
-    const { Paragraph } = Typography;
-
     return (
         <motion.div
             className="dark:bg-gray-900 dark:text-gray-300 text-center mb-2"
@@ -18,19 +15,12 @@ const Links = () => {
             transition={{ duration: 0.3, delay: 0.5 }}>
             <h1 className="text-4xl font-bold mb-4">About Me</h1>
             <div className="flex items-center justify-center">
-                <Paragraph
-                    copyable={{
-                        content: `${skipUrl.blog}/rss.xml`,
-                        copyTip: 'copy',
-                    }}
-                    className="text-sm font-bold dark:hover:text-blue-400 transition-colors duration-200 cursor-pointer">
-                    <span
-                        onClick={() =>
-                            window.open(`${skipUrl.blog}/rss.xml`, '_blank')
-                        }>
-                        Follow Me
-                    </span>
-                </Paragraph>
+                <Link
+                    to={`${skipUrl.blog}/rss.xml`}
+                    target="_blank"
+                    className="text-sm font-bold text-white dark:hover:text-blue-400 transition-colors duration-200">
+                    Follow Me
+                </Link>
                 <span className="mx-2">|</span>
                 <Link
                     to="/changelog"
