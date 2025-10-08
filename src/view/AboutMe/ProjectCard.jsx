@@ -9,6 +9,7 @@ const ProjectCard = ({ data }) => {
         <Card
             style={{ width: '100%' }}
             className="cursor-pointer"
+            role="list"
             title={
                 <Meta
                     title={data.title}
