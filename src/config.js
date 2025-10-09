@@ -237,6 +237,12 @@ export const urlList = {
                 img_src: 'https://img.tteam.icu/i/2024/12/04/n9qbcc-3.webp'
             },
             {
+                title: 'freeconvert',
+                src: 'https://www.freeconvert.com/zh/heic-to-webp',
+                describe: 'heic转webp',
+                img_src: 'https://img.tteam.icu/i/2024/12/04/n9qbcc-3.webp'
+            },
+            {
                 title: 'Ico download',
                 src: 'https://icon-sets.iconify.design/',
                 describe: '图标下载',
