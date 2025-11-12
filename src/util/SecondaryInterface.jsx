@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { pageVariants } from '@/config';
 import { Button } from '@douyinfe/semi-ui-19';
 import { IoIosArrowBack } from 'react-icons/io';

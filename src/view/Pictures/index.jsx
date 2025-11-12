@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Empty, Image } from '@douyinfe/semi-ui-19';
 import {
     IllustrationConstruction,

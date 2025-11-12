@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { Link } from 'react-router';
 import { FaCoffee, FaGithub } from 'react-icons/fa';
 import { skipUrl } from '@/config';

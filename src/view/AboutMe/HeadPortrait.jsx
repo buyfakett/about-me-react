@@ -1,6 +1,6 @@
 import React from 'react';
 import { HeadPortraitCircle } from '@/view/magicui/HeadPortraitCircle';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { imgUrl } from '@/config';
 
 const HeadPortrait = () => {

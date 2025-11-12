@@ -3,7 +3,7 @@ import { NeonGradientCard } from '@/view/magicui/NeonGradientCard';
 import { Image } from '@douyinfe/semi-ui-19';
 import { imgUrl, muenProjects, skipUrl } from '@/config';
 import { Button } from '@douyinfe/semi-ui-19';
-import { motion, AnimatePresence } from 'framer-motion';
+import { motion, AnimatePresence } from 'motion/react';
 import useLanguageStore from "@/stores/language";
 
 const WorkMuen = () => {

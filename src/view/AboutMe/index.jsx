@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import HeadPortrait from './HeadPortrait';
 import LanguageSection from './LanguageSection';
 import WorkExperience from './WorkExperience';

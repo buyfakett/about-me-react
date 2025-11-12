@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { projectData } from '@/config';
 import ProjectCard from '@/view/AboutMe/ProjectCard';
 import SecondaryInterface from '@/util/SecondaryInterface';

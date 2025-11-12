@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { skipUrl } from '@/config';
 import SecondaryInterface from '@/util/SecondaryInterface';
 import useBlogsStore from '@/stores/blogs';

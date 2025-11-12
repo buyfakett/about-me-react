@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router';
 import ProjectCard from './ProjectCard';
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import { projectData } from '@/config';
 import { CiLink } from 'react-icons/ci';
 
