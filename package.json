@@ -5,7 +5,7 @@
     "private": true,
     "dependencies": {
         "@douyinfe/semi-icons": "2.88.0",
-        "@douyinfe/semi-illustrations": "2.88.0",
+        "@douyinfe/semi-illustrations": "2.88.2",
         "@douyinfe/semi-ui-19": "2.87.0-alpha.8",
         "@emotion/is-prop-valid": "^1.4.0",
         "@giscus/react": "^3.1.0",
