@@ -16,7 +16,7 @@ importers:
         version: 2.88.2(react@19.2.0)
       '@douyinfe/semi-ui-19':
         specifier: ^2.88.2
-        version: 2.88.2(@floating-ui/dom@1.7.4)(@tiptap/suggestion@3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))(@tiptap/pm@3.11.0))(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+        version: 2.88.3(@floating-ui/dom@1.7.4)(@tiptap/suggestion@3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))(@tiptap/pm@3.11.0))(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@emotion/is-prop-valid':
         specifier: ^1.4.0
         version: 1.4.0
@@ -255,20 +255,25 @@ packages:
     peerDependencies:
       react: '>=16.8.0'
 
-  '@douyinfe/semi-animation-react@2.88.2':
-    resolution: {integrity: sha512-WA1MwGeNVo+Gc5Xd3BhHFk1TXJOEsANhn9iW+KUR3d4rMHE2hlGfU0w7wBT4ghdJ96E00WLwCa4irKwqi/h8mA==}
+  '@douyinfe/semi-animation-react@2.88.3':
+    resolution: {integrity: sha512-Jhk/QXZ1Wz++D7PZpdRSc3Pj9sDHIDeOXal/zfzUVpEjuQWlD/ebup0MM50ChBkMPI9HkOQLCbZ2Z5qV7bX5SQ==}
 
-  '@douyinfe/semi-animation-styled@2.88.2':
-    resolution: {integrity: sha512-H9d28qe9Wr9LGnZKYG5mpK21GIgxAe9YwnahK5tcD7NhcM8P86VF/e4vBf90aPXPUBefRdmmE5Etr35pzjoArA==}
+  '@douyinfe/semi-animation-styled@2.88.3':
+    resolution: {integrity: sha512-VNuMBD4mffSB4yCzhxHf7/AIRddIxUzz6U+jHQbd0ZAt75CXmj6h/YNyURpaYspHKr3bMqgRW98956CTa8qbjQ==}
 
-  '@douyinfe/semi-animation@2.88.2':
-    resolution: {integrity: sha512-JzSY8QXEXDHzH2W4HFLO7xG/hFPE5hCagDUcWtcIl7Z9e8xacr7yJsOWVqD/cYYhswzUtfN0F8Y5qMncD8DczA==}
+  '@douyinfe/semi-animation@2.88.3':
+    resolution: {integrity: sha512-x7Ef2IJjW8M0cgg41P7hgePlxz3XvWRVcov4fvzAE3LYBPgYRz9FL+k/gQ/OhT8PpnlHh5XpPUL3N2ATBLeiEQ==}
 
-  '@douyinfe/semi-foundation@2.88.2':
-    resolution: {integrity: sha512-cz/cx+KudZwBgnmZtkOQlzt/BPb3bnjZUMeqAdWcp7yZQ/fqnqtd2NCYI5cs+MNZR2aWwGNGFtP6FO9znrHmIA==}
+  '@douyinfe/semi-foundation@2.88.3':
+    resolution: {integrity: sha512-/jlSfki5Bg4lAqbl0oAUtHqzWqFijvqcHvH/dmU1wgLw/kZYj/bQkA3G9/VrTyWggfXmq2JC6bx9EoQAvXEsSQ==}
 
   '@douyinfe/semi-icons@2.88.2':
     resolution: {integrity: sha512-pORwLHLv+tE0DAnQ+OSlqAzD2/w9DXvqRfGsVgosSDlAdiu4Bn0Ak2IT9DEN8CF7jxcHgO2cTX81/wpNsQ6MCg==}
+    peerDependencies:
+      react: '>=16.0.0'
+
+  '@douyinfe/semi-icons@2.88.3':
+    resolution: {integrity: sha512-g3YFaM8Jr0GRY9rV5OuxvmZiqZUN9grj+TdRC930StxBjxdp901WGhuaPGpkaVahO0mkX3hSAJVlQYPEF/MOzQ==}
     peerDependencies:
       react: '>=16.0.0'
 
@@ -277,14 +282,19 @@ packages:
     peerDependencies:
       react: '>=16.0.0'
 
-  '@douyinfe/semi-json-viewer-core@2.88.2':
-    resolution: {integrity: sha512-2CosdM4F5DFfgXrU9g2FNoqGl6oxJpM9UtO5j5EQRDFhlWirDE63YqADmVDPFeKLRmQBmahbIcTeP0yESgkgxQ==}
+  '@douyinfe/semi-illustrations@2.88.3':
+    resolution: {integrity: sha512-L8nqLz7YaRTDM+ZSXmWLrt+zjaGl7SFOBT4QQG7O6q1gmaK2XOiHWLiiQYztp863cMr11LSBIckMy56M9ScCbQ==}
+    peerDependencies:
+      react: '>=16.0.0'
 
-  '@douyinfe/semi-theme-default@2.88.2':
-    resolution: {integrity: sha512-rOLwSDi5CNXa6MQ5GabHSBoAFFaGZipha/QIy1umqlF21ahw5IJyLCj7e0+TP1MyzcFsqeEjImALbR/cNRWjow==}
+  '@douyinfe/semi-json-viewer-core@2.88.3':
+    resolution: {integrity: sha512-2tqTXbUrDYxZVu/Stl14Rv/WeiqbYlfyKmra9AIG81ZaqG1fP28g/dkiBlHVzUZbYCMM9s3EGAuZugn1jWkWKQ==}
 
-  '@douyinfe/semi-ui-19@2.88.2':
-    resolution: {integrity: sha512-ew4KoaymfXHg1Z3UYrEOutsmH1OYK+j8dV9FGE0J+tlvenQyngb5gARi5svNGl/O5/hcKuRMCYhegnDfib3Z3g==}
+  '@douyinfe/semi-theme-default@2.88.3':
+    resolution: {integrity: sha512-mCuxedgCT1bJChMEQ+AAJ8g0oJQZaXsL+vVKxjqISjFUutbUvs++K+A2pWobgZafOXu1JS+cpppPsEcR4G4JvQ==}
+
+  '@douyinfe/semi-ui-19@2.88.3':
+    resolution: {integrity: sha512-ASxx80CuFa8aGj0pKKahe7o5kLlnvheajvMG2PLObJkPJOl3G/toHto/S/Hq3OKOpLnjWqughBTDb9thxePmxw==}
     engines: {node: '>=18.0.0'}
     peerDependencies:
       react: ^19.0.0
@@ -341,8 +351,8 @@ packages:
   '@hi-ui/func-utils@4.0.4':
     resolution: {integrity: sha512-YaRxaFK12oNCPefYZLTKUr8RjuzXzRof78RyI2bn7gc7s7EoqluYh7t0yyoppvOAfF0zSNxcumYORBLrkggV/g==}
 
-  '@hi-ui/locale-context@4.1.0':
-    resolution: {integrity: sha512-tYc6mnZfZHcvjVJuMrvrbvCIvHypRd0bCrQI1WvLUV6KlMTrwaJPX4LN6toMrKkCq1ie82BY+wC5xR1eSeBE1A==}
+  '@hi-ui/locale-context@4.1.1':
+    resolution: {integrity: sha512-V+wZDGxMaCfK10rRGV/89yzNjs6c3rCodTa9Gl7DuzjfdDG1TCX3H5AzL+XvxbN7K/Dk+X8yoYAdi7l/EYhlTw==}
     peerDependencies:
       react: '>=16.8.6'
       react-dom: '>=16.8.6'
@@ -519,25 +529,21 @@ packages:
     resolution: {integrity: sha512-Ldpoz2wWnBaL2+XKLIOyCZMkAkd4pk/L24EVgma3SpRtwgenLEr10bQupvwGAK5OLkjayslOTZmRiAv0FH5o/w==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.6.4':
     resolution: {integrity: sha512-3fLMSDK5yMjKmx7iFbYG3P3A0xNdtmNu09v5P6hzq65tkJ3dflIt3p8DvtOTURtuSgQZV2A1LDd9hpIXdnigqA==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.6.4':
     resolution: {integrity: sha512-5YzXUKLnaiqND05CDgkKE0WNRtC1ulkVncYs78xPikonzZmgVXa8eRaTPOZC6ZjpLR0eTsg+MSesLUsPUu27hA==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.6.4':
     resolution: {integrity: sha512-KcSFla8a9bXG1mmV5oQ1R5h/dSXfd41/qHOsNuLqho2UCX8CVh4dezUA153dj7p1S4yOhTy6VZZi6C1szweE9A==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-wasm32-wasi@1.6.4':
     resolution: {integrity: sha512-mfFJbDJkRy5I1iW3m0JlWbc0X8pjVd+GRUz5nhbccwEhSQOc27ao3evf7XPU4aaDxud1B3UEqYiRcRmtm1BrjA==}
@@ -626,28 +632,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-arm64-musl@4.1.17':
     resolution: {integrity: sha512-HvZLfGr42i5anKtIeQzxdkw/wPqIbpeZqe7vd3V9vI3RQxe3xU1fLjss0TjyhxWcBaipk7NYwSrwTwK1hJARMg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-linux-x64-gnu@4.1.17':
     resolution: {integrity: sha512-M3XZuORCGB7VPOEDH+nzpJ21XPvK5PyjlkSFkFziNHGLc5d6g3di2McAAblmaSUNl8IOmzYwLx9NsE7bplNkwQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-x64-musl@4.1.17':
     resolution: {integrity: sha512-k7f+pf9eXLEey4pBlw+8dgfJHY4PZ5qOUFDyNf7SI6lHjQ9Zt7+NcscjpwdCEbYi6FI5c2KDTDWyf2iHcCSyyQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-wasm32-wasi@4.1.17':
     resolution: {integrity: sha512-cEytGqSSoy7zK4JRWiTCx43FsKP/zGr0CsuMawhH67ONlH+T79VteQeJQRO/X7L0juEUA8ZyuYikcRBf0vsxhg==}
@@ -1632,28 +1634,24 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.30.2:
     resolution: {integrity: sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.30.2:
     resolution: {integrity: sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.30.2:
     resolution: {integrity: sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.30.2:
     resolution: {integrity: sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ==}
@@ -2833,22 +2831,22 @@ snapshots:
       react: 19.2.0
       tslib: 2.8.1
 
-  '@douyinfe/semi-animation-react@2.88.2':
+  '@douyinfe/semi-animation-react@2.88.3':
     dependencies:
-      '@douyinfe/semi-animation': 2.88.2
-      '@douyinfe/semi-animation-styled': 2.88.2
+      '@douyinfe/semi-animation': 2.88.3
+      '@douyinfe/semi-animation-styled': 2.88.3
       classnames: 2.5.1
 
-  '@douyinfe/semi-animation-styled@2.88.2': {}
+  '@douyinfe/semi-animation-styled@2.88.3': {}
 
-  '@douyinfe/semi-animation@2.88.2':
+  '@douyinfe/semi-animation@2.88.3':
     dependencies:
       bezier-easing: 2.1.0
 
-  '@douyinfe/semi-foundation@2.88.2':
+  '@douyinfe/semi-foundation@2.88.3':
     dependencies:
-      '@douyinfe/semi-animation': 2.88.2
-      '@douyinfe/semi-json-viewer-core': 2.88.2
+      '@douyinfe/semi-animation': 2.88.3
+      '@douyinfe/semi-json-viewer-core': 2.88.3
       '@mdx-js/mdx': 3.1.1
       async-validator: 3.5.2
       classnames: 2.5.1
@@ -2869,27 +2867,36 @@ snapshots:
       classnames: 2.5.1
       react: 19.2.0
 
+  '@douyinfe/semi-icons@2.88.3(react@19.2.0)':
+    dependencies:
+      classnames: 2.5.1
+      react: 19.2.0
+
   '@douyinfe/semi-illustrations@2.88.2(react@19.2.0)':
     dependencies:
       react: 19.2.0
 
-  '@douyinfe/semi-json-viewer-core@2.88.2':
+  '@douyinfe/semi-illustrations@2.88.3(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
+  '@douyinfe/semi-json-viewer-core@2.88.3':
     dependencies:
       jsonc-parser: 3.3.1
 
-  '@douyinfe/semi-theme-default@2.88.2': {}
+  '@douyinfe/semi-theme-default@2.88.3': {}
 
-  '@douyinfe/semi-ui-19@2.88.2(@floating-ui/dom@1.7.4)(@tiptap/suggestion@3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))(@tiptap/pm@3.11.0))(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@douyinfe/semi-ui-19@2.88.3(@floating-ui/dom@1.7.4)(@tiptap/suggestion@3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))(@tiptap/pm@3.11.0))(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@dnd-kit/core': 6.3.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@dnd-kit/sortable': 7.0.2(@dnd-kit/core@6.3.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0))(react@19.2.0)
       '@dnd-kit/utilities': 3.2.2(react@19.2.0)
-      '@douyinfe/semi-animation': 2.88.2
-      '@douyinfe/semi-animation-react': 2.88.2
-      '@douyinfe/semi-foundation': 2.88.2
-      '@douyinfe/semi-icons': 2.88.2(react@19.2.0)
-      '@douyinfe/semi-illustrations': 2.88.2(react@19.2.0)
-      '@douyinfe/semi-theme-default': 2.88.2
+      '@douyinfe/semi-animation': 2.88.3
+      '@douyinfe/semi-animation-react': 2.88.3
+      '@douyinfe/semi-foundation': 2.88.3
+      '@douyinfe/semi-icons': 2.88.3(react@19.2.0)
+      '@douyinfe/semi-illustrations': 2.88.3(react@19.2.0)
+      '@douyinfe/semi-theme-default': 2.88.3
       '@tiptap/core': 3.11.0(@tiptap/pm@3.11.0)
       '@tiptap/extension-document': 3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))
       '@tiptap/extension-hard-break': 3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))
@@ -2979,7 +2986,7 @@ snapshots:
   '@hi-ui/core@4.0.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@hi-ui/core-css': 4.1.5
-      '@hi-ui/locale-context': 4.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@hi-ui/locale-context': 4.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@hi-ui/portal-context': 4.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
@@ -2996,7 +3003,7 @@ snapshots:
       '@hi-ui/object-utils': 4.0.4
       '@hi-ui/type-assertion': 4.0.4
 
-  '@hi-ui/locale-context@4.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@hi-ui/locale-context@4.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@hi-ui/classname': 4.0.5
       '@hi-ui/env': 4.0.9
