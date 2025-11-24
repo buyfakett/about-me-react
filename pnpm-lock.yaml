@@ -13,7 +13,7 @@ importers:
         version: 2.88.2(react@19.2.0)
       '@douyinfe/semi-illustrations':
         specifier: ^2.88.2
-        version: 2.88.2(react@19.2.0)
+        version: 2.88.3(react@19.2.0)
       '@douyinfe/semi-ui-19':
         specifier: ^2.88.2
         version: 2.88.2(@floating-ui/dom@1.7.4)(@tiptap/suggestion@3.11.0(@tiptap/core@3.11.0(@tiptap/pm@3.11.0))(@tiptap/pm@3.11.0))(@types/react-dom@19.2.3(@types/react@19.2.6))(@types/react@19.2.6)(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
@@ -277,6 +277,11 @@ packages:
     peerDependencies:
       react: '>=16.0.0'
 
+  '@douyinfe/semi-illustrations@2.88.3':
+    resolution: {integrity: sha512-L8nqLz7YaRTDM+ZSXmWLrt+zjaGl7SFOBT4QQG7O6q1gmaK2XOiHWLiiQYztp863cMr11LSBIckMy56M9ScCbQ==}
+    peerDependencies:
+      react: '>=16.0.0'
+
   '@douyinfe/semi-json-viewer-core@2.88.2':
     resolution: {integrity: sha512-2CosdM4F5DFfgXrU9g2FNoqGl6oxJpM9UtO5j5EQRDFhlWirDE63YqADmVDPFeKLRmQBmahbIcTeP0yESgkgxQ==}
 
@@ -341,8 +346,8 @@ packages:
   '@hi-ui/func-utils@4.0.4':
     resolution: {integrity: sha512-YaRxaFK12oNCPefYZLTKUr8RjuzXzRof78RyI2bn7gc7s7EoqluYh7t0yyoppvOAfF0zSNxcumYORBLrkggV/g==}
 
-  '@hi-ui/locale-context@4.1.0':
-    resolution: {integrity: sha512-tYc6mnZfZHcvjVJuMrvrbvCIvHypRd0bCrQI1WvLUV6KlMTrwaJPX4LN6toMrKkCq1ie82BY+wC5xR1eSeBE1A==}
+  '@hi-ui/locale-context@4.1.1':
+    resolution: {integrity: sha512-V+wZDGxMaCfK10rRGV/89yzNjs6c3rCodTa9Gl7DuzjfdDG1TCX3H5AzL+XvxbN7K/Dk+X8yoYAdi7l/EYhlTw==}
     peerDependencies:
       react: '>=16.8.6'
       react-dom: '>=16.8.6'
@@ -519,25 +524,21 @@ packages:
     resolution: {integrity: sha512-Ldpoz2wWnBaL2+XKLIOyCZMkAkd4pk/L24EVgma3SpRtwgenLEr10bQupvwGAK5OLkjayslOTZmRiAv0FH5o/w==}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-arm64-musl@1.6.4':
     resolution: {integrity: sha512-3fLMSDK5yMjKmx7iFbYG3P3A0xNdtmNu09v5P6hzq65tkJ3dflIt3p8DvtOTURtuSgQZV2A1LDd9hpIXdnigqA==}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-linux-x64-gnu@1.6.4':
     resolution: {integrity: sha512-5YzXUKLnaiqND05CDgkKE0WNRtC1ulkVncYs78xPikonzZmgVXa8eRaTPOZC6ZjpLR0eTsg+MSesLUsPUu27hA==}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@rspack/binding-linux-x64-musl@1.6.4':
     resolution: {integrity: sha512-KcSFla8a9bXG1mmV5oQ1R5h/dSXfd41/qHOsNuLqho2UCX8CVh4dezUA153dj7p1S4yOhTy6VZZi6C1szweE9A==}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@rspack/binding-wasm32-wasi@1.6.4':
     resolution: {integrity: sha512-mfFJbDJkRy5I1iW3m0JlWbc0X8pjVd+GRUz5nhbccwEhSQOc27ao3evf7XPU4aaDxud1B3UEqYiRcRmtm1BrjA==}
@@ -626,28 +627,24 @@ packages:
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-arm64-musl@4.1.17':
     resolution: {integrity: sha512-HvZLfGr42i5anKtIeQzxdkw/wPqIbpeZqe7vd3V9vI3RQxe3xU1fLjss0TjyhxWcBaipk7NYwSrwTwK1hJARMg==}
     engines: {node: '>= 10'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-linux-x64-gnu@4.1.17':
     resolution: {integrity: sha512-M3XZuORCGB7VPOEDH+nzpJ21XPvK5PyjlkSFkFziNHGLc5d6g3di2McAAblmaSUNl8IOmzYwLx9NsE7bplNkwQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   '@tailwindcss/oxide-linux-x64-musl@4.1.17':
     resolution: {integrity: sha512-k7f+pf9eXLEey4pBlw+8dgfJHY4PZ5qOUFDyNf7SI6lHjQ9Zt7+NcscjpwdCEbYi6FI5c2KDTDWyf2iHcCSyyQ==}
     engines: {node: '>= 10'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   '@tailwindcss/oxide-wasm32-wasi@4.1.17':
     resolution: {integrity: sha512-cEytGqSSoy7zK4JRWiTCx43FsKP/zGr0CsuMawhH67ONlH+T79VteQeJQRO/X7L0juEUA8ZyuYikcRBf0vsxhg==}
@@ -1632,28 +1629,24 @@ packages:
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-arm64-musl@1.30.2:
     resolution: {integrity: sha512-5Vh9dGeblpTxWHpOx8iauV02popZDsCYMPIgiuw97OJ5uaDsL86cnqSFs5LZkG3ghHoX5isLgWzMs+eD1YzrnA==}
     engines: {node: '>= 12.0.0'}
     cpu: [arm64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-linux-x64-gnu@1.30.2:
     resolution: {integrity: sha512-Cfd46gdmj1vQ+lR6VRTTadNHu6ALuw2pKR9lYq4FnhvgBc4zWY1EtZcAc6EffShbb1MFrIPfLDXD6Xprbnni4w==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [glibc]
 
   lightningcss-linux-x64-musl@1.30.2:
     resolution: {integrity: sha512-XJaLUUFXb6/QG2lGIW6aIk6jKdtjtcffUT0NKvIqhSBY3hh9Ch+1LCeH80dR9q9LBjG3ewbDjnumefsLsP6aiA==}
     engines: {node: '>= 12.0.0'}
     cpu: [x64]
     os: [linux]
-    libc: [musl]
 
   lightningcss-win32-arm64-msvc@1.30.2:
     resolution: {integrity: sha512-FZn+vaj7zLv//D/192WFFVA0RgHawIcHqLX9xuWiQt7P0PtdFEVaxgF9rjM/IRYHQXNnk61/H/gb2Ei+kUQ4xQ==}
@@ -2873,6 +2866,10 @@ snapshots:
     dependencies:
       react: 19.2.0
 
+  '@douyinfe/semi-illustrations@2.88.3(react@19.2.0)':
+    dependencies:
+      react: 19.2.0
+
   '@douyinfe/semi-json-viewer-core@2.88.2':
     dependencies:
       jsonc-parser: 3.3.1
@@ -2979,7 +2976,7 @@ snapshots:
   '@hi-ui/core@4.0.9(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@hi-ui/core-css': 4.1.5
-      '@hi-ui/locale-context': 4.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
+      '@hi-ui/locale-context': 4.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
       '@hi-ui/portal-context': 4.0.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)
     transitivePeerDependencies:
       - react
@@ -2996,7 +2993,7 @@ snapshots:
       '@hi-ui/object-utils': 4.0.4
       '@hi-ui/type-assertion': 4.0.4
 
-  '@hi-ui/locale-context@4.1.0(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
+  '@hi-ui/locale-context@4.1.1(react-dom@19.2.0(react@19.2.0))(react@19.2.0)':
     dependencies:
       '@hi-ui/classname': 4.0.5
       '@hi-ui/env': 4.0.9
