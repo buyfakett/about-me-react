@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { motion } from 'motion/react';
-import { Empty, Image } from '@douyinfe/semi-ui-19';
+import { Empty } from '@douyinfe/semi-ui-19';
 import {
     IllustrationConstruction,
     IllustrationConstructionDark,
@@ -153,9 +153,7 @@ const Pictures = () => {
                     <h2 className="text-1xl font-bold mb-10">
                         The photo records the person behind it
                     </h2>
-                    <div
-                        className="w-full flex flex-wrap gap-4"
-                        style={{ justifyContent: 'center', rowGap: '16px' }}>
+                    <div className="w-full flex flex-wrap gap-4 justify-center">
                         {pictureList.urls
                             .slice(0, displayCount)
                             .map((photo, index) => (
@@ -204,13 +202,11 @@ const Pictures = () => {
                                             photo.height,
                                         ),
                                         aspectRatio: `${photo.width} / ${photo.height}`,
-                                        minWidth: '300px',
-                                        maxWidth: '800px',
                                     }}>
                                     {loadedPhotos.some(
                                         (p) => p.url === photo.url,
                                     ) ? (
-                                        <Image
+                                        <img
                                             src={photo.url}
                                             alt={photo.description}
                                             style={{
@@ -223,7 +219,6 @@ const Pictures = () => {
                                                     `图片 ${index + 1}\n图片地址：${photo.url}\n图片描述：${photo.description}`,
                                                 )
                                             }
-                                            preview
                                         />
                                     ) : (
                                         <div
