@@ -1,6 +1,5 @@
 import React from 'react';
 import { imgUrl } from '@/config';
-import { Image } from '@douyinfe/semi-ui-19';
 import SecondaryInterface from '@/util/SecondaryInterface';
 
 const Coffee = () => {
@@ -13,8 +12,8 @@ const Coffee = () => {
                     ☕ Thank you for your support.
                 </p>
                 <div className="flex gap-8 justify-center mb-10">
-                    <Image src={imgUrl.pay.wechat} className="w-64 h-auto" />
-                    <Image src={imgUrl.pay.ali} className="w-64 h-auto" />
+                    <img src={imgUrl.pay.wechat} className="w-64 h-auto" alt="微信支付" />
+                    <img src={imgUrl.pay.ali} className="w-64 h-auto" alt="支付宝支付" />
                 </div>
                 <div className="text-lg mb-10">
                     <h2 className="mb-2 text-xl font-semibold">

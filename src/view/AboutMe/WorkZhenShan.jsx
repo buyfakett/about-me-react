@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { NeonGradientCard } from '@/view/magicui/NeonGradientCard';
-import { Button, Image } from '@douyinfe/semi-ui-19';
+import { Button } from '@douyinfe/semi-ui-19';
 import { imgUrl, skipUrl, zhenshanProjects } from '@/config';
 import { AnimatePresence, motion } from 'motion/react';
 
@@ -11,7 +11,7 @@ const WorkZhenShan = () => {
         <>
             <div className="flex flex-col md:flex-row items-center md:items-start gap-4 md:gap-6 w-full max-w-(--breakpoint-lg) mx-auto">
                 <div className="shrink-0">
-                    <Image
+                    <img
                         src={imgUrl.zhenshan}
                         alt="浙江臻善科技股份有限公司"
                         className="w-16 h-16 md:w-12 md:h-12 md:mt-20 rounded-sm"
