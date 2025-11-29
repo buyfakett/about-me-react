@@ -113,6 +113,12 @@ export const zhenshanProjects = [
 
 export const projectData = [
     {
+        title: "easyimage-go",
+        description: "个人用图床",
+        src: "https://github.com/buyfakett/easyimage-go",
+        full_description: "使用golang编写，支持转换图片到webp"
+    },
+    {
         title: "confkeeper(暂未开源)",
         description: "你的配置文件中心",
         src: "https://confkeeper.tteam.icu",
