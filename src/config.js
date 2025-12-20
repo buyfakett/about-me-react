@@ -113,60 +113,68 @@ export const zhenshanProjects = [
 
 export const projectData = [
     {
-        title: "easyimage-go",
-        description: "个人用图床",
-        src: "https://github.com/buyfakett/easyimage-go",
-        full_description: "使用golang编写，支持转换图片到webp"
+        title: 'cloud-balance-exporter',
+        description: '云厂商余额监控',
+        src: 'https://github.com/buyfakett/cloud_balance_exporter',
+        full_description: '使用golang编写，监控各云厂商余额',
     },
     {
-        title: "confkeeper(暂未开源)",
-        description: "你的配置文件中心",
-        src: "https://confkeeper.tteam.icu",
-        full_description: "使用golang+react编写，在生产环境中已在上千个项目验证"
+        title: 'easyimage-go',
+        description: '个人用图床',
+        src: 'https://github.com/buyfakett/easyimage-go',
+        full_description: '使用golang编写，支持转换图片到webp',
     },
     {
-        title: "rspress-plugin-code",
-        description: "rspress插件",
-        src: "https://github.com/buyfakett/rspress-plugin-code",
-        full_description: "rspress插件，用于在文章中插入文件路径，渲染成代码块"
+        title: 'confkeeper(暂未开源)',
+        description: '你的配置文件中心',
+        src: 'https://confkeeper.tteam.icu',
+        full_description:
+            '使用golang+react编写，在生产环境中已在上千个项目验证',
     },
     {
-        title: "ding_bot",
-        description: "钉钉机器人",
-        src: "https://github.com/buyfakett/ding_bot",
-        full_description: "@机器人可以配合jenkins自动上线服务和分发nginx配置"
+        title: 'rspress-plugin-code',
+        description: 'rspress插件',
+        src: 'https://github.com/buyfakett/rspress-plugin-code',
+        full_description: 'rspress插件，用于在文章中插入文件路径，渲染成代码块',
     },
     {
-        title: "rsspush",
-        description: "检测rss状态",
-        src: "https://github.com/buyfakett/rsspush",
-        full_description: "推送到微信测试号和钉钉机器人的工具"
+        title: 'ding_bot',
+        description: '钉钉机器人',
+        src: 'https://github.com/buyfakett/ding_bot',
+        full_description: '@机器人可以配合jenkins自动上线服务和分发nginx配置',
     },
     {
-        title: "jenkins-build",
-        description: "devops",
-        src: "https://github.com/ttdockerfile/jenkins-build2/tree/2.474-debian",
-        full_description: "把jenkins、node、python、golang、java等编译工具打进docker中"
+        title: 'rsspush',
+        description: '检测rss状态',
+        src: 'https://github.com/buyfakett/rsspush',
+        full_description: '推送到微信测试号和钉钉机器人的工具',
     },
     {
-        title: "centos7_initialization",
-        description: "初始化centos7脚本",
-        src: "https://github.com/buyfakett/centos7_initialization",
-        full_description: "初始化centos7脚本"
+        title: 'jenkins-build',
+        description: 'devops',
+        src: 'https://github.com/ttdockerfile/jenkins-build2/tree/2.474-debian',
+        full_description:
+            '把jenkins、node、python、golang、java等编译工具打进docker中',
     },
     {
-        title: "qiniu_upload",
-        description: "七牛云oss上传",
-        src: "https://github.com/buyfakett/qiniu_upload",
-        full_description: "七牛云oss上传封装到docker"
+        title: 'centos7_initialization',
+        description: '初始化centos7脚本',
+        src: 'https://github.com/buyfakett/centos7_initialization',
+        full_description: '初始化centos7脚本',
     },
     {
-        title: "easy_send_mail",
-        description: "发送邮件",
-        src: "https://github.com/buyfakett/easy_send_mail",
-        full_description: "用shell实现发送邮件"
+        title: 'qiniu_upload',
+        description: '七牛云oss上传',
+        src: 'https://github.com/buyfakett/qiniu_upload',
+        full_description: '七牛云oss上传封装到docker',
     },
-]
+    {
+        title: 'easy_send_mail',
+        description: '发送邮件',
+        src: 'https://github.com/buyfakett/easy_send_mail',
+        full_description: '用shell实现发送邮件',
+    },
+];
 
 export const urlList = {
     friends: {
