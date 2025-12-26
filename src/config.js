@@ -429,10 +429,10 @@ export const devices = {
                     {
                         name: 'Home Server',
                         description: 'PVE (N305, 1T SSD+1T HDD)',
-                    }
-                ]
-            }
-        }
+                    },
+                ],
+            },
+        },
     },
     computer_device: {
         title: 'Computer Input Device',
@@ -459,10 +459,10 @@ export const devices = {
                     {
                         name: 'KOORUI MB27S7U',
                         description: '家用副屏',
-                    }
-                ]
-            }
-        }
+                    },
+                ],
+            },
+        },
     },
     mobile: {
         title: 'Mobile Devices',
@@ -472,32 +472,32 @@ export const devices = {
                 tools: [
                     {
                         name: 'iPhone 16 pro',
-                        description: '手机 (256GB)'
+                        description: '手机 (256GB)',
                     },
                     {
                         name: 'XiaoMi 13 Pro',
-                        description: '手机 (512GB)'
+                        description: '手机 (512GB)',
                     },
                     {
                         name: 'XiaoMi 10',
-                        description: '手机 (256GB)'
+                        description: '手机 (256GB)',
                     },
                     {
                         name: 'iPhone 10',
-                        description: '手机 (128GB)'
-                    }
-                ]
+                        description: '手机 (128GB)',
+                    },
+                ],
             },
             tablet: {
                 title: 'Tablet',
                 tools: [
                     {
                         name: 'XiaoMi Pad 6 Pro',
-                        description: '平板 (256GB)'
-                    }
-                ]
-            }
-        }
+                        description: '平板 (256GB)',
+                    },
+                ],
+            },
+        },
     },
     wearables: {
         title: 'Smart Wearables',
@@ -506,33 +506,41 @@ export const devices = {
                 title: 'Smart Watch',
                 tools: [
                     {
+                        name: 'Apple Watch S11',
+                        description: '手表',
+                    },
+                    {
                         name: 'XiaoMi Bond 9 pro',
-                        description: '手环'
-                    }
-                ]
+                        description: '手环',
+                    },
+                ],
             },
             audio: {
                 title: 'Audio Devices',
                 tools: [
                     {
+                        name: 'Apple airPods Pro 3',
+                        description: '无线耳机',
+                    },
+                    {
                         name: 'XiaoMi Buds 5',
-                        description: '无线耳机'
+                        description: '无线耳机',
                     },
                     {
                         name: 'XiaoMi 骨传导耳机',
-                        description: '骨传导耳机'
+                        description: '骨传导耳机',
                     },
                     {
                         name: 'Sony WH-XM3',
-                        description: '头戴式耳机'
+                        description: '头戴式耳机',
                     },
                     {
                         name: '小爱音响 Pro',
-                        description: '智能音响'
-                    }
-                ]
-            }
-        }
+                        description: '智能音响',
+                    },
+                ],
+            },
+        },
     },
     imaging: {
         title: 'Imaging Equipment',
@@ -542,18 +550,18 @@ export const devices = {
                 tools: [
                     {
                         name: 'Nikon ZFC',
-                        description: '相机'
+                        description: '相机',
                     },
                     {
                         name: 'DJI Osmo Pocket 3',
-                        description: 'VLOG 相机'
+                        description: 'VLOG 相机',
                     },
                     {
                         name: 'Nikon 16-50mm',
-                        description: '变焦镜头'
-                    }
-                ]
-            }
-        }
-    }
-}
+                        description: '变焦镜头',
+                    },
+                ],
+            },
+        },
+    },
+};
