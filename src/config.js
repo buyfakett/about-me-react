@@ -125,7 +125,7 @@ export const projectData = [
         full_description: '使用golang编写，支持转换图片到webp',
     },
     {
-        title: 'confkeeper(暂未开源)',
+        title: 'confkeeper',
         description: '你的配置文件中心',
         src: 'https://confkeeper.tteam.icu',
         full_description:
