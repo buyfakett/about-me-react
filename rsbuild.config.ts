@@ -25,9 +25,7 @@ export default defineConfig({
         },
         favicon: imgUrl.headPortrait,
         appIcon: {
-            icons: [
-                { src: imgUrl.headPortrait, size: 192 },
-            ],
+            icons: [{ src: imgUrl.headPortrait, size: 192 }],
         },
     },
     source: {
@@ -52,12 +50,10 @@ export default defineConfig({
             return size < 10 * 1000;
         },
     },
-    performance: {
-        chunkSplit: {
-            // 代码拆分
-            strategy: 'split-by-size',
-            minSize: 30000, // 30k
-            maxSize: 500000, // 50k
-        },
+    splitChunks: {
+        // 代码拆分
+        preset: 'none',
+        minSize: 30000, // 30k
+        maxSize: 500000, // 50k
     },
 });
