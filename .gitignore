@@ -24,4 +24,4 @@ yarn-error.log*
 
 .idea/
 
-src/default_data/*.js
+src/default_data/*.*s

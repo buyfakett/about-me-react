@@ -55,5 +55,5 @@ try {
 // 写入为 JavaScript 文件，包含 const 变量
 const jsContent = `export const buildInfo = ${JSON.stringify(buildInfo, null, 2)};`;
 
-await fs.writeFile(join(outputDir, 'buildInfo.js'), jsContent);
-console.log('构建信息已保存为 JavaScript 文件:', buildInfo);
+await fs.writeFile(join(outputDir, 'buildInfo.ts'), jsContent);
+console.log('构建信息已保存为 TS 文件:', buildInfo);

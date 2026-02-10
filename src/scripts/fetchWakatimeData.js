@@ -32,7 +32,7 @@ API_URLS.forEach(async (apiUrl) => {
         fs.mkdirSync(dirPath, { recursive: true });
 
         // 将数据保存到本地文件
-        const filePath = path.join(dirPath, `${fileName}.js`);
+        const filePath = path.join(dirPath, `${fileName}.ts`);
         fs.writeFileSync(filePath, data, 'utf8');
 
         console.log(`文件已保存到 ${filePath}`);
